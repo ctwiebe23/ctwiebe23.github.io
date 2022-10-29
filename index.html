@@ -7,10 +7,27 @@
     <title>Demo Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="index.css" type="text/css" rel="stylesheet">
-
 </head>
 <body>
      <header>
+         <!-- Modal -->
+         <div class="modal fade" id="explain" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Introducing: Spotify 2!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Niazie LLC is proud to present Spotify 2: the best music experience since VLC Media Player!  Theoretically able to contain dozens of songs, your listening library is bigger than ever in this new commercial Webbed Site.  It can even play music!
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Wow!</button>
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Wow!</button>
+                </div>
+            </div>
+            </div>
+        </div>
         <nav class="navbar p-4 fixed-top navbar-expand-lg navbar-light bg-info">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">Spotify 2</a>
@@ -39,24 +56,6 @@
                         What's this?
                     </button>
                     
-                    <!-- Modal -->
-                    <div class="modal fade" id="explain" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Introducing: Spotify 2!</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                            Niazie LLC is proud to present Spotify 2: the best music experience since VLC Media Player!  Theoretically able to contain dozens of songs, your listening library is bigger than ever in this new commercial Webbed Site.  It can even play music!
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Wow!</button>
-                            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Wow!</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
                   </li>
                 </ul>
                 <form class="d-flex">
@@ -69,6 +68,8 @@
             </div>
           </nav>
      </header>
+
+       
 
      <div class="container py-5"></div>
      <div class="container my-5">
