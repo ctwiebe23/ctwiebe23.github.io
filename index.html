@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="index.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+     <header>
+        <nav class="navbar p-4 fixed-top navbar-expand-lg navbar-light bg-info">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Spotify 2</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="yourmusic.html">Your Music</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Browse
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="popular.html">Popular</a></li>
+                      <li><a class="dropdown-item" href="new.html">New</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="suprise.html">Suprise Me!</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#explain">
+                        What's this?
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="explain" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Introducing: Spotify 2!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            Niazie LLC is proud to present Spotify 2: the best music experience since VLC Media Player!  Theoretically able to contain dozens of songs, your listening library is bigger than ever in this new commercial Webbed Site.  It can even play music!
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Wow!</button>
+                            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Wow!</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search for a song" aria-label="Search">
+                  <button class="btn btn-outline-dark btn-info" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+     </header>
+
+     <div class="container py-5"></div>
+     <div class="container my-5">
+        <p class="h1 my-5">Recent</p>
+        <div class="row">
+          <div class="col">
+            <div class="d-grid col-6 mx-auto">
+                <!-- Music 1 -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music1">
+                    <img src="MusicIcon.png" class="img-thumbnail" alt="...">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Symphony No 5  <small class="text-muted">Ludwig van Beethoven</small></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer mx-auto p-3 my-3">
+                            <button type="button" class="btn btn-info btn-lg">Prev Song</button>
+                            <button type="button" class="btn btn-secondary btn-lg">Pause/Play</button>
+                            <button type="button" class="btn btn-info btn-lg">Skip Song</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <p class="h5 text-center">Symphony No 5</p>
+            <p class="h5 text-center text-muted">Ludwig van Beethoven</p>
+          </div>
+          <div class="col">
+            <div class="d-grid col-6 mx-auto">
+                <!-- Music 2 -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music2">
+                    <img src="MusicIcon.png" class="img-thumbnail" alt="...">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Can Can  <small class="text-muted">Offenbach</small></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer mx-auto p-3 my-3">
+                            <button type="button" class="btn btn-info btn-lg">Prev Song</button>
+                            <button type="button" class="btn btn-secondary btn-lg">Pause/Play</button>
+                            <button type="button" class="btn btn-info btn-lg">Skip Song</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <p class="h5 text-center">Can Can</p>
+            <p class="h5 text-center text-muted">Offenbach</p>
+          </div>
+          <div class="col">
+            <div class="d-grid col-6 mx-auto">
+                <!-- Music 3 -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music3">
+                    <img src="MusicIcon.png" class="img-thumbnail" alt="...">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Jupiter Symphony  <small class="text-muted">Wolfgang Amadeus Mozart</small></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer mx-auto p-3 my-3">
+                            <button type="button" class="btn btn-info btn-lg">Prev Song</button>
+                            <button type="button" class="btn btn-secondary btn-lg">Pause/Play</button>
+                            <button type="button" class="btn btn-info btn-lg">Skip Song</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <p class="h5 text-center">Jupiter Symphony</p>
+            <p class="h5 text-center text-muted">Wolfgang Amadeus Mozart</p>          
+        </div>
+          <div class="col">
+            <div class="d-grid col-6 mx-auto">
+                <!-- Music 4 -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music4">
+                    <img src="ParagraphIcon.png" class="img-thumbnail" alt="...">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Recent</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <p class="h5 text-center">See All</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container my-5">
+        <p class="h1 my-5">Popular</p>
+        <div class="row">
+          <div class="col">
+            <div class="d-grid col-6 mx-auto">
+                <!-- Music 1 -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music1p">
+                    <img src="MusicIcon.png" class="img-thumbnail" alt="...">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music1p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Flight of the Bumblebee  <small class="text-muted">Ludwig van Beethoven</small></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer mx-auto p-3 my-3">
+                            <button type="button" class="btn btn-info btn-lg">Prev Song</button>
+                            <button type="button" class="btn btn-secondary btn-lg">Pause/Play</button>
+                            <button type="button" class="btn btn-info btn-lg">Skip Song</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <p class="h5 text-center">Flight of the Bumblebee</p>
+            <p class="h5 text-center text-muted">Ludwig van Beethoven</p>
+          </div>
+          <div class="col">
+            <div class="d-grid col-6 mx-auto">
+                <!-- Music 2 -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music2p">
+                    <img src="MusicIcon.png" class="img-thumbnail" alt="...">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music2p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Jupiter Symphony  <small class="text-muted">Wolfgang Amadeus Mozart</small></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer mx-auto p-3 my-3">
+                            <button type="button" class="btn btn-info btn-lg">Prev Song</button>
+                            <button type="button" class="btn btn-secondary btn-lg">Pause/Play</button>
+                            <button type="button" class="btn btn-info btn-lg">Skip Song</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <p class="h5 text-center">Jupiter Symphony</p>
+            <p class="h5 text-center text-muted">Wolfgang Amadeus Mozart</p> 
+        </div>
+          <div class="col">
+            <div class="d-grid col-6 mx-auto">
+                <!-- Music 3 -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music3p">
+                    <img src="MusicIcon.png" class="img-thumbnail" alt="...">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music3p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Gangnam Style  <small class="text-muted">PSY</small></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer mx-auto p-3 my-3">
+                            <button type="button" class="btn btn-info btn-lg">Prev Song</button>
+                            <button type="button" class="btn btn-secondary btn-lg">Pause/Play</button>
+                            <button type="button" class="btn btn-info btn-lg">Skip Song</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <p class="h5 text-center">Gangnam Style</p>
+            <p class="h5 text-center text-muted">PSY</p>             
+          </div>
+
+          
+          <div class="col">
+            <div class="d-grid col-6 mx-auto">
+                <!-- Music 4 -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music4p">
+                    <img src="ParagraphIcon.png" class="img-thumbnail" alt="...">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music4p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Popular</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            <p class="h5 text-center">See All</p>
+          </div>
+        </div>
+      </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
