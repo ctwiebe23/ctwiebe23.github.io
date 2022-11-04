@@ -13,3 +13,77 @@ function search() {
     }
 
 }
+
+
+let music = [
+    allthat = {
+        name: "All That",
+        artist: "Benjamin Tissot",
+        posted: 1,
+        listened: new Date(2022-11-03),
+        listens: 0
+      },
+    
+    bipbip = {
+        name: "bipbip",
+        artist: "bipbip",
+        posted: 2,
+        listened: new Date(2022-11-03)
+      },
+    
+    creativeminds = {
+        name: "Creative Minds",
+        artist: "Benjamin Tissot",
+        posted: 3,
+        listened: new Date(2022-11-03)
+      },
+    
+    dreams = {
+        name: "Dreams",
+        artist: "Benjamin Tissot",
+        posted: 4,
+        listened: new Date(2022-11-03)
+      },
+    
+    funkysuspense = {
+        name: "Funky Suspense",
+        artist: "Benjamin Tissot",
+        posted: 5,
+        listened: new Date(2022-11-03)
+      },
+    
+    happyrock = {
+        name: "Happy Rock",
+        artist: "Benjamin Tissot",
+        posted: 6,
+        listened: new Date(2022-11-03)
+      },
+    
+    onceagain = {
+        name: "Once Again",
+        artist: "Benjamin Tissot",
+        posted: 7,
+        listened: new Date(2022-11-03)
+      },
+    
+    passwordinfinity = {
+        name: "Password Infinity",
+        artist: "EvgenyBardyuzha",
+        posted: 8,
+        listened: new Date(2022-11-03)
+      },
+    
+    saveas = {
+        name: "Save As",
+        artist: "tobylane",
+        posted: 9,
+        listened: new Date(2022-11-03)
+      },
+    
+    weeknds = {
+        name: "weeknds",
+        artist: "DayFox",
+        posted: 10,
+        listened: new Date(2022-11-03)
+      }
+];
