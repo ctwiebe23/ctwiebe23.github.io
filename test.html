@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+
+
+    </style>
+</head>
+<body>
+    <button onclick="displayimage(music[0].image, 80, 80)">Create image A</button>
+    <button onclick="displayimage(music[2].image,80,80)">Create image B</button>  
+
+
+    <script>
+        function displayimage(key, y, x) {
+        var theimage = document.createElement("img");
+        theimage.setAttribute('src', key);
+        theimage.setAttribute('alt', 'image');
+        theimage.height = y;
+        theimage.width = x;
+        document.body.appendChild(theimage);  
+}
+
+        let music = [
+            allthat = {
+                name: "All That",
+                artist: "Benjamin Tissot",
+                posted: 1,
+                listened: new Date(2022-11-03),
+                listens: 0,
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            },
+            
+            bipbip = {
+                name: "bipbip",
+                artist: "bipbip",
+                posted: 2,
+                listened: new Date(2022-11-03),
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            },
+            
+            creativeminds = {
+                name: "Creative Minds",
+                artist: "Benjamin Tissot",
+                posted: 3,
+                listened: new Date(2022-11-03),
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            },
+            
+            dreams = {
+                name: "Dreams",
+                artist: "Benjamin Tissot",
+                posted: 4,
+                listened: new Date(2022-11-03),
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            },
+            
+            funkysuspense = {
+                name: "Funky Suspense",
+                artist: "Benjamin Tissot",
+                posted: 5,
+                listened: new Date(2022-11-03),
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            },
+            
+            happyrock = {
+                name: "Happy Rock",
+                artist: "Benjamin Tissot",
+                posted: 6,
+                listened: new Date(2022-11-03),
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            },
+            
+            onceagain = {
+                name: "Once Again",
+                artist: "Benjamin Tissot",
+                posted: 7,
+                listened: new Date(2022-11-03),
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            },
+            
+            passwordinfinity = {
+                name: "Password Infinity",
+                artist: "EvgenyBardyuzha",
+                posted: 8,
+                listened: new Date(2022-11-03),
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            },
+            
+            saveas = {
+                name: "Save As",
+                artist: "tobylane",
+                posted: 9,
+                listened: new Date(2022-11-03),
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            },
+            
+            weeknds = {
+                name: "weeknds",
+                artist: "DayFox",
+                posted: 10,
+                listened: new Date(2022-11-03),
+                audio: new Audio('allthat.mp3'),
+                image: "MusicIcon.png",
+            }
+        ];
+
+
+    </script>
+</body>
+</html>
