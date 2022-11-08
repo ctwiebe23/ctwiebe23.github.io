@@ -14,13 +14,26 @@ function search() {
 
 }
 
-function displayimage(key, y, x) {
+window.onload = function() {
+    displayimage(allthat, 120);
+    displayimage(bipbip, 120);
+    displayimage(creativeminds, 120);
+    displayimage(dreams, 120);
+    displayimage(funkysuspense, 120);
+    displayimage(happrock, 120);
+    displayimage(onceagain, 120);
+    displayimage(passwordinfinity, 120);
+    displayimage(saveas, 120);
+    displayimage(weeknds, 120);
+}
+
+function displayimage(key, size) {
     var theimage = document.createElement("img");
-    theimage.setAttribute('src', key);
-    theimage.setAttribute('alt', 'image');
-    theimage.height = y;
-    theimage.width = x;
-    return theimage; 
+    theimage.setAttribute('src', key.image);
+    theimage.setAttribute('alt', key.name);
+    theimage.height = size;
+    theimage.width = size;
+    document.getElementById(key.name).appendChild(theimage);
 }
 
 let music = [

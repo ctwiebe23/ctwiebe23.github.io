@@ -12,27 +12,40 @@
     </style>
 </head>
 <body>
-    <button onclick="displayimage(allthat.image, 200, 200)">Create image A</button>
-    <button onclick="displayimage(music[1].image,200,200)">Create image B</button>  
-    <button onclick="displayimage(music[2].image,200,200)">Create image B</button>  
-    <button onclick="displayimage(music[3].image,200,200)">Create image B</button>  
-    <button onclick="displayimage(music[4].image,200,200)">Create image B</button>  
-    <button onclick="displayimage(music[5].image,200,200)">Create image B</button>  
-    <button onclick="displayimage(music[6].image,200,200)">Create image B</button>  
-    <button onclick="displayimage(music[7].image,200,200)">Create image B</button>  
-    <button onclick="displayimage(music[8].image,200,200)">Create image B</button>  
-    <button onclick="displayimage(music[9].image,200,200)">Create image B</button>  
+    <button onclick="displayimage(allthat, 200, 200)">Create image A</button>
+    <button onclick="displayimage(music[1],200,200)">Create image B</button>  
+    <button onclick="displayimage(music[2],200,200)">Create image B</button>  
+    <button onclick="displayimage(music[3],200,200)">Create image B</button>  
+    <button onclick="displayimage(music[4],200,200)">Create image B</button>  
+    <button onclick="displayimage(music[5],200,200)">Create image B</button>  
+    <button onclick="displayimage(music[6],200,200)">Create image B</button>  
+    <button onclick="displayimage(music[7],200,200)">Create image B</button>  
+    <button onclick="displayimage(music[8],200,200)">Create image B</button>  
+    <button onclick="displayimage(music[9],200,200)">Create image B</button>
 
+    <p id="All That"></p>  
+    
 
     <script>
+        window.onload = function() {
+            displayimage(allthat, 200, 200);
+        }
+
+
         function displayimage(key, y, x) {
         var theimage = document.createElement("img");
-        theimage.setAttribute('src', key);
-        theimage.setAttribute('alt', 'image');
+        theimage.setAttribute('src', key.image);
+        theimage.setAttribute('alt', key.name);
         theimage.height = y;
         theimage.width = x;
-        document.body.appendChild(theimage);
-}
+        document.getElementById(key.name).appendChild(theimage);
+        }
+
+
+        function makemodel(song) {
+
+        }
+
 
         let music = [
             allthat = {
