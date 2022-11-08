@@ -15,16 +15,16 @@ function search() {
 }
 
 window.onload = function() {
-    displayimage(allthat, 120);
-    displayimage(bipbip, 120);
-    displayimage(creativeminds, 120);
-    displayimage(dreams, 120);
-    displayimage(funkysuspense, 120);
-    displayimage(happrock, 120);
-    displayimage(onceagain, 120);
-    displayimage(passwordinfinity, 120);
-    displayimage(saveas, 120);
-    displayimage(weeknds, 120);
+    displayimage(music[0], 120);    
+    displayimage(music[1], 120);
+    displayimage(music[2], 120);
+    displayimage(music[3], 120);
+    displayimage(music[4], 120);
+    displayimage(music[5], 120);    
+    displayimage(music[6], 120);
+    displayimage(music[7], 120);
+    displayimage(music[8], 120);    
+    displayimage(music[9], 120);
 }
 
 function displayimage(key, size) {
@@ -34,6 +34,10 @@ function displayimage(key, size) {
     theimage.height = size;
     theimage.width = size;
     document.getElementById(key.name).appendChild(theimage);
+}
+
+function makemodel(song) {
+    
 }
 
 let music = [
