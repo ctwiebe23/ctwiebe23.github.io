@@ -36,6 +36,19 @@ function displayimage(key, size) {
     document.getElementById(key.name).appendChild(theimage);
 }
 
+function playsong(song) {
+    song.audio.play();
+}
+
+function pausesong(song) {
+    song.audio.pause();
+}
+
+function restartsong(song) {
+    song.audio.load();
+    song.audio.play();
+}
+
 function makemodel(song) {
     
 }
