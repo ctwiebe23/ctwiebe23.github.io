@@ -38,6 +38,8 @@ function displayimage(key, size) {
 
 function playsong(song) {
     song.audio.play();
+    song.listens++;
+    song.listened = new Date();
 }
 
 function pausesong(song) {
@@ -47,6 +49,8 @@ function pausesong(song) {
 function restartsong(song) {
     song.audio.load();
     song.audio.play();
+    song.listens++;
+    song.listened = new Date();
 }
 
 function makemodel(song) {
@@ -69,6 +73,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('bipbip.mp3'),
         image: "bipbip.png",
+        listens: 0
     },
     
     creativeminds = {
@@ -77,6 +82,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('creativeminds.mp3'),
         image: "creativeminds.png",
+        listens: 0
     },
     
     dreams = {
@@ -85,6 +91,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('dreams.mp3'),
         image: "dreams.png",
+        listens: 0
     },
     
     funkysuspense = {
@@ -93,6 +100,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('funkysuspense.mp3'),
         image: "funkysuspense.png",
+        listens: 0
     },
     
     happyrock = {
@@ -101,6 +109,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('happyrock.mp3'),
         image: "happyrock.png",
+        listens: 0
     },
     
     onceagain = {
@@ -109,6 +118,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('onceagain.mp3'),
         image: "onceagain.png",
+        listens: 0
     },
     
     passwordinfinity = {
@@ -117,6 +127,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('passwordinfinity.mp3'),
         image: "passwordinfinity.png",
+        listens: 0
     },
     
     saveas = {
@@ -125,6 +136,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('saveas.mp3'),
         image: "saveas.png",
+        listens: 0
     },
     
     weeknds = {
@@ -133,5 +145,6 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('weeknds.mp3'),
         image: "weeknds.png",
+        listens: 0
     }
 ];
