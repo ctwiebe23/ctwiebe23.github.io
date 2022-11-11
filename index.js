@@ -15,31 +15,46 @@ function search() {
 }
 
 window.onload = function() {
-    displayimage(music[0], 120);    
-    displayimage(music[1], 120);
-    displayimage(music[2], 120);
-    displayimage(music[3], 120);
-    displayimage(music[4], 120);
-    displayimage(music[5], 120);    
-    displayimage(music[6], 120);
-    displayimage(music[7], 120);
-    displayimage(music[8], 120);    
-    displayimage(music[9], 120);
+    displayimage(music[0], "rec1");    
+    displayimage(music[1], "rec2");
+    displayimage(music[2], "rec3");
+    displayimage(music[3], "pop1");
+    displayimage(music[4], "pop2");
+    displayimage(music[5], "pop3");    
+    displayimage(music[6], "new1");
+    displayimage(music[7], "new2");
+    displayimage(music[8], "new3");    
 }
 
-function displayimage(key, size) {
+function musicload() {
+    displayimage(music[0], "rec1");    
+    displayimage(music[1], "rec2");
+    displayimage(music[2], "rec3");
+    displayimage(music[3], "pop1");
+    displayimage(music[4], "pop2");
+    displayimage(music[5], "pop3");    
+    displayimage(music[6], "new1");
+    displayimage(music[7], "new2");
+    displayimage(music[8], "new3");    
+}
+
+function displayimage(key, location) {
     var theimage = document.createElement("img");
     theimage.setAttribute('src', key.image);
     theimage.setAttribute('alt', key.name);
-    theimage.height = size;
-    theimage.width = size;
-    document.getElementById(key.name).appendChild(theimage);
+    theimage.height = 120;
+    theimage.width = 120;
+    document.getElementById(location).innerHTML = "";
+    document.getElementById(location).appendChild(theimage);
 }
 
 function playsong(song) {
     song.audio.play();
     song.listens++;
-    song.listened = new Date();
+    music = music.filter(function (letter) {
+        return letter !== song;
+    });
+    music.unshift(song);
 }
 
 function pausesong(song) {
@@ -49,12 +64,16 @@ function pausesong(song) {
 function restartsong(song) {
     song.audio.load();
     song.audio.play();
-    song.listens++;
-    song.listened = new Date();
+    music = music.filter(function (letter) {
+        return letter !== song;
+    });
+    music.unshift(song);
 }
 
-function makemodel(song) {
-    
+function findpop(x) {
+    for (let i = 0; i < music.length; i++){
+        
+    }
 }
 
 let music = [
