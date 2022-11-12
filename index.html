@@ -78,30 +78,30 @@
           <div class="col">
             <div class="d-grid col-6 mx-auto">
                 <!-- Music 1 -->
-                <button id="rec1" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music1" onclick="musicload()"></button>
+                <button id="rec1" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music1"></button>
                 
                 <!-- Modal -->
                 <div class="modal fade" id="music1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">All That  <small class="text-muted">Benjamin Tissot</small></h5>
+                            <h5 class="modal-title" id="exampleModalLabel rec1name2">  <small class="text-muted" id="rec1artist2"></small></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                         ...
                         </div>
                         <div class="modal-footer mx-auto p-3 my-3">
-                            <button type="button" class="btn btn-info btn-lg" onclick="playsong(allthat)">Play</button>
-                            <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(allthat)">Pause</button>
-                            <button type="button" class="btn btn-info btn-lg" onclick="restartsong(allthat)">Restart</button>
+                            <button type="button" class="btn btn-info btn-lg" onclick="playsong(music[0])">Play</button>
+                            <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(music[0])">Pause</button>
+                            <button type="button" class="btn btn-info btn-lg" onclick="restartsong(music[0])">Restart</button>
                         </div>
                     </div>
                     </div>
                 </div>
             </div>
-            <p class="h5 text-center">All That</p>
-            <p class="h5 text-center text-muted">Benjamin Tissot</p>
+            <p class="h5 text-center" id="rec1name"></p>
+            <p class="h5 text-center text-muted" id="rec1artist"></p>
           </div>
           <div class="col">
             <div class="d-grid col-6 mx-auto">
@@ -114,23 +114,23 @@
                     <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Funky Suspense  <small class="text-muted">Benjamin Tissot</small></h5>
+                            <h5 class="modal-title" id="exampleModalLabel rec2name2">  <small class="text-muted" id="rec2artist2"></small></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                         ...
                         </div>
                         <div class="modal-footer mx-auto p-3 my-3">
-                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(funkysuspense)">Play</button>
-                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(funkysuspense)">Pause</button>
-                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(funkysuspense)">Restart</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(music[1])">Play</button>
+                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(music[1])">Pause</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(music[1])">Restart</button>
                       </div>
                     </div>
                     </div>
                 </div>
             </div>
-            <p class="h5 text-center">Funky Suspense</p>
-            <p class="h5 text-center text-muted">Benjamin Tissot</p>
+            <p class="h5 text-center" id="rec2name"></p>
+            <p class="h5 text-center text-muted" id="rec2artist"></p>
           </div>
           <div class="col">
             <div class="d-grid col-6 mx-auto">
@@ -143,23 +143,23 @@
                     <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Creative Minds  <small class="text-muted">Benjamin Tissot</small></h5>
+                            <h5 class="modal-title" id="exampleModalLabel rec3name2">  <small class="text-muted" id="rec3artist2"></small></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                         ...
                         </div>
                         <div class="modal-footer mx-auto p-3 my-3">
-                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(creativeminds)">Play</button>
-                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(creativeminds)">Pause</button>
-                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(creativeminds)">Restart</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(music[2])">Play</button>
+                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(music[2])">Pause</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(music[2])">Restart</button>
                       </div>
                     </div>
                     </div>
                 </div>
             </div>
-            <p class="h5 text-center">Creative Minds</p>
-            <p class="h5 text-center text-muted">Benjamin Tissot</p>          
+            <p class="h5 text-center" id="rec3name"></p>
+            <p class="h5 text-center text-muted" id="rec3artist"></p>          
         </div>
           <div class="col">
             <div class="d-grid col-6 mx-auto">
@@ -203,23 +203,23 @@
                     <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Happy Rock  <small class="text-muted">Benjamin Tissot</small></h5>
+                            <h5 class="modal-title" id="exampleModalLabel pop1name2">  <small class="text-muted" id="pop1artist2"></small></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                         ...
                         </div>
                         <div class="modal-footer mx-auto p-3 my-3">
-                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(happyrock)">Play</button>
-                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(happyrock)">Pause</button>
-                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(happyrock)">Restart</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(findpop(0))">Play</button>
+                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(findpop(0))">Pause</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findpop(0))">Restart</button>
                       </div>
                     </div>
                     </div>
                 </div>
             </div>
-            <p class="h5 text-center">Happy Rock</p>
-            <p class="h5 text-center text-muted">Benjamin Tissot</p>
+            <p class="h5 text-center" id="pop1name"></p>
+            <p class="h5 text-center text-muted" id="pop1artist"></p>
           </div>
           <div class="col">
             <div class="d-grid col-6 mx-auto">
@@ -232,23 +232,23 @@
                     <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Dreams  <small class="text-muted">Benjamin Tissot</small></h5>
+                            <h5 class="modal-title" id="exampleModalLabel pop2name2">  <small class="text-muted" id="pop2artist2"></small></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                         ...
                         </div>
                         <div class="modal-footer mx-auto p-3 my-3">
-                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(dreams)">Play</button>
-                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(dreams)">Pause</button>
-                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(dreams)">Restart</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(findpop(1))">Play</button>
+                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(findpop(1))">Pause</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findpop(1))">Restart</button>
                       </div>
                     </div>
                     </div>
                 </div>
             </div>
-            <p class="h5 text-center">Dreams</p>
-            <p class="h5 text-center text-muted">Benjamin Tissot</p> 
+            <p class="h5 text-center" id="pop2name"></p>
+            <p class="h5 text-center text-muted" id="pop2artist"></p> 
         </div>
           <div class="col">
             <div class="d-grid col-6 mx-auto">
@@ -261,47 +261,35 @@
                     <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">bipbip  <small class="text-muted">bipbip</small></h5>
+                            <h5 class="modal-title" id="exampleModalLabel pop3name2">  <small class="text-muted" id="pop3artist2"></small></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                         ...
                         </div>
                         <div class="modal-footer mx-auto p-3 my-3">
-                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(bipbip)">Play</button>
-                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(bipbip)">Pause</button>
-                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(bipbip)">Restart</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(findpop(2))">Play</button>
+                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong(findpop(2))">Pause</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findpop(2))">Restart</button>
                       </div>
                     </div>
                     </div>
                 </div>
             </div>
-            <p class="h5 text-center">bipbip</p>
-            <p class="h5 text-center text-muted">bipbip</p>             
+            <p class="h5 text-center" id="pop3name"></p>
+            <p class="h5 text-center text-muted" id="pop3artist"></p>             
           </div>
 
           
           <div class="col">
             <div class="d-grid col-6 mx-auto">
                 <!-- Music 4 -->
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music4p">
-                    <img src="ParagraphIcon.png" class="img-thumbnail" alt="...">
+                <button type="button" class="btn btn-light">
+                    <a href="popular.html"><img src="ParagraphIcon.png" class="img-thumbnail" alt="..."></a>
+                    
                 </button>
                 
-                <!-- Modal -->
-                <div class="modal fade" id="music4p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Popular</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                        ...
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                
             <p class="h5 text-center">See All</p>
           </div>
         </div>

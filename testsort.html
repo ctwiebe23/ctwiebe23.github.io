@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p id="test"></p>
+
+    <script>
+
+    window.onload = function() {
+    document.getElementById("test").innerHTML = findpop(0);
+    }
+
+    function findpop(x) {
+        let temparray = music;
+        temparray.sort(dynamicSort("-listens"));
+        return temparray[x].name;
+    }
+
+function dynamicSort(property) {
+var sortOrder = 1;
+if(property[0] === "-") {
+    sortOrder = -1;
+    property = property.substr(1);
+}
+return function (a,b) {
+    var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+    return result * sortOrder;
+}
+}
+
+
+    let music = [
+    allthat = {
+        name: "All That",
+        artist: "Benjamin Tissot",
+        listened: new Date(2022-11-03),
+        listens: 0,
+        audio: new Audio('allthat.mp3'),
+        image: "allthat.png",
+    },
+    
+    bipbip = {
+        name: "bipbip",
+        artist: "bipbip",
+        listened: new Date(2022-11-03),
+        audio: new Audio('bipbip.mp3'),
+        image: "bipbip.png",
+        listens: 0
+    },
+    
+    creativeminds = {
+        name: "Creative Minds",
+        artist: "Benjamin Tissot",
+        listened: new Date(2022-11-03),
+        audio: new Audio('creativeminds.mp3'),
+        image: "creativeminds.png",
+        listens: 0
+    },
+    
+    dreams = {
+        name: "Dreams",
+        artist: "Benjamin Tissot",
+        listened: new Date(2022-11-03),
+        audio: new Audio('dreams.mp3'),
+        image: "dreams.png",
+        listens: 0
+    },
+    
+    funkysuspense = {
+        name: "Funky Suspense",
+        artist: "Benjamin Tissot",
+        listened: new Date(2022-11-03),
+        audio: new Audio('funkysuspense.mp3'),
+        image: "funkysuspense.png",
+        listens: 0
+    },
+    
+    happyrock = {
+        name: "Happy Rock",
+        artist: "Benjamin Tissot",
+        listened: new Date(2022-11-03),
+        audio: new Audio('happyrock.mp3'),
+        image: "happyrock.png",
+        listens: 0
+    },
+    
+    onceagain = {
+        name: "Once Again",
+        artist: "Benjamin Tissot",
+        listened: new Date(2022-11-03),
+        audio: new Audio('onceagain.mp3'),
+        image: "onceagain.png",
+        listens: 0
+    },
+    
+    passwordinfinity = {
+        name: "Password Infinity",
+        artist: "EvgenyBardyuzha",
+        listened: new Date(2022-11-03),
+        audio: new Audio('passwordinfinity.mp3'),
+        image: "passwordinfinity.png",
+        listens: 5
+    },
+    
+    saveas = {
+        name: "Save As",
+        artist: "tobylane",
+        listened: new Date(2022-11-03),
+        audio: new Audio('saveas.mp3'),
+        image: "saveas.png",
+        listens: 0
+    },
+    
+    weeknds = {
+        name: "weeknds",
+        artist: "DayFox",
+        listened: new Date(2022-11-03),
+        audio: new Audio('weeknds.mp3'),
+        image: "weeknds.png",
+        listens: 0
+    }
+    ];
+
+    </script>
+</body>
+</html>

@@ -15,9 +15,7 @@ function search() {
 }
 
 window.onload = function() {
-    displayimage(music[0], "rec1");    
-    displayimage(music[1], "rec2");
-    displayimage(music[2], "rec3");
+    
     displayimage(findpop(0), "pop1");
     displayimage(findpop(1), "pop2");
     displayimage(findpop(2), "pop3");
@@ -28,15 +26,10 @@ window.onload = function() {
     displayimage(findpop(7), "pop8");
     displayimage(findpop(8), "pop9");
     displayimage(findpop(9), "pop10");                    
-    displayimage(findnew(0), "new1");
-    displayimage(findnew(1), "new2");
-    displayimage(findnew(2), "new3");    
+     
 }
 
 function musicload() {
-    displayimage(music[0], "rec1");    
-    displayimage(music[1], "rec2");
-    displayimage(music[2], "rec3");
     displayimage(findpop(0), "pop1");
     displayimage(findpop(1), "pop2");
     displayimage(findpop(2), "pop3");
@@ -47,9 +40,6 @@ function musicload() {
     displayimage(findpop(7), "pop8");
     displayimage(findpop(8), "pop9");
     displayimage(findpop(9), "pop10");                    
-    displayimage(findnew(0), "new1");
-    displayimage(findnew(1), "new2");
-    displayimage(findnew(2), "new3");    
 }
 
 function displayimage(key, location) {
