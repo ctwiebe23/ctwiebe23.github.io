@@ -184,7 +184,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('passwordinfinity.mp3'),
         image: "passwordinfinity.png",
-        listens: 12
+        listens: 0
     },
     
     saveas = {
@@ -193,7 +193,7 @@ let music = [
         listened: new Date(2022-11-03),
         audio: new Audio('saveas.mp3'),
         image: "saveas.png",
-        listens: 5
+        listens: 12
     },
     
     weeknds = {
