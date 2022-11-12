@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Password Infinity",
+        "artist": "EvgenyBardyuzha",
+        "listened": "new Date(2022-11-03)",
+        "audio": "new Audio('passwordinfinity.mp3')",
+        "image": "passwordinfinity.png",
+        "listens": 0
+    },
+    
+    {
+        "name": "Save As",
+        "artist": "tobylane",
+        "listened": "new Date(2022-11-03)",
+        "audio": "new Audio('saveas.mp3')",
+        "image": "saveas.png",
+        "listens": 12
+    },
+    
+    {
+        "name": "weeknds",
+        "artist": "DayFox",
+        "listened": "new Date(2022-11-03)",
+        "audio": "new Audio('weeknds.mp3')",
+        "image": "weeknds.png",
+        "listens": 9
+    }
+];
