@@ -16,8 +16,8 @@ async function fetchuser() {
 }
 
 async function renderuser() {
-    let user = await fetchuser();
-    console.log(user);
+    let users = await fetchuser();
+    //console.log(user);
     let html = '';
 
     users.forEach(user => {
