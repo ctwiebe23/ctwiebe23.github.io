@@ -1,32 +1,32 @@
 {
 	"allthat" : [
-		[ "All That", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('allthat.mp3')", "allthat.png", 2, false]
+		 "All That", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('allthat.mp3')", "allthat.png", 2, false
 	],
     "bipbip" : [
-		[ "bipbip", "bipbip", "new Date(2022-11-03)" , "new Audio('bipbip.mp3')", "bipbip.png", 8, true]
+		 "bipbip", "bipbip", "new Date(2022-11-03)" , "new Audio('bipbip.mp3')", "bipbip.png", 8, true
 	],
     "creativeminds" : [
-		[ "Creative Minds", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('creativeminds.mp3')", "creativeminds.png", 3, false]
+		 "Creative Minds", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('creativeminds.mp3')", "creativeminds.png", 3, false
 	],
     "dreams" : [
-		[ "Dreams", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('dreams.mp3')", "dreams.png", 9, false]
+		 "Dreams", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('dreams.mp3')", "dreams.png", 9, false
 	],
     "funkysuspense" : [
-		[ "Funky Suspense", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('funkysuspense.mp3')", "funkysuspense.png", 2, false]
+		 "Funky Suspense", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('funkysuspense.mp3')", "funkysuspense.png", 2, false
 	],
     "happyrock" : [
-		[ "Happy Rock", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('happyrock.mp3')", "happyrock.png", 13, true]
+		 "Happy Rock", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('happyrock.mp3')", "happyrock.png", 13, true
 	],
     "onceagain" : [
-		[ "Once Again", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('onceagain.mp3')", "onceagain.png", 1, false]
+		 "Once Again", "Benjamin Tissot", "new Date(2022-11-03)" , "new Audio('onceagain.mp3')", "onceagain.png", 1, false
 	],
     "passwordinfinity" : [
-		[ "Password Infinity", "EvgenyBardyuzha", "new Date(2022-11-03)" , "new Audio('passwordinfinity.mp3')", "passwordinfinity.png", 0, false]
+		 "Password Infinity", "EvgenyBardyuzha", "new Date(2022-11-03)" , "new Audio('passwordinfinity.mp3')", "passwordinfinity.png", 0, false
 	],
     "saveas" : [
-		[ "Save As", "tobylane", "new Date(2022-11-03)" , "new Audio('saveas.mp3')", "saveas.png", 4, false]
+		 "Save As", "tobylane", "new Date(2022-11-03)" , "new Audio('saveas.mp3')", "saveas.png", 4, false
 	],
     "weeknds" : [
-		[ "weeknds", "DayFox", "new Date(2022-11-03)" , "new Audio('weeknds.mp3')", "weeknds.png", 7, false]
+		 "weeknds", "DayFox", "new Date(2022-11-03)" , "new Audio('weeknds.mp3')", "weeknds.png", 7, false
 	]
 }
