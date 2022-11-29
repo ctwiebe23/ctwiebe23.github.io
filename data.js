@@ -1,5 +1,5 @@
-async function fetchuser() {
-    let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/users.json";
+async function fetchmusic() {
+    let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
     try {
         let response = await fetch(url);
         console.log(response);
@@ -9,29 +9,26 @@ async function fetchuser() {
         else {
             console.log(response.status)
         }
-        // break to catch, throw error
     } catch (error) {
         console.log(error);
     }
 }
 
-async function renderuser() {
-    let users = await fetchuser();
-    //console.log(user);
+async function rendermusic() {
+    let music = await fetchmusic();
+    console.log(music);
     let html = '';
 
-    users.forEach(user => {
-        console.log(user)
-;        let htmlSegment = 
+    
+;   let htmlSegment = 
                             `<div class="user">
-                            <h2>${user.firstname} ${user.lastname}</h2>
-                            <div class="email"><a href="email:${user.email}">${user.email}</a></div>
+                            <h2>${music["allthat"].name} ${music["allthat"].artist}</h2>
+                            <div class="email"><a href="email:${music["allthat"].audio}">${music["allthat"].audio}</a></div>
                             </div>`
-        html += htmlSegment;
-    });
+    html += htmlSegment;
 
     let container = document.querySelector(".usercon");
     container.innerHTML = html;
 }
 
-renderuser();
+rendermusic();

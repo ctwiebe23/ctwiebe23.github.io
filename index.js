@@ -20,14 +20,7 @@ window.onload = function() {
     displayimage(music[2], "rec3");
     displayimage(findpop(0), "pop1");
     displayimage(findpop(1), "pop2");
-    displayimage(findpop(2), "pop3");
-    displayimage(findpop(3), "pop4");
-    displayimage(findpop(4), "pop5");
-    displayimage(findpop(5), "pop6");
-    displayimage(findpop(6), "pop7");
-    displayimage(findpop(7), "pop8");
-    displayimage(findpop(8), "pop9");
-    displayimage(findpop(9), "pop10");                    
+    displayimage(findpop(2), "pop3");                  
     displayimage(findnew(0), "new1");
     displayimage(findnew(1), "new2");
     displayimage(findnew(2), "new3");    
@@ -39,17 +32,31 @@ function musicload() {
     displayimage(music[2], "rec3");
     displayimage(findpop(0), "pop1");
     displayimage(findpop(1), "pop2");
-    displayimage(findpop(2), "pop3");
-    displayimage(findpop(3), "pop4");
-    displayimage(findpop(4), "pop5");
-    displayimage(findpop(5), "pop6");
-    displayimage(findpop(6), "pop7");
-    displayimage(findpop(7), "pop8");
-    displayimage(findpop(8), "pop9");
-    displayimage(findpop(9), "pop10");                    
+    displayimage(findpop(2), "pop3");                   
     displayimage(findnew(0), "new1");
     displayimage(findnew(1), "new2");
     displayimage(findnew(2), "new3");    
+}
+
+async function fetchmusic() {
+    let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
+    try {
+        let response = await fetch(url);
+        console.log(response);
+        if (response.status == 200) {
+            return await response.json();
+        }
+        else {
+            console.log(response.status)
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function rendermusic() {
+    let music = await fetchmusic();
+    console.log(music);
 }
 
 function displayimage(key, location) {
@@ -205,3 +212,5 @@ let music = [
         listens: 9
     }
 ];
+
+rendermusic();
