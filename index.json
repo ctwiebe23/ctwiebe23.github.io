@@ -1,7 +1,7 @@
 {
 	"array" : [
 		{
-			"name" : "All That", "artist" : "Benjamin Tissot", "date" : "new Date(2022-11-03)" , "audio" : "new Audio('allthat.mp3')", "image" : "allthat.png", "listens" : 2, "fav" : false
+			"name" : "All That", "artist" : "Benjamin Tissot", "date" : "new Date(2022-11-03)" , "audio" : "allthat.mp3", "image" : "allthat.png", "listens" : 2, "fav" : false
 		},
 		{
 			"name" : "bipbip", "artist" : "bipbip", "date" : "new Date(2022-11-03)" , "audio" : "new Audio('bipbip.mp3')", "image" : "bipbip.png", "listens" : 8, "fav" : true

@@ -1,7 +1,7 @@
   async function musicload() {
     let musictemp = await fetchmusic();
     console.log(musictemp);
-    let music = [];
+    music = [];
     music = music.concat(musictemp.array);
     console.log(music);    
     displayimage(music[0], "rec1");    
@@ -41,7 +41,7 @@ async function fetchmusic() {
 };
 
  function playsong(song) {
-    song.audio.play();
+    new Audio(song.audio).play();
     song.listens++;
     music = music.filter(function (letter) {
         return letter !== song;
@@ -51,12 +51,12 @@ async function fetchmusic() {
 };
 
  function pausesong(song) {
-    song.audio.pause();
+    new Audio(song.audio).pause();
 };
 
  function restartsong(song) {
-    song.audio.load();
-    song.audio.play();
+    new Audio(song.audio).load();
+    new Audio(song.audio).play();
     music = music.filter(function (letter) {
         return letter !== song;
     });
@@ -99,10 +99,10 @@ async function setupmusic() {
     console.log(music);
 }
 
-let music = [
+/*let music = [
     bipbip = {
-        name: "bipbip",
-        artist: "bipbip",
+        name: "incorrect",
+        artist: "incorrect",
         listened: new Date(2022-11-03),
         audio: new Audio('bipbip.mp3'),
         image: "bipbip.png",
@@ -189,6 +189,6 @@ let music = [
         image: "weeknds.png",
         listens: 9
     }
-];
+];*/
 
 musicload();
