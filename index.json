@@ -1,5 +1,5 @@
 {
-	"music" : [
+	"array" : [
 		{
 			"name" : "All That", "artist" : "Benjamin Tissot", "date" : "new Date(2022-11-03)" , "audio" : "new Audio('allthat.mp3')", "image" : "allthat.png", "listens" : 2, "fav" : false
 		},

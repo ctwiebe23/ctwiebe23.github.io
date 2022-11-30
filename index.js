@@ -1,16 +1,16 @@
-async function musicload() {
-    let music = await fetchmusic();
-    console.log(music);
-    displayimage(music["allthat"], "rec1");    
-    displayimage(music["bipbip"], "rec2");
-    displayimage(music["saveas"], "rec3");
+  async function musicload() {
+    let musictemp = await fetchmusic();
+    console.log(musictemp);
+    let music = [];
+    music = music.concat(musictemp.array);
+    console.log(music);    
+    displayimage(music[0], "rec1");    
+    displayimage(music[1], "rec2");
+    displayimage(music[2], "rec3");
     displayimage(findpop(0), "pop1");
     displayimage(findpop(1), "pop2");
     displayimage(findpop(2), "pop3");                   
-    displayimage(findnew(0), "new1");
-    displayimage(findnew(1), "new2");
-    displayimage(findnew(2), "new3");    
-}
+};
 
 async function fetchmusic() {
     let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
@@ -26,9 +26,9 @@ async function fetchmusic() {
     } catch (error) {
         console.log(error);
     }
-}
+};
 
-function displayimage(key, location) {
+ function displayimage(key, location) {
     var theimage = document.createElement("img");
     theimage.setAttribute('src', key.image);
     theimage.setAttribute('alt', key.name);
@@ -38,9 +38,9 @@ function displayimage(key, location) {
     document.getElementById(location).appendChild(theimage);
     document.getElementById(location + "name").innerHTML = key.name;
     document.getElementById(location + "artist").innerHTML = key.artist;
-}
+};
 
-function playsong(song) {
+ function playsong(song) {
     song.audio.play();
     song.listens++;
     music = music.filter(function (letter) {
@@ -48,13 +48,13 @@ function playsong(song) {
     });
     music.unshift(song);
     musicload();
-}
+};
 
-function pausesong(song) {
+ function pausesong(song) {
     song.audio.pause();
-}
+};
 
-function restartsong(song) {
+ function restartsong(song) {
     song.audio.load();
     song.audio.play();
     music = music.filter(function (letter) {
@@ -62,23 +62,24 @@ function restartsong(song) {
     });
     music.unshift(song);
     musicload();
-}
+};
 
-function findpop(x) {
+ function findpop(x) {
     let temparray = [];
     temparray = temparray.concat(music);
     temparray.sort(dynamicSort("-listens"));
+    console.log(temparray);
     return temparray[x];
-}
+};
 
-function findnew(x) {
+ function findnew(x) {
     let temparray = [];
     temparray = temparray.concat(music);
     temparray.sort(dynamicSort("-listened"));
     return temparray[x];
-}
+};
 
-function dynamicSort(property) {
+ function dynamicSort(property) {
     var sortOrder = 1;
     if(property[0] === "-") {
         sortOrder = -1;
@@ -88,18 +89,17 @@ function dynamicSort(property) {
         var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
         return result * sortOrder;
     }
-    }
+};
+
+async function setupmusic() {
+    let musictemp = await fetchmusic();
+    console.log(musictemp);
+    let music = [];
+    music = music.concat(musictemp.music);
+    console.log(music);
+}
 
 let music = [
-    allthat = {
-        name: "All That",
-        artist: "Benjamin Tissot",
-        listened: new Date(2022-11-03),
-        listens: 2,
-        audio: new Audio('allthat.mp3'),
-        image: "allthat.png",
-    },
-    
     bipbip = {
         name: "bipbip",
         artist: "bipbip",
@@ -109,6 +109,15 @@ let music = [
         listens: 8
     },
     
+    allthat = {
+        name: "All That",
+        artist: "Benjamin Tissot",
+        listened: new Date(2022-11-03),
+        listens: 2,
+        audio: new Audio('allthat.mp3'),
+        image: "allthat.png",
+    },
+
     creativeminds = {
         name: "Creative Minds",
         artist: "Benjamin Tissot",
