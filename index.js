@@ -1,35 +1,9 @@
-function search() {
-    let myInput = document.getElementById("myInput").value;
-    myInput = myInput.toLowerCase();
-    let music = document.getElementsByClassName("music");
-
-    for (i = 0; i < music.length; i++) {
-        if (!music[i].innerHTML.toLowerCase().includes(myInput)) {
-            music[i].style.display = "none";
-        }
-        else {
-            music[i].style.display = "list-item";
-        }
-    }
-
-}
-
-window.onload = function() {
-    displayimage(music[0], "rec1");    
-    displayimage(music[1], "rec2");
-    displayimage(music[2], "rec3");
-    displayimage(findpop(0), "pop1");
-    displayimage(findpop(1), "pop2");
-    displayimage(findpop(2), "pop3");                  
-    displayimage(findnew(0), "new1");
-    displayimage(findnew(1), "new2");
-    displayimage(findnew(2), "new3");    
-}
-
-function musicload() {
-    displayimage(music[0], "rec1");    
-    displayimage(music[1], "rec2");
-    displayimage(music[2], "rec3");
+async function musicload() {
+    let music = await fetchmusic();
+    console.log(music);
+    displayimage(music["allthat"], "rec1");    
+    displayimage(music["bipbip"], "rec2");
+    displayimage(music["saveas"], "rec3");
     displayimage(findpop(0), "pop1");
     displayimage(findpop(1), "pop2");
     displayimage(findpop(2), "pop3");                   
@@ -52,11 +26,6 @@ async function fetchmusic() {
     } catch (error) {
         console.log(error);
     }
-}
-
-async function rendermusic() {
-    let music = await fetchmusic();
-    console.log(music);
 }
 
 function displayimage(key, location) {
@@ -213,4 +182,4 @@ let music = [
     }
 ];
 
-rendermusic();
+musicload();
