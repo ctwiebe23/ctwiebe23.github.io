@@ -68,7 +68,6 @@ async function fetchmusic() {
     let temparray = [];
     temparray = temparray.concat(music);
     temparray.sort(dynamicSort("-listens"));
-    console.log(temparray);
     return temparray[x];
 };
 
