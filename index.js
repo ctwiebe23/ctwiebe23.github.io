@@ -21,7 +21,7 @@ async function fetchmusic() {
             return await response.json();
         }
         else {
-            console.log(response.status)
+            console.log(response.status);
         }
     } catch (error) {
         console.log(error);
