@@ -94,7 +94,7 @@ function playsong(song) {
  function findnew(x) {
     let temparray = [];
     temparray = temparray.concat(music);
-    temparray.sort(dynamicSort("-date"));
+    temparray.sort(dynamicSort("date"));
     return temparray[x];
 };
 
