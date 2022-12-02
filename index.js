@@ -1,9 +1,12 @@
-  async function musicload() {
-    let musictemp = await fetchmusic();
-    console.log(musictemp);
-    music = [];
-    music = music.concat(musictemp.array);
-    console.log(music);    
+music = [];
+
+async function musicload() {
+    if (music.length == 0) {
+        let musictemp = await fetchmusic();
+        console.log(musictemp);
+        music = music.concat(musictemp.array);
+        console.log(music);    
+    }
     displayimage(music[0], "rec1");    
     displayimage(music[1], "rec2");
     displayimage(music[2], "rec3");
