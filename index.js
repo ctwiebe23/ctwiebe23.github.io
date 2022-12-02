@@ -1,4 +1,6 @@
 let music = [];
+let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
+
 
 async function musicload() {
     if (music.length == 0) {
@@ -17,7 +19,6 @@ async function musicload() {
 };
 
 async function fetchmusic() {
-    let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
     try {
         let response = await fetch(url);
         console.log(response);
@@ -37,9 +38,7 @@ async function storemusic() {
     let data = {music};
     console.log(data);
 
-    http.put(
-    'https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json',
-    data)
+    http.put(url, data)
     
     .then(data => console.log(data))
     
