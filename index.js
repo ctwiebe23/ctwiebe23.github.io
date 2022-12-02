@@ -31,6 +31,10 @@ async function fetchmusic() {
     }
 };
 
+async function storemusic() {
+
+};
+
  function displayimage(key, location) {
     var theimage = document.createElement("img");
     theimage.setAttribute('src', key.image);
