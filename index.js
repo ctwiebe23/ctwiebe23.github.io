@@ -1,18 +1,19 @@
-music = [];
+let music = [];
 
 async function musicload() {
     if (music.length == 0) {
         let musictemp = await fetchmusic();
         console.log(musictemp);
         music = music.concat(musictemp.array);
-        console.log(music);    
+        console.log(music);
     }
     displayimage(music[0], "rec1");    
     displayimage(music[1], "rec2");
     displayimage(music[2], "rec3");
     displayimage(findpop(0), "pop1");
     displayimage(findpop(1), "pop2");
-    displayimage(findpop(2), "pop3");                   
+    displayimage(findpop(2), "pop3");    
+    storemusic();             
 };
 
 async function fetchmusic() {
@@ -32,7 +33,17 @@ async function fetchmusic() {
 };
 
 async function storemusic() {
+    let http = new EasyHTTP;
+    let data = {music};
+    console.log(data);
 
+    http.put(
+    'https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json',
+    data)
+    
+    .then(data => console.log(data))
+    
+    .catch(err => console.log(err));
 };
 
  function displayimage(key, location) {
