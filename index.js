@@ -1,6 +1,6 @@
 let music = [];
 let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
-
+let recentsong = new Audio();
 
 async function musicload() {
     if (music.length == 0) {
@@ -57,8 +57,10 @@ async function storemusic() {
     document.getElementById(location + "artist").innerHTML = key.artist;
 };
 
- function playsong(song) {
-    new Audio(song.audio).play();
+function playsong(song) {
+    recentsong.pause();
+    recentsong = new Audio(song.audio);
+    recentsong.play();
     song.listens++;
     music = music.filter(function (letter) {
         return letter !== song;
@@ -67,13 +69,16 @@ async function storemusic() {
     musicload();
 };
 
- function pausesong(song) {
-    new Audio(song.audio).pause();
+ function pausesong() {
+    recentsong.pause();
 };
 
  function restartsong(song) {
-    new Audio(song.audio).load();
-    new Audio(song.audio).play();
+    recentsong.pause();
+    recentsong = new Audio(song.audio);
+    recentsong.load();
+    recentsong.play();
+    song.listens++;
     music = music.filter(function (letter) {
         return letter !== song;
     });
@@ -91,7 +96,7 @@ async function storemusic() {
  function findnew(x) {
     let temparray = [];
     temparray = temparray.concat(music);
-    temparray.sort(dynamicSort("-listened"));
+    temparray.sort(dynamicSort("-date"));
     return temparray[x];
 };
 

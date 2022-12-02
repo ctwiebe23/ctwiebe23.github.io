@@ -10,7 +10,7 @@ async function musicload() {
         console.log(music);
     }
     for (i = 0; i < music.length; i++) {
-        displayimage(findpop(i), ("pop" + (i+1).toString()));
+        displayimage(findnew(i), ("new" + (i+1).toString()));
     } 
     storemusic();             
 };

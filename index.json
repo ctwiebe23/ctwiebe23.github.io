@@ -1,34 +1,34 @@
 {
 	"array" : [
 		{
-			"name" : "All That", "artist" : "Benjamin Tissot", "date" : "new Date(2022-11-03)" , "audio" : "allthat.mp3", "image" : "allthat.png", "listens" : 2, "fav" : false
+			"name" : "All That", "artist" : "Benjamin Tissot", "date" : 0 , "audio" : "allthat.mp3", "image" : "allthat.png", "listens" : 2, "fav" : false
 		},
 		{
-			"name" : "bipbip", "artist" : "bipbip", "date" : "new Date(2022-11-03)" , "audio" : "bipbip.mp3", "image" : "bipbip.png", "listens" : 8, "fav" : true
+			"name" : "bipbip", "artist" : "bipbip", "date" : 1 , "audio" : "bipbip.mp3", "image" : "bipbip.png", "listens" : 8, "fav" : true
 		},
 		{
-			"name" : "Creative Minds", "artist" : "Benjamin Tissot", "date" : "new Date(2022-11-03)" , "audio" : "creativeminds.mp3", "image" : "creativeminds.png", "listens" : 3, "fav" : false
+			"name" : "Creative Minds", "artist" : "Benjamin Tissot", "date" : 2 , "audio" : "creativeminds.mp3", "image" : "creativeminds.png", "listens" : 3, "fav" : false
 		},
 		{
-			"name" : "Dreams", "artist" : "Benjamin Tissot", "date" : "new Date(2022-11-03)" , "audio" : "dreams.mp3", "image" : "dreams.png", "listens" : 9, "fav" : false
+			"name" : "Dreams", "artist" : "Benjamin Tissot", "date" : 3 , "audio" : "dreams.mp3", "image" : "dreams.png", "listens" : 9, "fav" : false
 		},
 		{
-			"name" : "Funky Suspense", "artist" : "Benjamin Tissot", "date" : "new Date(2022-11-03)" , "audio" : "funkysuspense.mp3", "image" : "funkysuspense.png", "listens" : 2, "fav" : false
+			"name" : "Funky Suspense", "artist" : "Benjamin Tissot", "date" : 4 , "audio" : "funkysuspense.mp3", "image" : "funkysuspense.png", "listens" : 2, "fav" : false
 		},
 		{
-			"name" : "Happy Rock", "artist" : "Benjamin Tissot", "date" : "new Date(2022-11-03)" , "audio" : "happyrock.mp3", "image" : "happyrock.png", "listens" : 13, "fav" : true
+			"name" : "Happy Rock", "artist" : "Benjamin Tissot", "date" : 5 , "audio" : "happyrock.mp3", "image" : "happyrock.png", "listens" : 13, "fav" : true
 		},
 		{
-			"name" : "Once Again", "artist" : "Benjamin Tissot", "date" : "new Date(2022-11-03)" , "audio" : "onceagain.mp3", "image" : "onceagain.png", "listens" : 1, "fav" : false
+			"name" : "Once Again", "artist" : "Benjamin Tissot", "date" : 6 , "audio" : "onceagain.mp3", "image" : "onceagain.png", "listens" : 1, "fav" : false
 		},
 		{
-			"name" : "Password Infinity", "artist" : "EvgenyBardyuzha", "date" : "new Date(2022-11-03)" , "audio" : "passwordinfinity.mp3", "image" : "passwordinfinity.png", "listens" : 0, "fav" : false
+			"name" : "Password Infinity", "artist" : "EvgenyBardyuzha", "date" : 7 , "audio" : "passwordinfinity.mp3", "image" : "passwordinfinity.png", "listens" : 0, "fav" : false
 		},
 		{
-			"name" : "Save As", "artist" : "tobylane", "date" : "new Date(2022-11-03)" , "audio" : "saveas.mp3", "image" : "saveas.png", "listens" : 4, "fav" : false
+			"name" : "Save As", "artist" : "tobylane", "date" : 8 , "audio" : "saveas.mp3", "image" : "saveas.png", "listens" : 4, "fav" : false
 		},
 		{
-			"name" : "weeknds", "artist" : "DayFox", "date" : "new Date(2022-11-03)" , "audio" : "weeknds.mp3", "image" : "weeknds.png", "listens" : 7, "fav" : false
+			"name" : "weeknds", "artist" : "DayFox", "date" : 9 , "audio" : "weeknds.mp3", "image" : "weeknds.png", "listens" : 7, "fav" : false
 		}
 	]
 }
