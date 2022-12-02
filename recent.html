@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="index.css" type="text/css" rel="stylesheet">
+    <script src="myscripts.js"></script> 
+</head>
+<body>
+     <header>
+         <!-- Modal -->
+         <div class="modal fade" id="explain" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Introducing: Conductor!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                I am proud to present Conductor: the best music experience since VLC Media Player!  Theoretically able to contain dozens of songs, your listening library is bigger than ever in this new commercial Webbed Site.  It can even play music!
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Wow!</button>
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Wow!</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <nav class="navbar p-4 fixed-top navbar-expand-lg navbar-light bg-info">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Conductor</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="yourmusic.html">Your Music</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Browse
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="popular.html">Popular</a></li>
+                      <li><a class="dropdown-item" href="new.html">New</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="suprise.html">Suprise Me!</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#explain">
+                        What's this?
+                    </button>
+                    
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" id="myInput" type="search" placeholder="Search for a song" aria-label="Search" onkeyup="search()">
+                  <button class="btn btn-outline-dark btn-info" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+     </header>
+
+     <div class="container py-5"></div>
+
+     <div class="container my-5">
+      <p class="h1 my-5">rec</p>
+      <div class="row">
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+                <!-- Music 1 -->
+                <button id="rec1" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music1p">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music1p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel rec1name2">  <small class="text-muted" id="rec1artist2"></small></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer mx-auto p-3 my-3">
+                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(0))">Play</button>
+                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(0))">Restart</button>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <p class="h5 text-center" id="rec1name"></p>
+            <p class="h5 text-center text-muted" id="rec1artist"></p>         
+        </div>
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+            <!-- Music 2 -->
+            <button id="rec2" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music2p">
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="music2p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel rec2name2">  <small class="text-muted" id="rec2artist2"></small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer mx-auto p-3 my-3">
+                      <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(1))">Play</button>
+                      <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                      <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(1))">Restart</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <p class="h5 text-center" id="rec2name"></p>
+        <p class="h5 text-center text-muted" id="rec2artist"></p>         
+        </div>
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+                <!-- Music 3 -->
+                <button id="rec3" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music3p">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="music3p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel rec3name2">  <small class="text-muted" id="rec3artist2"></small></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer mx-auto p-3 my-3">
+                          <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(2))">Play</button>
+                          <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                          <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(2))">Restart</button>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <p class="h5 text-center" id="rec3name"></p>
+            <p class="h5 text-center text-muted" id="rec3artist"></p>         
+        </div>
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+            <!-- Music 4 -->
+            <button id="rec4" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music4p">
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="music4p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel rec4name2">  <small class="text-muted" id="rec4artist2"></small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer mx-auto p-3 my-3">
+                      <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(3))">Play</button>
+                      <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                      <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(3))">Restart</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <p class="h5 text-center" id="rec4name"></p>
+        <p class="h5 text-center text-muted" id="rec4artist"></p>         
+        </div>
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+            <!-- Music 5 -->
+            <button id="rec5" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music5p">
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="music5p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel rec5name2">  <small class="text-muted" id="rec5artist2"></small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer mx-auto p-3 my-3">
+                      <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(4))">Play</button>
+                      <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                      <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(4))">Restart</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <p class="h5 text-center" id="rec5name"></p>
+        <p class="h5 text-center text-muted" id="rec5artist"></p>         
+        </div>
+      </div>
+
+      <div class="container py-5"></div>
+
+      <div class="row">
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+            <!-- Music 6 -->
+            <button id="rec6" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music6p">
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="music6p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel rec6name2">  <small class="text-muted" id="rec6artist2"></small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer mx-auto p-3 my-3">
+                      <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(5))">Play</button>
+                      <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                      <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(5))">Restart</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <p class="h5 text-center" id="rec6name"></p>
+        <p class="h5 text-center text-muted" id="rec6artist"></p>         
+        </div>
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+            <!-- Music 7 -->
+            <button id="rec7" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music7p">
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="music7p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel rec7name2">  <small class="text-muted" id="rec7artist2"></small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer mx-auto p-3 my-3">
+                      <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(6))">Play</button>
+                      <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                      <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(6))">Restart</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <p class="h5 text-center" id="rec7name"></p>
+        <p class="h5 text-center text-muted" id="rec7artist"></p>         
+        </div>
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+            <!-- Music 8 -->
+            <button id="rec8" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music8p">
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="music8p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel rec8name2">  <small class="text-muted" id="rec8artist2"></small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer mx-auto p-3 my-3">
+                      <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(7))">Play</button>
+                      <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                      <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(7))">Restart</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <p class="h5 text-center" id="rec8name"></p>
+        <p class="h5 text-center text-muted" id="rec8artist"></p>         
+        </div>
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+            <!-- Music 9 -->
+            <button id="rec9" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music9p">
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="music9p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel rec9name2">  <small class="text-muted" id="rec9artist2"></small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer mx-auto p-3 my-3">
+                      <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(8))">Play</button>
+                      <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                      <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(8))">Restart</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <p class="h5 text-center" id="rec9name"></p>
+        <p class="h5 text-center text-muted" id="rec9artist"></p>         
+        </div>
+        <div class="col">
+          <div class="d-grid col-6 mx-auto">
+            <!-- Music 10 -->
+            <button id="rec10" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#music10p">
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="music10p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel rec10name2">  <small class="text-muted" id="rec10artist2"></small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer mx-auto p-3 my-3">
+                      <button type="button" class="btn btn-info btn-lg" onclick="playsong(findrec(9))">Play</button>
+                      <button type="button" class="btn btn-secondary btn-lg" onclick="pausesong()">Pause</button>
+                      <button type="button" class="btn btn-info btn-lg" onclick="restartsong(findrec(9))">Restart</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <p class="h5 text-center" id="rec10name"></p>
+        <p class="h5 text-center text-muted" id="rec10artist"></p>         
+        </div>
+      </div>
+
+
+     </div>
+     <script src="recent.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
