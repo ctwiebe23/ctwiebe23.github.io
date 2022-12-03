@@ -1,6 +1,6 @@
 let music = [];
-let url2 = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
-let url = "https://dev.gtrst.me";
+let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
+//let url = "https://dev.gtrst.me";
 let recentsong = new Audio();
 
 async function musicload() {
@@ -21,7 +21,7 @@ async function musicload() {
 
 async function fetchmusic() {
     try {
-        let response = await fetch(url2);
+        let response = await fetch(url);
         console.log(response);
         if (response.status == 200) {
             return await response.json();
@@ -116,10 +116,10 @@ function playsong(song) {
 
 class EasyHTTP {
     async put(url, data) {
-        let response = await fetch(url + "/Collection/carstonmusic", {
-            method: 'POST',
+        let response = await fetch(url, {
+            method: 'PUT',
             headers: {
-            'Content-type': 'text/plain'
+            'Content-type': 'application/json'
             /*'Access-Control-Allow-Origin': 'https://ctwiebe23.github.io',
             'Access-Control-Allow-Methods': 'PUT, POST'*/
             },
