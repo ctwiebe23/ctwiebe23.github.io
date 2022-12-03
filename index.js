@@ -118,7 +118,9 @@ class EasyHTTP {
         let response = await fetch(url, {
             method: 'PUT',
             headers: {
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'PUT, POST'
             },
             body: JSON.stringify(data)
         });
