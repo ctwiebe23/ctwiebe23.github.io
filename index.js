@@ -119,7 +119,7 @@ class EasyHTTP {
             method: 'PUT',
             headers: {
             'Content-type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Origin': 'https://ctwiebe23.github.io',
             'Access-Control-Allow-Methods': 'PUT, POST'
             },
             body: JSON.stringify(data)
