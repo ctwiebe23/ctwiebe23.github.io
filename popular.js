@@ -24,9 +24,10 @@ async function fetchmusic() {
         }
         else {
             console.log(response.status);
+            window.location = 'https://ctwiebe23.github.io/errorpage.html';
         }
     } catch (error) {
-        console.log(error);
+        console.log("error");
     }
 };
 
