@@ -1,5 +1,5 @@
 let music = [];
-let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/indkex.json";
+let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
 let recentsong = new Audio();
 
 async function musicload() {
