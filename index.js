@@ -30,6 +30,8 @@ async function fetchmusic() {
         }
     } catch (error) {
         console.log(error);
+        if (error != 200){
+            document.location.href = 'https://ctwiebe23.github.io/errorpage.html'        }
     }
 };
 
