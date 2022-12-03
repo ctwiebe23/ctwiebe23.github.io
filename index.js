@@ -1,5 +1,5 @@
 let music = [];
-let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
+let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/indkex.json";
 let recentsong = new Audio();
 
 async function musicload() {
@@ -27,11 +27,10 @@ async function fetchmusic() {
         }
         else {
             console.log(response.status);
+            window.location = 'https://ctwiebe23.github.io/errorpage.html';
         }
     } catch (error) {
-        console.log(error);
-        if (error != 200){
-            document.location.href = 'https://ctwiebe23.github.io/errorpage.html'        }
+        console.log("error");
     }
 };
 
