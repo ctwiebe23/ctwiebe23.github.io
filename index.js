@@ -1,5 +1,6 @@
 let music = [];
 let url = "https://raw.githubusercontent.com/ctwiebe23/ctwiebe23.github.io/main/index.json";
+//let url = "";
 let recentsong = new Audio();
 
 async function musicload() {
@@ -118,9 +119,9 @@ class EasyHTTP {
         let response = await fetch(url, {
             method: 'PUT',
             headers: {
-            'Content-type': 'application/json',
-            'Access-Control-Allow-Origin': 'https://ctwiebe23.github.io',
-            'Access-Control-Allow-Methods': 'PUT, POST'
+            'Content-type': 'application/json'
+            /*'Access-Control-Allow-Origin': 'https://ctwiebe23.github.io',
+            'Access-Control-Allow-Methods': 'PUT, POST'*/
             },
             body: JSON.stringify(data)
         });
