@@ -1,5 +1,5 @@
-import { makeHasseDiagram } from "./utils/hasseUtils.2024-07-13T18-14-06.js";
-import { drawHasse } from "./utils/d3Utils.2024-07-13T18-14-06.js";
+import { makeHasseDiagram } from "./utils/hasseUtils.2024-07-13T23-28-17.js";
+import { drawHasse } from "./utils/d3Utils.2024-07-13T23-28-17.js";
 
 console.log("voi voi. se on korvakoira.");
 
