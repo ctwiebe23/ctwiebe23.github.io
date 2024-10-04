@@ -1,0 +1,59 @@
+table#blockly-window {
+  width:100%;
+  height:512px;
+}
+
+table#blockly-window td {
+  height:100%;
+}
+
+table#blockly-window th {
+  text-align:left;
+  font-size:16pt;
+  padding:0px 4px;
+}
+
+button#copy-code-button {
+  border:1px solid #333;
+  border-radius:8px;
+
+  background-color:#FFF;
+
+  float:right;
+
+  padding:2px 8px;
+}
+
+button#copy-code-button:hover {
+  background-color:#DDD;
+}
+
+button#copy-code-button:active {
+  background-color:#569;
+  color:#FFF;
+}
+
+td#canvas {
+  width:70%;
+}
+
+/* Only exists to satisfy Blockly. All styling should go under `td#canvas`
+ * when possible. */
+td#canvas div#editor {
+  height:100%;
+  width:100%;
+}
+
+td#preview {
+  vertical-align:top;
+
+  background-color:#DDD;
+  opacity:75%;
+
+  font-size:10pt;
+}
+
+td#preview pre {
+  margin:0px;
+  padding:8px;
+}
