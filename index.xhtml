@@ -65,7 +65,15 @@ body &gt; nav a + a::before {
         <li>Just A Very Asinine Stupid Codebase Really It's Painful Too</li>
         <li>Causes every <strong>bug</strong> on the page</li>
         <li>Well-deserved reputation</li>
-        <pre><code class="language-js">console.error('js loaded successfully');</code></pre>
+        <pre><code class="language-js">if (document.readyState !== 'loading') {
+  main();
+} else {
+  console.warn('js loaded early');
+  document.addEventListener(
+    'DOMContentLoaded',
+    main
+  );
+}</code></pre>
       </ul>
     </section>
 
@@ -81,7 +89,6 @@ body &gt; nav a + a::before {
         <pre><code class="language-html">&lt;script type="text/javascript" src="./index.xhtml.pre.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="./index.xhtml.post.js" defer=""&gt;&lt;/script&gt;</code></pre>
         <li>Locality of Behavior</li>
-        <li>Fully-qualified CSS</li>
         <li>Dark mode</li>
         <pre><code class="language-html">&lt;meta name="color-scheme" content="light dark" /&gt;</code></pre>
       </ul>
@@ -91,19 +98,22 @@ body &gt; nav a + a::before {
       <h2>html format</h2>
 
       <ul class="c21">
-        <li>How do we represent a slideshow?</li>
-        <li>Use <code>header</code> for title slides</li>
-        <li>Use <code>section</code> for normal slides</li>
-        <li>Use <code>footer</code> for ending slides</li>
-        <li>Use <code>h2</code> as slide headers</li>
-        <hr />
+        <li>
+          How do we represent a slideshow?
+          <ul>
+            <li><code>header</code> for title slides</li>
+            <li><code>section</code> for normal slides</li>
+            <li><code>footer</code> for ending slides</li>
+            <li><code>h2</code> as slide headers</li>
+          </ul>
+        </li>
         <li>how do we make it look good?</li>
       </ul>
 
       <pre class="c22"><code class="language-html">&lt;header&gt;
   &lt;h1&gt;making a slideshow in html&lt;/h1&gt;
-  &lt;small&gt;and css and javascript and all
-    that jazz&lt;/small&gt;
+  &lt;h2&gt;and css and javascript and all
+    that jazz&lt;/h2&gt;
   Carston Wiebe
   &lt;br /&gt;
   &lt;time&gt;2025.01.31&lt;/time&gt;
@@ -113,8 +123,6 @@ body &gt; nav a + a::before {
   &lt;ul&gt;
     &lt;li&gt;How do we represent a
       slideshow?&lt;/li&gt;
-    &lt;li&gt;Use &lt;code&gt;header&lt;/code&gt; for
-      title slides&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/section&gt;</code></pre>
     </section>
@@ -123,9 +131,11 @@ body &gt; nav a + a::before {
       <h2>css reset</h2>
 
       <ul class="c21">
-        <li>Everything looks bad</li>
+        <li>By default, everything looks bad</li>
         <li>More importantly, everything looks bad differently</li>
         <li>How do we make it our own version of bad?</li>
+        <hr />
+        <li>But what about columns…</li>
       </ul>
 
       <pre class="c22"><code class="language-css">* {
@@ -180,17 +190,26 @@ section > h2 {
     </section>
 
     <section>
-      <h2>syntax highlighting</h2>
+      <h2>other things</h2>
 
-      <ol>
-        <h3>two options:</h3>
-        <hr />
+      <ul>
+        <h3>two options for syntax highlighting</h3>
         <li>Write a syntax highlighter yourself and add support for every
           language you want to use</li>
-        <li>Download the cursed 'dependency' (<a href="https://prismjs.com/" title="https://prismjs.com/" target="_blank">prism.js</a>)</li>
+        <li>Download a cursed 'dependency'
+          (<a href="https://prismjs.com/" title="https://prismjs.com/" target="_blank">prism.js</a>)</li>
         <pre><code class="language-html">&lt;link type="text/css" rel="stylesheet" href="./deps/prism-tomorrow-night.min.css" /&gt;
 &lt;script type="text/javascript" defer="" src="./deps/prism.min.js"&gt;&lt;/script&gt;</code></pre>
-      </ol>
+        <hr />
+        <h3>adding custom fonts</h3>
+        <li>Download a <code>.TTF</code>, <code>.OTF</code>, or
+          <code>.WOFF</code> file</li>
+        <li>Initialize it is CSS</li>
+        <pre><code class="language-css">@font-face {
+  font-family:Sarala;
+  src:url('./fonts/Sarala-Regular.ttf');
+}</code></pre>
+      </ul>
     </section>
 
     <section>
