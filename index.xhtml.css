@@ -83,14 +83,9 @@ code {
   padding:0px 2px;
 }
 
-/* pre > code { */
-/*   display:block; */
-/**/
-/*   overflow:hidden; */
-/*   padding:8px; */
-/**/
-/*   border-radius:8px; */
-/* } */
+code[class|="language"] {  /* Don't style prism.js targets. */
+  padding:0px;
+}
 
 h1 {
   color:var(--primary);
