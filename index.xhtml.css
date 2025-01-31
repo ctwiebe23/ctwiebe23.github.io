@@ -1,23 +1,29 @@
 @font-face {
   font-family:Sarala;
+  font-weight:normal;
+  font-style:normal;
   src:url('./fonts/Sarala-Regular.ttf');
 }
 
 @font-face {
   font-family:Sarala;
-  src:url('./fonts/Sarala-Bold.ttf');
   font-weight:bold;
+  font-style:normal;
+  src:url('./fonts/Sarala-Bold.ttf');
 }
 
 @font-face {
   font-family:DMMono;
+  font-weight:normal;
+  font-style:normal;
   src:url('./fonts/DMMono-Regular.ttf');
 }
 
 @font-face {
   font-family:DMMono;
-  src:url('./fonts/DMMono-Italic.ttf');
+  font-weight:normal;
   font-style:italic;
+  src:url('./fonts/DMMono-Italic.ttf');
 }
 
 :root {
@@ -84,7 +90,7 @@ body {
   overflow:hidden;
 
   width:100vw;
-  height:100vh;
+  min-height:100vh;
   border-inline:2px solid var(--primary);
 }
 
