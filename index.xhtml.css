@@ -75,14 +75,14 @@ code {
   padding:0px 2px;
 }
 
-pre > code {
-  display:block;
-
-  overflow:hidden;
-  padding:8px;
-
-  border-radius:8px;
-}
+/* pre > code { */
+/*   display:block; */
+/**/
+/*   overflow:hidden; */
+/*   padding:8px; */
+/**/
+/*   border-radius:8px; */
+/* } */
 
 h1 {
   color:var(--primary);
