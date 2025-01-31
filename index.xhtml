@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="CONTENT-TYPE" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>HTML Slideshow</title>
+    <meta name="author" content="Carston Wiebe" />
+    <meta name="description" content="Slidwshow built in HTML" />
+    <meta name="color-scheme" content="light dark" />
+
+    <link type="image/x-icon" rel="icon" href="./favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="./index.xhtml.css" />
+  </head>
+
+  <body onload="changeSlide()" onclick="changeSlide()" onwheel="changeSlide(event)" onkeydown="changeSlide(event)">
+    <header>
+      <h1>making a slideshow in html</h1>
+      <h2>and css and javascript and all that jazz</h2>
+      Carston Wiebe
+      <br />
+      <time>2025.01.31</time>
+    </header>
+
+    <section>
+      <h2>what do you need to know?</h2>
+
+      <ul class="c31">
+        <h3>HTML</h3>
+        <li>Hypertext Markup Language</li>
+        <li>Contains all the <strong>content</strong> of the page</li>
+        <li>Lots of langle rangles</li>
+        <pre><code data-lang="html">&lt;section&gt;
+  &lt;ul&gt;
+    &lt;h3&gt;HTML&lt;/h3&gt;
+    &lt;li&gt;Hypertext Markup Language&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+      </ul>
+
+      <ul class="c32">
+        <h3>CSS</h3>
+        <li>Cascading Style Sheets</li>
+        <li>Describes the <strong>style</strong> of the page</li>
+        <li>Extremely ugly-looking</li>
+        <pre><code data-lang="css">body &gt; nav a {
+  text-decoration:none;
+}
+
+body &gt; nav a::hover {
+  text-decoration:underline;
+}
+
+body &gt; nav a + a::before {
+  content:' • ';
+  color:var(--text);
+}</code></pre>
+      </ul>
+
+      <ul class="c33">
+        <h3>JAVASCRIPT</h3>
+        <li>Just A Very Asinine Stupid Codebase Really It's Painful Too</li>
+        <li>Causes every <strong>bug</strong> on the page</li>
+        <li>Well-deserved reputation</li>
+        <pre><code data-lang="js">console.error('js loaded successfully');</code></pre>
+      </ul>
+    </section>
+
+    <section>
+      <h2>personal quirks</h2>
+
+      <ul>
+        <li>XHTML5</li>
+        <pre><code data-lang="html">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="CONTENT-TYPE" content="application/xhtml+xml; charset=UTF-8" /&gt;</code></pre>
+        <li><code>pre</code> and <code>post</code> js</li>
+        <pre><code data-lang="html">&lt;script type="text/javascript" src="./index.xhtml.pre.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./index.xhtml.post.js" defer=""&gt;&lt;/script&gt;</code></pre>
+        <li>Locality of Behavior</li>
+        <li>Fully-qualified CSS</li>
+        <li>Dark mode</li>
+        <pre><code data-lang="html">&lt;meta name="color-scheme" content="light dark" /&gt;</code></pre>
+      </ul>
+    </section>
+
+    <section>
+      <h2>html format</h2>
+
+      <ul class="c21">
+        <li>How do we represent a slideshow?</li>
+        <li>Use <code>header</code> for title slides</li>
+        <li>Use <code>section</code> for normal slides</li>
+        <li>Use <code>footer</code> for ending slides</li>
+        <hr />
+        <li>But how do we make columns?</li>
+      </ul>
+
+      <pre class="c22"><code data-lang="html">&lt;header&gt;
+  &lt;h1&gt;making a slideshow in html&lt;/h1&gt;
+  &lt;small&gt;and css and javascript and all
+    that jazz&lt;/small&gt;
+  Carston Wiebe
+  &lt;br /&gt;
+  2025.01.31
+&lt;/header&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;html format&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;How do we represent a
+      slideshow?&lt;/li&gt;
+    &lt;li&gt;Use &lt;code&gt;header&lt;/code&gt; for
+      title slides&lt;/li&gt;
+    &lt;li&gt;Use &lt;code&gt;section&lt;/code&gt; for
+      normal slides&lt;/li&gt;
+    &lt;li&gt;Use &lt;code&gt;footer&lt;/code&gt; for
+      ending slides&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>css stuff</h2>
+
+      <ul class="c31">
+        <li>Everything looks ugly like a default word doc</li>
+        <li>How do we make it our own version of ugly?</li>
+        <li>Notably, how do we make multiple columns?</li>
+        <li>Enter <code>display:grid</code></li>
+      </ul>
+
+      <pre class="c32"><code data-lang="css">html {
+  font:14pt Sarala, Helvetica, sans-serif;
+  color:#eeeeee;
+  background-color:#222222;
+}
+
+section {
+  display:grid;
+  gap:16px;
+
+  grid-template:
+    "hed hed hed hed hed hed" auto
+    "nop c21 c21 c22 c22 emp" auto
+    "c31 c31 c32 c32 c33 c33" auto
+   / 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+section &gt; * {
+  grid-area:c32;
+}
+
+section &gt; h2 {
+  grid-area:hed;
+  text-align:center;
+}</code></pre>
+      <pre class="c33"><code data-lang="css">*.c21 { grid-area:c21; }
+*.c22 { grid-area:c22; }
+*.c31 { grid-area:c31; }
+*.c32 { grid-area:c32; }
+*.c33 { grid-area:c33; }</code></pre>
+    </section>
+
+    <section>
+      <h2>no one wants to see the whole slideshow at once!</h2>
+
+      <ul class="c21">
+        <li>By default, hide all the <code>header</code>, <code>section</code>,
+          and <code>footer</code> elements in CSS</li>
+        <li>Add some event listeners to your HTML:</li>
+        <pre><code data-lang="html">&lt;body onload="changeSlide()"
+      onclick="changeSlide()"
+      onkeydown="changeSlide(event)"&gt;
+&lt;/body&gt;</code></pre>
+        <li>Commit some javascript</li>
+      </ul>
+
+      <pre class="c22"><code data-lang="js">function changeSlide(event) {
+  if (!event) {
+    nextSlide();
+  } else {
+    switch (event.keyCode) {
+      case 32:  // Space.
+      case 39:  // Left.
+      case 40:  // Down.
+      case 74:  // j.
+      case 76:  // l.
+      case 78:  // n.
+        nextSlide();
+        break;
+      case 8:   // Backspace.
+      case 37:  // Back.
+      case 38:  // Up.
+      case 72:  // h.
+      case 75:  // k.
+      case 80:  // p.
+        prevSlide();
+    }
+  }
+}</code></pre>
+    </section>
+
+    <footer>
+      <h1>and that's it!</h1>
+      <h2>you're done!</h2>
+      Congratulations!
+      <br />
+      <small>hooray!</small>
+    </footer>
+
+    <script>
+      let slides = document.querySelectorAll('header, section, footer');
+      let nextInQueue = 0;
+
+      function changeSlide(event) {
+        if (event &amp;&amp; event.type === 'keydown') {
+          switch (event.keyCode) {
+            case 32:  // Space.
+            case 39:  // Left.
+            case 40:  // Down.
+            case 74:  // j.
+            case 76:  // l.
+            case 78:  // n.
+              nextSlide();
+              break;
+            case 8:  // Backspace.
+            case 37:  // Back.
+            case 38:  // Up.
+            case 72:  // h.
+            case 75:  // k.
+            case 80:  // p.
+              prevSlide();
+          }
+        } else if (event &amp;&amp; event.type === 'wheel') {
+          if (event.deltaY > 0) {  // Scroll down.
+            nextSlide();
+          } else {  // Scroll up.
+            prevSlide();
+          }
+        } else {
+          nextSlide();
+        }
+      }
+
+      function nextSlide() {
+        if (nextInQueue === slides.length) return;
+        if (nextInQueue > 0) slides[nextInQueue - 1].removeAttribute('data-open');
+        slides[nextInQueue++].setAttribute('data-open', '');
+      }
+
+      function prevSlide() {
+        if (nextInQueue === 1) return;
+        slides[--nextInQueue - 1].setAttribute('data-open', '');
+        slides[nextInQueue].removeAttribute('data-open');
+      }
+    </script>
+  </body>
+</html>
