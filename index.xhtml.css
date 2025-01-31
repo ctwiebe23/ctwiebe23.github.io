@@ -38,7 +38,15 @@
 }
 
 li {
-  margin-left:16px;
+  margin-left:2ch;
+}
+
+ul li::marker {
+  content:'• ';
+}
+
+ul ul li::marker {
+  content:'∘ ';
 }
 
 table {
