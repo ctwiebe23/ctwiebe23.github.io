@@ -9,9 +9,20 @@
   font-weight:bold;
 }
 
+@font-face {
+  font-family:DMMono;
+  src:url('./fonts/DMMono-Regular.ttf');
+}
+
+@font-face {
+  font-family:DMMono;
+  src:url('./fonts/DMMono-Italic.ttf');
+  font-style:italic;
+}
+
 :root {
   --font-normal:Sarala, Helvetica, Arial, sans-serif;
-  --font-monospace:'Courier New', monospace;
+  --font-monospace:DMMono, 'Courier New', monospace;
 
   --text:#222222;
   --text-2:#333333;
