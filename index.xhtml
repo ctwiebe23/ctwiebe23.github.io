@@ -10,6 +10,9 @@
     <meta name="description" content="Slidwshow built in HTML" />
     <meta name="color-scheme" content="light dark" />
 
+    <link type="text/css" rel="stylesheet" href="./deps/prism-tomorrow-night.min.css" />
+    <script type="text/javascript" defer="" src="./deps/prism.min.js"></script>
+
     <link type="image/x-icon" rel="icon" href="./favicon.ico" />
     <link type="text/css" rel="stylesheet" href="./index.xhtml.css" />
   </head>
@@ -31,7 +34,7 @@
         <li>Hypertext Markup Language</li>
         <li>Contains all the <strong>content</strong> of the page</li>
         <li>Lots of langle rangles</li>
-        <pre><code data-lang="html">&lt;section&gt;
+        <pre><code class="language-html">&lt;section&gt;
   &lt;ul&gt;
     &lt;h3&gt;HTML&lt;/h3&gt;
     &lt;li&gt;Hypertext Markup Language&lt;/li&gt;
@@ -45,14 +48,12 @@
         <li>Cascading Style Sheets</li>
         <li>Describes the <strong>style</strong> of the page</li>
         <li>Extremely ugly-looking</li>
-        <pre><code data-lang="css">body &gt; nav a {
+        <pre><code class="language-css">body &gt; nav a {
   text-decoration:none;
 }
-
 body &gt; nav a::hover {
   text-decoration:underline;
 }
-
 body &gt; nav a + a::before {
   content:' • ';
   color:var(--text);
@@ -64,7 +65,7 @@ body &gt; nav a + a::before {
         <li>Just A Very Asinine Stupid Codebase Really It's Painful Too</li>
         <li>Causes every <strong>bug</strong> on the page</li>
         <li>Well-deserved reputation</li>
-        <pre><code data-lang="js">console.error('js loaded successfully');</code></pre>
+        <pre><code class="language-js">console.error('js loaded successfully');</code></pre>
       </ul>
     </section>
 
@@ -73,16 +74,16 @@ body &gt; nav a + a::before {
 
       <ul>
         <li>XHTML5</li>
-        <pre><code data-lang="html">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+        <pre><code class="language-html">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
   &lt;head&gt;
     &lt;meta http-equiv="CONTENT-TYPE" content="application/xhtml+xml; charset=UTF-8" /&gt;</code></pre>
         <li><code>pre</code> and <code>post</code> js</li>
-        <pre><code data-lang="html">&lt;script type="text/javascript" src="./index.xhtml.pre.js"&gt;&lt;/script&gt;
+        <pre><code class="language-html">&lt;script type="text/javascript" src="./index.xhtml.pre.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="./index.xhtml.post.js" defer=""&gt;&lt;/script&gt;</code></pre>
         <li>Locality of Behavior</li>
         <li>Fully-qualified CSS</li>
         <li>Dark mode</li>
-        <pre><code data-lang="html">&lt;meta name="color-scheme" content="light dark" /&gt;</code></pre>
+        <pre><code class="language-html">&lt;meta name="color-scheme" content="light dark" /&gt;</code></pre>
       </ul>
     </section>
 
@@ -94,19 +95,19 @@ body &gt; nav a + a::before {
         <li>Use <code>header</code> for title slides</li>
         <li>Use <code>section</code> for normal slides</li>
         <li>Use <code>footer</code> for ending slides</li>
+        <li>Use <code>h2</code> as slide headers</li>
         <hr />
-        <li>But how do we make columns?</li>
+        <li>how do we make it look good?</li>
       </ul>
 
-      <pre class="c22"><code data-lang="html">&lt;header&gt;
+      <pre class="c22"><code class="language-html">&lt;header&gt;
   &lt;h1&gt;making a slideshow in html&lt;/h1&gt;
   &lt;small&gt;and css and javascript and all
     that jazz&lt;/small&gt;
   Carston Wiebe
   &lt;br /&gt;
-  2025.01.31
+  &lt;time&gt;2025.01.31&lt;/time&gt;
 &lt;/header&gt;
-
 &lt;section&gt;
   &lt;h2&gt;html format&lt;/h2&gt;
   &lt;ul&gt;
@@ -114,54 +115,82 @@ body &gt; nav a + a::before {
       slideshow?&lt;/li&gt;
     &lt;li&gt;Use &lt;code&gt;header&lt;/code&gt; for
       title slides&lt;/li&gt;
-    &lt;li&gt;Use &lt;code&gt;section&lt;/code&gt; for
-      normal slides&lt;/li&gt;
-    &lt;li&gt;Use &lt;code&gt;footer&lt;/code&gt; for
-      ending slides&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/section&gt;</code></pre>
     </section>
 
     <section>
-      <h2>css stuff</h2>
+      <h2>css reset</h2>
 
-      <ul class="c31">
-        <li>Everything looks ugly like a default word doc</li>
-        <li>How do we make it our own version of ugly?</li>
-        <li>Notably, how do we make multiple columns?</li>
-        <li>Enter <code>display:grid</code></li>
+      <ul class="c21">
+        <li>Everything looks bad</li>
+        <li>More importantly, everything looks bad differently</li>
+        <li>How do we make it our own version of bad?</li>
       </ul>
 
-      <pre class="c32"><code data-lang="css">html {
-  font:14pt Sarala, Helvetica, sans-serif;
+      <pre class="c22"><code class="language-css">* {
+  box-sizing:border-box;
+  padding:0px;
+  margin:0px;
+}
+table {
+  border-collapse:collapse;
+}
+a {
+  text-decoration:none;
+}
+html {
+  font:14pt Sarala;
   color:#eeeeee;
   background-color:#222222;
-}
+}</code></pre>
+    </section>
 
-section {
+    <section>
+      <h2>css grid</h2>
+
+      <ul class="c31">
+        <li>Enter <code>display:grid</code></li>
+        <li>Makes it very easy to design reactive websites</li>
+        <li>Similar to <code>table</code> or <code>display:flex</code></li>
+      </ul>
+
+      <pre class="c32"><code class="language-css">section {
   display:grid;
   gap:16px;
-
   grid-template:
     "hed hed hed hed hed hed" auto
+    "nop c11 c11 c11 c11 emp" auto
     "nop c21 c21 c22 c22 emp" auto
     "c31 c31 c32 c32 c33 c33" auto
    / 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-
-section &gt; * {
-  grid-area:c32;
+section > * {
+  grid-area:c11;
 }
-
-section &gt; h2 {
+section > h2 {
   grid-area:hed;
   text-align:center;
 }</code></pre>
-      <pre class="c33"><code data-lang="css">*.c21 { grid-area:c21; }
+      <pre class="c33"><code class="language-css">*.c21 { grid-area:c21; }
 *.c22 { grid-area:c22; }
 *.c31 { grid-area:c31; }
 *.c32 { grid-area:c32; }
 *.c33 { grid-area:c33; }</code></pre>
+    </section>
+
+    <section>
+      <h2>syntax highlighting</h2>
+
+      <ol>
+        <h3>two options:</h3>
+        <hr />
+        <li>Write a syntax highlighter yourself and add support for every
+          language you want to use</li>
+        <li>Download the cursed 'dependency' (<a href="https://prismjs.com/" title="https://prismjs.com/" target="_blank">prism.js</a>)</li>
+        <pre><code class="language-html">&lt;link type="text/css" rel="stylesheet" href="./deps/prism-tomorrow-night.min.css" /&gt;
+&lt;script type="text/javascript" defer="" src="./deps/prism.min.js"&gt;&lt;/script&gt;</code></pre>
+      </ol>
     </section>
 
     <section>
@@ -170,33 +199,33 @@ section &gt; h2 {
       <ul class="c21">
         <li>By default, hide all the <code>header</code>, <code>section</code>,
           and <code>footer</code> elements in CSS</li>
+        <pre><code class="language-css">header, section, footer {
+  display:none;
+}
+*[data-open] {
+  display:grid;
+}</code></pre>
         <li>Add some event listeners to your HTML:</li>
-        <pre><code data-lang="html">&lt;body onload="changeSlide()"
+        <pre><code class="language-html">&lt;body onload="changeSlide()"
       onclick="changeSlide()"
       onkeydown="changeSlide(event)"&gt;
 &lt;/body&gt;</code></pre>
         <li>Commit some javascript</li>
       </ul>
 
-      <pre class="c22"><code data-lang="js">function changeSlide(event) {
+      <pre class="c22"><code class="language-js">function changeSlide(event) {
   if (!event) {
     nextSlide();
   } else {
     switch (event.keyCode) {
       case 32:  // Space.
       case 39:  // Left.
-      case 40:  // Down.
       case 74:  // j.
-      case 76:  // l.
-      case 78:  // n.
         nextSlide();
         break;
       case 8:   // Backspace.
-      case 37:  // Back.
-      case 38:  // Up.
-      case 72:  // h.
+      case 37:  // Right.
       case 75:  // k.
-      case 80:  // p.
         prevSlide();
     }
   }
@@ -227,7 +256,7 @@ section &gt; h2 {
               nextSlide();
               break;
             case 8:  // Backspace.
-            case 37:  // Back.
+            case 37:  // Right.
             case 38:  // Up.
             case 72:  // h.
             case 75:  // k.
