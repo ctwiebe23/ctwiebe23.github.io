@@ -115,7 +115,7 @@
       <label for="input">Input vectors:</label>
       <textarea id="input"
                 rows="10"
-                placeholder="Vs: 7.07 @ 32.8"
+                placeholder="Vs = 7.07 @ 32.8"
                 onkeypress="updateSVG ()"></textarea>
       <button onclick="downloadSVG ()">
         Download SVG
@@ -131,10 +131,10 @@
 
       const stroke = '#222';
       const strokeLight = '#ccc';
-      const strokeWidth = '4';
+      const strokeWidth = '2';
 
-      const padding = 32;
-      const textPadd = 8;
+      const padding = 64;
+      const textPadd = 16;
 
       const colors = [
         '#cc4444',
@@ -179,6 +179,16 @@
         svg.appendChild (xaxis);
         svg.appendChild (yaxis);
 
+        const circle = document.createElementNS (namespace, 'circle');
+        circle.setAttribute ('r', radius);
+        circle.setAttribute ('cx', center);
+        circle.setAttribute ('cy', center);
+        circle.setAttribute ('stroke', strokeLight);
+        circle.setAttribute ('stroke-width', strokeWidth);
+        circle.setAttribute ('fill-opacity', 0);
+
+        svg.appendChild (circle);
+
         const vectorInput = input.value
                                  .split ('\n')
                                  .map ((s) => s.trim ())
@@ -186,7 +196,7 @@
 
         var maxMag = 0;
         const vectors = vectorInput.map ((str) => {
-          const [name, mag, ang] = str.split (/[:]|[@]/, 3)
+          const [name, mag, ang] = str.split (/[=]|[@]/, 3)
                                       .map ((s) => s.trim ());
 
           if (isNaN (mag) || isNaN (ang)) {
@@ -232,15 +242,6 @@
           svg.appendChild (text);
         });
 
-        const circle = document.createElementNS (namespace, 'circle');
-        circle.setAttribute ('r', radius);
-        circle.setAttribute ('cx', center);
-        circle.setAttribute ('cy', center);
-        circle.setAttribute ('stroke', stroke);
-        circle.setAttribute ('stroke-width', strokeWidth);
-        circle.setAttribute ('fill-opacity', 0);
-
-        svg.appendChild (circle);
         diagram.appendChild (svg);
       }
 
