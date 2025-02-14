@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="CONTENT-TYPE" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>HTML Slideshow</title>
+    <meta name="author" content="Carston Wiebe" />
+    <meta name="description" content="Slideshow built in HTML" />
+    <meta name="color-scheme" content="light dark" />
+
+    <link type="text/css" rel="stylesheet" href="./deps/prism-tomorrow-night.min.css" />
+    <script type="text/javascript" defer="" src="./deps/prism.min.js"></script>
+
+    <link type="image/x-icon" rel="icon" href="./favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="./index.xhtml.css" />
+  </head>
+
+  <body onload="changeSlide()" onclick="changeSlide()" onwheel="changeSlide(event)" onkeydown="changeSlide(event)">
+    <header>
+      <h1>making a slideshow in html</h1>
+      <h2>and css and javascript and all that jazz</h2>
+      Carston Wiebe
+      <br />
+      <time>2025.01.31</time>
+    </header>
+
+    <section>
+      <h2>what do you need to know?</h2>
+
+      <ul class="c31">
+        <h3>HTML</h3>
+        <li>Hypertext Markup Language</li>
+        <li>Contains all the <strong>content</strong> of the page</li>
+        <li>Lots of langle rangles</li>
+        <pre><code class="language-html">&lt;section&gt;
+  &lt;ul&gt;
+    &lt;h3&gt;HTML&lt;/h3&gt;
+    &lt;li&gt;Hypertext Markup Language&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+      </ul>
+
+      <ul class="c32">
+        <h3>CSS</h3>
+        <li>Cascading Style Sheets</li>
+        <li>Describes the <strong>style</strong> of the page</li>
+        <li>Extremely ugly-looking</li>
+        <pre><code class="language-css">body &gt; nav a {
+  text-decoration:none;
+}
+body &gt; nav a::hover {
+  text-decoration:underline;
+}
+body &gt; nav a + a::before {
+  content:' • ';
+  color:var(--text);
+}</code></pre>
+      </ul>
+
+      <ul class="c33">
+        <h3>JAVASCRIPT</h3>
+        <li>Just A Very Asinine Stupid Codebase Really It's Painful Too</li>
+        <li>Causes every <strong>bug</strong> on the page</li>
+        <li>Well-deserved reputation</li>
+        <pre><code class="language-js">if (document.readyState !== 'loading') {
+  main();
+} else {
+  console.warn('js loaded early');
+  document.addEventListener(
+    'DOMContentLoaded',
+    main
+  );
+}</code></pre>
+      </ul>
+    </section>
+
+    <section>
+      <h2>personal quirks</h2>
+
+      <ul>
+        <li>XHTML5</li>
+        <pre><code class="language-html">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="CONTENT-TYPE" content="application/xhtml+xml; charset=UTF-8" /&gt;</code></pre>
+        <li><code>pre</code> and <code>post</code> js</li>
+        <pre><code class="language-html">&lt;script type="text/javascript" src="./index.xhtml.pre.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./index.xhtml.post.js" defer=""&gt;&lt;/script&gt;</code></pre>
+        <li>Locality of Behavior</li>
+        <li>Dark mode</li>
+        <pre><code class="language-html">&lt;meta name="color-scheme" content="light dark" /&gt;</code></pre>
+      </ul>
+    </section>
+
+    <section>
+      <h2>html format</h2>
+
+      <ul class="c21">
+        <li>
+          How do we represent a slideshow?
+          <ul>
+            <li><code>header</code> for title slides</li>
+            <li><code>section</code> for normal slides</li>
+            <li><code>footer</code> for ending slides</li>
+            <li><code>h2</code> as slide headers</li>
+          </ul>
+        </li>
+        <li>how do we make it look good?</li>
+      </ul>
+
+      <pre class="c22"><code class="language-html">&lt;header&gt;
+  &lt;h1&gt;making a slideshow in html&lt;/h1&gt;
+  &lt;h2&gt;and css and javascript and all
+    that jazz&lt;/h2&gt;
+  Carston Wiebe
+  &lt;br /&gt;
+  &lt;time&gt;2025.01.31&lt;/time&gt;
+&lt;/header&gt;
+&lt;section&gt;
+  &lt;h2&gt;html format&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;How do we represent a
+      slideshow?&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>css reset</h2>
+
+      <ul class="c21">
+        <li>By default, everything looks bad</li>
+        <li>More importantly, everything looks bad differently</li>
+        <li>How do we make it our own version of bad?</li>
+        <hr />
+        <li>But what about columns…</li>
+      </ul>
+
+      <pre class="c22"><code class="language-css">* {
+  box-sizing:border-box;
+  padding:0px;
+  margin:0px;
+}
+table {
+  border-collapse:collapse;
+}
+a {
+  text-decoration:none;
+}
+html {
+  font:14pt Sarala;
+  color:#eeeeee;
+  background-color:#222222;
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>css grid</h2>
+
+      <ul class="c31">
+        <li>Enter <code>display:grid</code></li>
+        <li>Makes it very easy to design reactive websites</li>
+        <li>Similar to <code>table</code> or <code>display:flex</code></li>
+      </ul>
+
+      <pre class="c32"><code class="language-css">section {
+  display:grid;
+  gap:16px;
+  grid-template:
+    "hed hed hed hed hed hed" auto
+    "nop c11 c11 c11 c11 emp" auto
+    "nop c21 c21 c22 c22 emp" auto
+    "c31 c31 c32 c32 c33 c33" auto
+   / 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+section > * {
+  grid-area:c11;
+}
+section > h2 {
+  grid-area:hed;
+  text-align:center;
+}</code></pre>
+      <pre class="c33"><code class="language-css">*.c21 { grid-area:c21; }
+*.c22 { grid-area:c22; }
+*.c31 { grid-area:c31; }
+*.c32 { grid-area:c32; }
+*.c33 { grid-area:c33; }</code></pre>
+    </section>
+
+    <section>
+      <h2>other things</h2>
+
+      <ul>
+        <h3>two options for syntax highlighting</h3>
+        <li>Write a syntax highlighter yourself and add support for every
+          language you want to use</li>
+        <li>Download a cursed 'dependency'
+          (<a href="https://prismjs.com/" title="https://prismjs.com/" target="_blank">prism.js</a>)</li>
+        <pre><code class="language-html">&lt;link type="text/css" rel="stylesheet" href="./deps/prism-tomorrow-night.min.css" /&gt;
+&lt;script type="text/javascript" src="./deps/prism.min.js" defer=""&gt;&lt;/script&gt;</code></pre>
+        <hr />
+        <h3>adding custom fonts</h3>
+        <li>Download a <code>.TTF</code>, <code>.OTF</code>, or
+          <code>.WOFF</code> file</li>
+        <li>Initialize it in CSS</li>
+        <pre><code class="language-css">@font-face {
+  font-family:Sarala;
+  src:url('./fonts/Sarala-Regular.ttf');
+}</code></pre>
+      </ul>
+    </section>
+
+    <section>
+      <h2>no one wants to see the whole slideshow at once!</h2>
+
+      <ul class="c21">
+        <li>By default, hide all the <code>header</code>, <code>section</code>,
+          and <code>footer</code> elements in CSS</li>
+        <pre><code class="language-css">header, section, footer {
+  display:none;
+}
+*[data-open] {
+  display:grid;
+}</code></pre>
+        <li>Add some event listeners to your HTML:</li>
+        <pre><code class="language-html">&lt;body onload="changeSlide()"
+      onclick="changeSlide()"
+      onkeydown="changeSlide(event)"&gt;
+&lt;/body&gt;</code></pre>
+        <li>Commit some javascript</li>
+      </ul>
+
+      <pre class="c22"><code class="language-js">function changeSlide(event) {
+  if (!event) {
+    nextSlide();
+  } else {
+    switch (event.keyCode) {
+      case 32:  // Space.
+      case 39:  // Left.
+      case 74:  // j.
+        nextSlide();
+        break;
+      case 8:   // Backspace.
+      case 37:  // Right.
+      case 75:  // k.
+        prevSlide();
+    }
+  }
+}</code></pre>
+    </section>
+
+    <footer>
+      <h1>and that's it!</h1>
+      <h2>you're done!</h2>
+      Congratulations!
+      <br />
+      <small>hooray!</small>
+    </footer>
+
+    <script>
+      let slides = document.querySelectorAll('header, section, footer');
+      let nextInQueue = 0;
+
+      function changeSlide(event) {
+        if (event &amp;&amp; event.type === 'keydown') {
+          switch (event.keyCode) {
+            case 32:  // Space.
+            case 39:  // Left.
+            case 40:  // Down.
+            case 74:  // j.
+            case 76:  // l.
+            case 78:  // n.
+              nextSlide();
+              break;
+            case 8:  // Backspace.
+            case 37:  // Right.
+            case 38:  // Up.
+            case 72:  // h.
+            case 75:  // k.
+            case 80:  // p.
+              prevSlide();
+          }
+        } else if (event &amp;&amp; event.type === 'wheel') {
+          if (event.deltaY > 0) {  // Scroll down.
+            nextSlide();
+          } else {  // Scroll up.
+            prevSlide();
+          }
+        } else {
+          nextSlide();
+        }
+      }
+
+      function nextSlide() {
+        if (nextInQueue === slides.length) return;
+        if (nextInQueue > 0) slides[nextInQueue - 1].removeAttribute('data-open');
+        slides[nextInQueue++].setAttribute('data-open', '');
+      }
+
+      function prevSlide() {
+        if (nextInQueue === 1) return;
+        slides[--nextInQueue - 1].setAttribute('data-open', '');
+        slides[nextInQueue].removeAttribute('data-open');
+      }
+    </script>
+  </body>
+</html>
