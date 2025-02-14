@@ -2,7 +2,7 @@ const namespace = 'http://www.w3.org/2000/svg';
 
 const stroke = '#222';
 const strokeLight = '#ccc';
-const strokeWidth = '2';
+const strokeWidth = 2;
 
 const padding = 64;
 const textPad = 8;
@@ -37,6 +37,7 @@ function updateSVG () {
   xaxis.setAttribute ('y2', center);
   xaxis.setAttribute ('stroke', strokeLight);
   xaxis.setAttribute ('stroke-width', strokeWidth / 2);
+  xaxis.setAttribute ('stroke-linecap', 'round');
 
   const yaxis = document.createElementNS (namespace, 'line');
   yaxis.setAttribute ('x1', center);
@@ -45,6 +46,7 @@ function updateSVG () {
   yaxis.setAttribute ('y2', center + radius);
   yaxis.setAttribute ('stroke', strokeLight);
   yaxis.setAttribute ('stroke-width', strokeWidth / 2);
+  yaxis.setAttribute ('stroke-linecap', 'round');
 
   svg.appendChild (xaxis);
   svg.appendChild (yaxis);
@@ -98,6 +100,7 @@ function updateSVG () {
     line.setAttribute ('y2', y2);
     line.setAttribute ('stroke', colors[colorIndex]);
     line.setAttribute ('stroke-width', strokeWidth);
+    line.setAttribute ('stroke-linecap', 'round');
 
     const text = document.createElementNS (namespace, 'text');
     text.setAttribute ('x', x2 + ((vector.x > 0) ? textPad : -textPad));
