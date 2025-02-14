@@ -134,7 +134,7 @@
       const strokeWidth = '2';
 
       const padding = 64;
-      const textPadd = 16;
+      const textPadd = 8;
 
       const colors = [
         '#cc4444',
@@ -252,6 +252,7 @@
         const dummyLink = document.createElement ('a');
 
         dummyLink.download = 'phasor-diagram.svg';
+        dummyLink.target = '_blank';
         dummyLink.href = 'data:image/svg+xml;base64,' + encoding;
         dummyLink.dispatchEvent (new MouseEvent ('click'));
       }
