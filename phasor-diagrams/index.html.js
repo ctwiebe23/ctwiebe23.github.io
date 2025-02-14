@@ -13,7 +13,7 @@ const colors = [
   '#4444cc',
   '#44cccc',
   '#cccc44',
-  '#cc44cc'
+  '#cc44cc',
 ];
 
 function updateSVG () {
