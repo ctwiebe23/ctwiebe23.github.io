@@ -196,8 +196,9 @@
 
         var maxMag = 0;
         const vectors = vectorInput.map ((str) => {
-          const [name, mag, ang] = str.split (/[=]|[@]/, 3)
-                                      .map ((s) => s.trim ());
+          const [name, mag, ang] = str.split (/[=]|[:]|[@]|[∠]/, 3)
+                                      .map ((s) => s.replace ('°', '')
+                                                    .trim ());
 
           if (isNaN (mag) || isNaN (ang)) {
             return { name: name, x: 0, y: 0 };
