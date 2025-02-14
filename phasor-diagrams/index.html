@@ -5,7 +5,7 @@
 
     <title>Generate Phasor Diagrams</title>
     <meta name="author" content="Carston Wiebe" />
-    <meta name="description" content="Website to generate phasor diagrams using SVGs." />
+    <meta name="description" content="Generate phasor diagrams using SVGs." />
     <meta name="color-scheme" content="light" />
 
     <style>
@@ -54,6 +54,8 @@
 
       header {
         grid-area:head;
+
+        border-bottom:1px solid #222;
       }
 
       main {
@@ -73,6 +75,8 @@
         font-size:0.8rem;
 
         grid-area:foot;
+
+        border-top:1px solid #222;
       }
 
       h1, p {
@@ -198,14 +202,15 @@
         const vectors = vectorInput.map ((str) => {
           const [name, mag, ang] = str.split (/[=]|[:]|[@]|[∠]/, 3)
                                       .map ((s) => s.replace ('°', '')
-                                                    .trim ());
+                                                    .trim ())
+                                      .map ((s) => (isNaN (s)) ? s : +s);
 
           if (isNaN (mag) || isNaN (ang)) {
             return { name: name, x: 0, y: 0 };
           }
 
-          if (mag > maxMag) {
-            maxMag = mag;
+          if (Math.abs (mag) > maxMag) {
+            maxMag = Math.abs (mag);
           }
 
           const x = mag * Math.cos (ang * Math.PI / 180);
@@ -229,8 +234,8 @@
           line.setAttribute ('stroke-width', strokeWidth);
 
           const text = document.createElementNS (namespace, 'text');
-          text.setAttribute ('x', x2 + ((x2 > 0) ? textPadd : -textPadd));
-          text.setAttribute ('y', y2 + ((y2 > 0) ? textPadd : -textPadd));
+          text.setAttribute ('x', x2 + ((vector.x > 0) ? textPadd : -textPadd));
+          text.setAttribute ('y', y2 + ((vector.y > 0) ? textPadd : -textPadd));
           text.setAttribute ('fill', colors[colorIndex]);
           text.textContent = vector.name;
 
