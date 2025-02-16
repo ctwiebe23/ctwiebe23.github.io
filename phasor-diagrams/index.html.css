@@ -92,6 +92,7 @@ button, textarea {
 
 textarea {
   width:100%;
+  resize:vertical;
 }
 
 button:hover {
