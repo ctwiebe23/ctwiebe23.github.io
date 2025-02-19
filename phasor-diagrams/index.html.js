@@ -103,8 +103,8 @@ function updateSVG () {
     line.setAttribute ('stroke-linecap', 'round');
 
     const text = document.createElementNS (namespace, 'text');
-    text.setAttribute ('x', x2 + ((vector.x > 0) ? textPad : -textPad));
-    text.setAttribute ('y', y2 + ((vector.y > 0) ? textPad : -textPad));
+    text.setAttribute ('x', x2 + ((vector.x > 0) ? textPad : -textPad * 2));
+    text.setAttribute ('y', y2 + ((vector.y > 0) ? -textPad : textPad * 2));
     text.setAttribute ('fill', colors[colorIndex]);
     text.textContent = vector.name;
 
