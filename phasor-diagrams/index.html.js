@@ -69,9 +69,9 @@ function updateSVG () {
   var maxMag = 0;
   const vectors = vectorInput.map ((str) => {
     const [name, mag, ang] = str.split (/[=]|[:]|[@]|[∠]/, 3)
-                                .map ((s) => s.replace ('°', '')
+                                .map ((s) => s.replace (/°|\[.*\]/g, '')
                                               .trim ())
-                                .map ((s) => (isNaN (s)) ? s : +s);
+                                .map (parseFragment);
 
     if (isNaN (mag) || isNaN (ang)) {
       return { name: name, x: 0, y: 0 };
@@ -128,4 +128,14 @@ function downloadSVG () {
   dummyLink.target = '_blank';
   dummyLink.href = 'data:image/svg+xml;base64,' + encoding;
   dummyLink.dispatchEvent (new MouseEvent ('click'));
+}
+
+function parseFragment (frag) {
+  if (frag.substring (0, 1) == '−') {
+    return -1 * Number (frag.substring (1, frag.length));
+  } else if (isNaN (frag)) {
+    return frag;
+  } else {
+    return Number (frag);
+  }
 }
