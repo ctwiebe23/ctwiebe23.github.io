@@ -29,6 +29,23 @@ Vr: 4.31∠60°
 Vx : 12.0 ∠ -20"
                 onchange="updateSVG ()"
                 onkeypress="updateSVG ()"></textarea>
+
+      <fieldset>
+        <input id="labels"
+               type="checkbox"
+               checked=""
+               onchange="updateSVG ()" />
+        <label for="labels">Show labels</label>
+
+        <br />
+
+        <input id="colors"
+               type="checkbox"
+               checked=""
+               onchange="updateSVG ()" />
+        <label for="colors">Use color</label>
+      </fieldset>
+
       <button onclick="downloadSVG ()">
         Download SVG
       </button>
