@@ -2,12 +2,13 @@ const namespace = 'http://www.w3.org/2000/svg';
 
 const stroke = '#222';
 const strokeLight = '#ccc';
-const strokeWidth = 2;
+const strokeWidth = 3;
 
 const padding = 64;
 const textPad = 8;
 
 const colors = [
+  '#222222',
   '#cc4444',
   '#44cc44',
   '#4444cc',
@@ -61,15 +62,16 @@ function updateSVG () {
 
   svg.appendChild (circle);
 
-  const vectorInput = input.value
-                           .split ('\n')
-                           .map ((s) => s.trim ())
-                           .filter ((s) => s);
+  const vectorInput = document.getElementById('input')
+                              .value
+                              .split ('\n')
+                              .map ((s) => s.trim ())
+                              .filter ((s) => s);
 
   var maxMag = 0;
   const vectors = vectorInput.map ((str) => {
     const [name, mag, ang] = str.split (/[=]|[:]|[@]|[∠]/, 3)
-                                .map ((s) => s.replace (/°|\[.*\]/g, '')
+                                .map ((s) => s.replace (/°|\[.*\]|[()]/g, '')
                                               .trim ())
                                 .map (parseFragment);
 
@@ -88,6 +90,8 @@ function updateSVG () {
   });
 
   const scale = (maxMag) ? radius / maxMag : 0;
+  const shouldLabel = document.getElementById ('labels').checked;
+  const shouldColor = document.getElementById ('colors').checked;
 
   vectors.forEach ((vector) => {
     const x2 = center + vector.x * scale;
@@ -102,19 +106,24 @@ function updateSVG () {
     line.setAttribute ('stroke-width', strokeWidth);
     line.setAttribute ('stroke-linecap', 'round');
 
-    const text = document.createElementNS (namespace, 'text');
-    text.setAttribute ('x', x2 + ((vector.x > 0) ? textPad : -textPad * 2));
-    text.setAttribute ('y', y2 + ((vector.y > 0) ? -textPad : textPad * 2));
-    text.setAttribute ('fill', colors[colorIndex]);
-    text.textContent = vector.name;
+    svg.appendChild (line);
 
-    colorIndex++;
-    if (colorIndex == colors.length) {
-      colorIndex = 0;
+    if (shouldLabel) {
+      const text = document.createElementNS (namespace, 'text');
+      text.setAttribute ('x', x2 + ((vector.x > 0) ? textPad : -textPad * 2));
+      text.setAttribute ('y', y2 + ((vector.y > 0) ? -textPad : textPad * 2));
+      text.setAttribute ('fill', colors[colorIndex]);
+      text.textContent = vector.name;
+
+      svg.appendChild (text);
     }
 
-    svg.appendChild (line);
-    svg.appendChild (text);
+    if (shouldColor) {
+      colorIndex++;
+      if (colorIndex == colors.length) {
+        colorIndex = 0;
+      }
+    }
   });
 
   diagram.appendChild (svg);

@@ -6,7 +6,7 @@
 }
 
 html {
-  font:14pt Helvetica, Arial, sans-serif;
+  font:12pt Helvetica, Arial, sans-serif;
   color:#222;
   background-color:#fff;
   hyphens:auto;
@@ -77,16 +77,12 @@ h1 {
   text-align:center;
 }
 
-label {
+button, textarea, fieldset {
   display:block;
-
-  text-align:center;
-}
-
-button, textarea {
   border:1px solid #222;
   border-radius:4px;
   padding:4px 8px;
+  margin:4px 0px;
   background:none;
 }
 
