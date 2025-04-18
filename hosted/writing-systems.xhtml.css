@@ -71,8 +71,8 @@ footer li {
   white-space:nowrap;
 }
 
-section {
-  margin-bottom:8rem;
+section > h1, section > h2 {
+  margin-top:8rem;
 }
 
 section > h1::before {
@@ -124,6 +124,7 @@ a.source:empty::after {
 
 figure {
   margin-block:2rem;
+  text-align:center;
 }
 
 figcaption {
@@ -152,7 +153,17 @@ dd {
   margin-left:4ch;
 }
 
+aside {
+  background:var(--bg2);
+  border-radius:1rem;
+  padding:1rem;
+}
+
 @media print {
+  html {
+    font-size:11pt;
+  }
+
   body {
     padding:0;
     margin:0;
@@ -162,6 +173,9 @@ dd {
     width:8.5in;
     height:11in;
     padding:0.5in;
+  }
+
+  section > h1, section > h2 {
     margin:0;
   }
 
