@@ -8,6 +8,7 @@
 html {
   --text:#000;
   --bg:#fff;
+  --bg2:#ddd;
   --red:#c44;
   --green:#4c4;
   --blue:#44c;
@@ -16,11 +17,13 @@ html {
   --magenta:#c4c;
   --primary:#67c;
   --font:sans-serif;
+  --padd:0.5rem;
   color:var(--text);
   background:var(--bg);
   font:13pt var(--font);
   hyphens:auto;
   line-height:1.5;
+  counter-reset:figure section subsection;
 }
 
 body {
@@ -38,6 +41,7 @@ body {
 
 header {
   grid-area:head;
+  min-height:100vh;
 }
 
 header h1 {
@@ -67,8 +71,20 @@ footer li {
   white-space:nowrap;
 }
 
-header, section {
-  min-height:100vh;
+section {
+  margin-bottom:8rem;
+}
+
+section > h1::before {
+  content:'§'counter(section);
+  counter-increment:section;
+  padding-right:1rem;
+}
+
+section > h2::before {
+  content:'§'counter(section)'.'counter(subsection);
+  counter-increment:subsection;
+  padding-right:1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -76,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6, p, li {
-  margin-block:0.5rem;
+  margin-block:var(--padd);
 }
 
 li {
@@ -86,10 +102,11 @@ li {
 blockquote {
   padding-left:1rem;
   border-left:0.3rem solid currentcolor;
+  margin-block:1rem;
 }
 
 blockquote p.speaker::before {
-  content:'—';
+  content:'— ';
 }
 
 a {
@@ -99,6 +116,40 @@ a {
 
 a:hover {
   color:var(--blue);
+}
+
+a.source:empty::after {
+  content:'(Source)';
+}
+
+figure {
+  margin-block:2rem;
+}
+
+figcaption {
+  max-width:90%;
+  width:fit-content;
+  margin:auto;
+  font-size:0.9rem;
+}
+
+figcaption::before {
+  content:'Figure 'counter(figure)':';
+  counter-increment:figure;
+}
+
+img {
+  max-width:100%;
+  margin-inline:auto;
+}
+
+dt {
+  font-weight:bold;
+  margin-top:var(--padd);
+}
+
+dd {
+  margin-left:4ch;
 }
 
 @media print {
@@ -111,6 +162,12 @@ a:hover {
     width:8.5in;
     height:11in;
     padding:0.5in;
+    margin:0;
+  }
+
+  figure {
+    width:4in;
+    margin:auto;
   }
 
   footer {
