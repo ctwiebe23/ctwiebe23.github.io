@@ -5,6 +5,11 @@
   animation:fadein 0.5s;
 }
 
+@page {
+  margin:0;
+  size:8.5in 11in;
+}
+
 html {
   --text:#000;
   --bg:#fff;
