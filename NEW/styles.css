@@ -118,6 +118,10 @@ ul, ol {
   margin-left:4ch;
 }
 
+p {
+  margin-block:8px;
+}
+
 inline-list {
   list-style:none;
 }
@@ -169,6 +173,7 @@ button {
   color:var(--fg);
   background:var(--bg-faded);
   font-family:var(--font-family);
+  font-size:0.9rem;
 }
 
 button:hover {
@@ -216,7 +221,7 @@ img.round-edges {
 
 prj-profile {
   display:block;
-  margin:16px;
+  margin:32px 16px;
 }
 
 prj-name {
