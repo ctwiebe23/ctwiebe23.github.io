@@ -12,7 +12,7 @@ projects:
         show: Github
     desc: |
       Command line program that combines template files and structured data to
-      produce filled templates.  It built the page you're looking at write now!
+      produce filled templates.  It built the page you're looking at right now!
 
   - name: M-DOT
     featured: true
