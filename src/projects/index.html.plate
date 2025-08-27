@@ -1,0 +1,39 @@
+<section>
+  <h1>My projects</h1>
+  <section>
+    <h2>Programs</h2>
+    ##projects{{##[type.cli]{{
+      <project-profile>
+        <project-name>##name##</project-name>
+        <project-tagline>##tagline##</project-tagline>
+        <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
+        <project-lang>##lang##</project-lang>
+        <project-desc><p>##desc##</p></project-desc>
+      </project-profile>
+    }}}}
+  </section>
+  <section>
+    <h2>Hardware</h2>
+    ##projects{{##[type.hardware]{{
+      <project-profile>
+        <project-name>##name##</project-name>
+        <project-tagline>##tagline##</project-tagline>
+        <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
+        <project-lang>##lang##</project-lang>
+        <project-desc><p>##desc##</p></project-desc>
+      </project-profile>
+    }}}}
+  </section>
+  <section>
+    <h2>Sites</h2>
+    ##projects{{##[type.website]{{
+      <project-profile>
+        <project-name>##name##</project-name>
+        <project-tagline>##tagline##</project-tagline>
+        <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
+        <project-lang>##lang##</project-lang>
+        <project-desc><p>##desc##</p></project-desc>
+      </project-profile>
+    }}}}
+  </section>
+</section>

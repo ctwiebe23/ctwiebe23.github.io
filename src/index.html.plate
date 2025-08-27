@@ -1,0 +1,46 @@
+<section>
+  <h1>Hello!</h1>
+  <personal-profile>
+    <personal-desc>
+      <p>
+        My name is Carston Wiebe, and I am a university student majoring in
+        both Computer and Electrical Engineering.  I also enjoy web
+        development, languages (for computers or for humans), fiction
+        stories, video games, and occasionally art.
+      </p>
+      <p>
+        You can email me at
+        <a href="mailto:ctwiebe23@gmail.com">ctwiebe23@gmail.com</a> if you want
+        to reach out, and my résumé can be seen
+        <a href="https://resume.carston.zip">here</a>.
+        Some other places you might find me include
+        <a href="https://github.com/ctwiebe23">Github</a> and
+        <a href="https://www.linkedin.com/in/carston-wiebe">LinkedIn</a>.
+      </p>
+    </personal-desc>
+    <figure>
+      <img src="/images/400x400_profile-photo.JPG"
+           alt="A photograph of me."
+           title="A photograph of me."
+           width="200"
+           />
+      <figcaption>
+        A photograph of me.
+      </figcaption>
+    </figure>
+  </personal-profile>
+</section>
+
+<section>
+  <h1>Featured projects</h1>
+  ##projects{{##[featured]{{
+    <project-profile>
+      <project-name>##name##</project-name>
+      <project-tagline>##tagline##</project-tagline>
+      <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
+      <project-lang>##lang##</project-lang>
+      <project-desc><p>##desc##</p></project-desc>
+    </project-profile>
+  }}}}
+  <p><a href="/projects" target="_self">View all projects</a></p>
+</section>
