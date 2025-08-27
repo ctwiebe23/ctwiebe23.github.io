@@ -207,7 +207,7 @@ resources:
       Web-book about typography and styling text.
 
   - name: How to Write Mathematics
-    href: https://ctwiebe23.github.io/hosted/pdf/HalmosHowToWriteMath.pdf
+    href: https://faculty.washington.edu/heagerty/Courses/b572/public/HalmosHowToWrite.pdf
     type:
       website: true
     desc: |
