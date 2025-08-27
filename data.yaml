@@ -1,0 +1,215 @@
+projects:
+  - name: kera
+    featured: false
+    type:
+      cli: true
+    tagline: Fill template files
+    lang: Python
+    links:
+      - href: /kera
+        show: Site
+      - href: https://github.com/ctwiebe23/kera
+        show: Github
+    desc: |
+      Command line program that combines template files and structured data to
+      produce filled templates.  It built the page you're looking at write now!
+
+  - name: M-DOT
+    featured: true
+    type:
+      hardware: true
+    tagline: Maze-navigating robot car
+    lang: C
+    links:
+      - href: https://github.com/ctwiebe23/m-dot
+        show: Github
+    desc: |
+      Robot car built using an Arduino UNO, hobby motors, an ultrasonic sensor,
+      and an IR receiver.  Does not use any Arduino libraries — rather, it is
+      programmed using a custom library that directly uses the ATmega328P
+      registers.
+
+  - name: My résumé
+    featured: true
+    type:
+      website: true
+    tagline: Printable website
+    lang: HTML, CSS
+    links:
+      - href: https://carstonwiebe17.github.io
+        show: Site
+      - href: https://github.com/carstonwiebe17/carstonwiebe17.github.io
+        show: Github
+    desc: |
+      My web-based résumé, created using plain HTML and CSS.  Uses different
+      styles when displayed in-browser versus when printed.
+
+  - name: os2g.github.io
+    featured: true
+    type:
+      website: true
+    tagline: Club website for OS2G
+    lang: HTML, CSS, Python
+    links:
+      - href: https://os2g.github.io
+        show: Site
+      - href: https://github.com/os2g/os2g.github.io
+        show: Github
+    desc: |
+      Club website built for the Operating Systems &amp; Open Source Group.
+      JavaScript-less and generated using a custom Python SSG.
+
+  - name: My homepage
+    featured: false
+    type:
+      website: true
+    tagline: This site right here!
+    lang: HTML, CSS
+    links:
+      - href: /
+        show: Site
+      - href: https://github.com/ctwiebe23/ctwiebe23.github.io
+        show: Github
+    desc: |
+      Simple webpage hosting some information about me and collecting all my
+      links in the same place.
+
+  - name: Websocket pertubation &amp; response
+    featured: false
+    type:
+      website: true
+    tagline: Probe websockets
+    lang: HTML, CSS, JavaScript
+    links:
+      - href: /perturb-and-resp
+        show: Site
+      - href: https://github.com/ctwiebe23/perturb-and-resp
+        show: Github
+    desc: |
+      Webform created using
+      <a href="https://www.npmjs.com/package/ellipsi">Ellipsi</a> that
+      lets you connect to a websocket and exchange messages.
+
+  - name: Phasor diagrams
+    featured: false
+    type:
+      website: true
+    tagline: Generate circuit phasor diagrams
+    lang: HTML, CSS, JavaScript
+    links:
+      - href: /phasor-diagrams
+        show: Site
+      - href: https://github.com/ctwiebe23/phasor-diagrams
+        show: Github
+    desc: |
+      Created for my circuits class after I spent much too time making
+      computer-generated phasor diagrams.  Takes a bunch of phasors and graphs
+      them together.
+
+  - name: HTML slideshow
+    featured: false
+    type:
+      website: true
+    tagline: Microtalk for <a href="https://os2g.github.io">OS2G</a>
+    lang: HTML, CSS, JavaScript
+    links:
+      - href: /html-slideshow
+        show: Site
+      - href: https://github.com/ctwiebe23/html-slideshow
+        show: Github
+    desc: |
+      Made for a microtalk I gave at a meeting of the Operating Systems &amp;
+      Open Source Group.  Demonstrates the creation of a slideshow using
+      standard web languages.
+
+  - name: M'TAG
+    featured: false
+    type:
+      cli: true
+    tagline: Tag audio files based on filenames
+    lang: Clojure
+    links:
+      - href: https://github.com/ctwiebe23/m-tag
+        show: Github
+    desc: |
+      Command line program that uses <a
+      href="https://github.com/RouHim/jaudiotagger">JAudioTagger</a> to bulk
+      re-tag audio files by matching their filenames against patterns using
+      regular expressions.
+
+  - name: The Last Question
+    featured: false
+    type:
+      website: true
+    tagline: Short story by Isaac Asimov
+    lang: HTML, CSS
+    links:
+      - href: /the-last-question
+        show: Site
+      - href: https://github.com/ctwiebe23/the-last-question
+        show: Github
+    desc: |
+      Thrown together in an angry haze after someone shared a link to this
+      short story with the worst typesetting imaginable.  I was forced to
+      download the original page and rewrite it with better styling before I
+      could read the story.
+
+resources:
+  - name: just
+    href: https://github.com/casey/just
+    type:
+      cli: true
+    desc: |
+      Project-level aliases; language-agnostic makefile.  Allows you to easily shortcut
+      commands.
+
+  - name: watchexec
+    href: https://github.com/watchexec/watchexec
+    type:
+      cli: true
+    desc: |
+      Execute commands when files are changed.
+
+  - name: Music Player Daemon
+    href: https://www.musicpd.org/
+    type:
+      cli: true
+    desc: |
+      Stream music on a home network.
+
+  - name: rmpc
+    href: https://mierak.github.io/rmpc/
+    type:
+      cli: true
+    desc: |
+      Connect to an instance of the Music Player Daemon through the terminal.
+
+  - name: OBS
+    href: https://obsproject.com/
+    type:
+      desktop: true
+    desc: |
+      Screen recording and video streaming.  Great for recording slideshow
+      presentations and the like.
+
+  - name: PixiEditor
+    href: https://pixieditor.net/
+    type:
+      desktop: true
+    desc: |
+      Free 2d art program with impressive capabilities.
+
+  - name: Butterick's Practical Typography
+    href: https://practicaltypography.com/
+    type:
+      website: true
+    desc: |
+      Web-book about typography and styling text.
+
+  - name: How to Write Mathematics
+    href: https://ctwiebe23.github.io/hosted/pdf/HalmosHowToWriteMath.pdf
+    type:
+      website: true
+    desc: |
+      Essay on how to write math, how to write technical, and how to write in
+      general.

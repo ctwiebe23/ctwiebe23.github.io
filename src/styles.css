@@ -5,9 +5,9 @@
 }
 
 :root {
-  --fg:light-dark(#424, #eef);
+  --fg:light-dark(#324, #eef);
   --bg:light-dark(#fff, #223);
-  --primary:light-dark(#727, #69f);
+  --primary:light-dark(#a27, #69f);
   --fg-faded:light-dark(#867, #99a);
   --bg-faded:light-dark(#ede, #445);
   --font:sans-serif;
@@ -58,6 +58,15 @@ header h1 span {
   animation:sparkle 0.3s;
 }
 
+header h1 a {
+  color:var(--primary);
+  text-decoration:none;
+}
+
+header h1 a:hover::after {
+  content:none;
+}
+
 header h2 {
   border:none;
   color:var(--fg-faded);
@@ -98,6 +107,7 @@ footer {
   font-size:0.8rem;
   width:fit-content;
   margin-inline:auto;
+  padding-top:64px;
 }
 
 @media (width > 900px) {
@@ -134,8 +144,12 @@ ul, ol {
   margin-left:4ch;
 }
 
-p {
-  margin-block:8px;
+p + p {
+  margin-top:16px;
+}
+
+ul > li, ol > li {
+  margin-top:16px;
 }
 
 @media (width > 900px) {
@@ -184,8 +198,8 @@ h2 {
   font-size:1.2rem;
   border-top:var(--rule) solid var(--bg-faded);
   padding-top:8px;
-  margin-top:8px;
-  margin-bottom:4px;
+  margin-top:16px;
+  margin-bottom:12px;
 }
 
 button {
@@ -209,13 +223,12 @@ button:active {
 }
 
 a {
-  color:var(--fg);
-  text-decoration:underline 1px solid var(--fg-faded);
+  color:var(--primary);
+  text-decoration:none;
 }
 
 a:hover {
   position:relative;
-  color:var(--primary);
 }
 
 a:hover::after {
@@ -227,6 +240,7 @@ a:hover::after {
   padding:4px 8px;
   border-radius:4px;
   background:var(--bg-faded);
+  font-weight:normal;
 }
 
 img {
