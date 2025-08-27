@@ -1,4 +1,4 @@
 # Carston's Homepage
 
-Personal homepage for Carston Wiebe.  Built with vanilla HTML & CSS, no
-scripts required.
+Personal homepage for Carston Wiebe.  Static site build using kera and composed
+of plain HTML and CSS — no JavaScript.
