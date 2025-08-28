@@ -6,11 +6,11 @@
 
 :root {
   --fg:light-dark(#324, #eef);
-  --bg:light-dark(#fff, #223);
+  --bg:light-dark(#fff, #222);
   --primary:light-dark(#a27, #69f);
-  --fg-faded:light-dark(#867, #99a);
+  --fg-faded:light-dark(#867, #889);
   --bg-faded:light-dark(#ede, #445);
-  --font:sans-serif;
+  --font:KohSantepheap, serif;
   --rule:2px;
 
   font:13pt / 1.5 var(--font);
@@ -54,7 +54,7 @@ header h1 {
 header h1 span {
   font-size:2rem;
   text-transform:uppercase;
-  letter-spacing:0.08em;
+  letter-spacing:0.1em;
   animation:sparkle 0.3s;
 }
 
@@ -317,4 +317,19 @@ personal-profile {
   0% {opacity:1;}
   50% {opacity:0.5;}
   100% {opacity:1;}
+}
+
+/* Fonts ------------------------------------------------------------------- */
+
+@font-face {
+  font-family:KohSantepheap;
+  src:url('./fonts/KohSantepheap-Regular.ttf');
+  font-display:swap;
+}
+
+@font-face {
+  font-family:KohSantepheap;
+  font-weight:bold;
+  src:url('./fonts/KohSantepheap-Bold.ttf');
+  font-display:swap;
 }
