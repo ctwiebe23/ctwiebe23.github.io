@@ -23,6 +23,8 @@ projects:
     links:
       - href: https://github.com/ctwiebe23/m-dot
         show: Github
+      - href: https://ctwiebe23.github.io/m-dot/out.pdf
+        show: Report
     desc: |
       Robot car built using an Arduino UNO, hobby motors, an ultrasonic sensor,
       and an IR receiver.  Does not use any Arduino libraries — rather, it is
