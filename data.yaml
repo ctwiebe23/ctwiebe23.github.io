@@ -1,12 +1,12 @@
 projects:
   - name: kera
-    featured: false
+    featured: true
     type:
       cli: true
     tagline: Fill template files
     lang: Python
     links:
-      - href: /kera
+      - href: https://ctwiebe23.github.io/kera
         show: Site
       - href: https://github.com/ctwiebe23/kera
         show: Github
@@ -19,7 +19,7 @@ projects:
     type:
       hardware: true
     tagline: Maze-navigating robot car
-    lang: C
+    lang: C++
     links:
       - href: https://github.com/ctwiebe23/m-dot
         show: Github
@@ -30,21 +30,6 @@ projects:
       and an IR receiver.  Does not use any Arduino libraries — rather, it is
       programmed using a custom library that directly uses the ATmega328P
       registers.
-
-  - name: My résumé
-    featured: true
-    type:
-      website: true
-    tagline: Printable website
-    lang: HTML, CSS
-    links:
-      - href: https://carstonwiebe17.github.io
-        show: Site
-      - href: https://github.com/carstonwiebe17/carstonwiebe17.github.io
-        show: Github
-    desc: |
-      My web-based résumé, created using plain HTML and CSS.  Uses different
-      styles when displayed in-browser versus when printed.
 
   - name: os2g.github.io
     featured: true
@@ -83,7 +68,7 @@ projects:
     tagline: Probe websockets
     lang: HTML, CSS, JavaScript
     links:
-      - href: /perturb-and-resp
+      - href: https://ctwiebe23.github.io/perturb-and-resp
         show: Site
       - href: https://github.com/ctwiebe23/perturb-and-resp
         show: Github
@@ -99,7 +84,7 @@ projects:
     tagline: Generate circuit phasor diagrams
     lang: HTML, CSS, JavaScript
     links:
-      - href: /phasor-diagrams
+      - href: https://ctwiebe23.github.io/phasor-diagrams
         show: Site
       - href: https://github.com/ctwiebe23/phasor-diagrams
         show: Github
@@ -115,7 +100,7 @@ projects:
     tagline: Microtalk for <a href="https://os2g.github.io">OS2G</a>
     lang: HTML, CSS, JavaScript
     links:
-      - href: /html-slideshow
+      - href: https://ctwiebe23.github.io/html-slideshow
         show: Site
       - href: https://github.com/ctwiebe23/html-slideshow
         show: Github
@@ -146,7 +131,7 @@ projects:
     tagline: Short story by Isaac Asimov
     lang: HTML, CSS
     links:
-      - href: /the-last-question
+      - href: https://ctwiebe23.github.io/the-last-question
         show: Site
       - href: https://github.com/ctwiebe23/the-last-question
         show: Github
