@@ -6,7 +6,7 @@ projects:
     tagline: Fill template files
     lang: Python
     links:
-      - href: https://ctwiebe23.github.io/kera
+      - href: /kera
         show: Site
       - href: https://github.com/ctwiebe23/kera
         show: Github
@@ -23,7 +23,7 @@ projects:
     links:
       - href: https://github.com/ctwiebe23/m-dot
         show: Github
-      - href: https://ctwiebe23.github.io/m-dot/out.pdf
+      - href: /m-dot/out.pdf
         show: Report
     desc: |
       Robot car built using an Arduino UNO, hobby motors, an ultrasonic sensor,
