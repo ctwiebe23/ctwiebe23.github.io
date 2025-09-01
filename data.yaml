@@ -141,6 +141,21 @@ projects:
       download the original page and rewrite it with better styling before I
       could read the story.
 
+  - name: rpcalc
+    featured: false
+    type:
+      cli: true
+    tagline: Reverse polish notation calculator
+    lang: Rust, BASH
+    links:
+      - href: https://ctwiebe23.github.io/rpcalc
+        show: Site
+      - href: https://github.com/ctwiebe23/rpcalc
+        show: Github
+    desc: |
+      Simple shell-based calculator made in BASH and Rust to let me quickly
+      run calculations on my computer.
+
 resources:
   - name: just
     href: https://github.com/casey/just
