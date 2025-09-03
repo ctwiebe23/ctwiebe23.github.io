@@ -156,14 +156,29 @@ projects:
       Simple shell-based calculator made in BASH and Rust to let me quickly
       run calculations on my computer.
 
+  - name: htag
+    featured: false
+    type:
+      cli: true
+    tagline: Create HTML in the shell
+    lang: C
+    links:
+      - href: https://ctwiebe23.github.io/htag
+        show: Site
+      - href: https://github.com/ctwiebe23/htag
+        show: Github
+    desc: |
+      Little C script that generates HTML tags in a BASH-friendly way.  Allows
+      adding attributes to the flags as well.
+
 resources:
   - name: just
     href: https://github.com/casey/just
     type:
       cli: true
     desc: |
-      Project-level aliases; language-agnostic makefile.  Allows you to easily shortcut
-      commands.
+      Project-level aliases; language-agnostic makefile.  Allows you to easily
+      shortcut commands.
 
   - name: watchexec
     href: https://github.com/watchexec/watchexec
