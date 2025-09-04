@@ -30,13 +30,13 @@
 <section>
   <h1>Featured projects</h1>
   ##projects{{##[featured]{{
-    <project-profile>
-      <project-name>##name##</project-name>
-      <project-tagline>##tagline##</project-tagline>
-      <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-      <project-lang>##lang##</project-lang>
-      <project-desc><p>##desc##</p></project-desc>
-    </project-profile>
+  <project-profile>
+    <project-name>##name##</project-name>
+    <project-tagline>##tagline##</project-tagline>
+    <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
+    <project-lang>##lang##</project-lang>
+    <project-desc><p>##desc##</p></project-desc>
+  </project-profile>
   }}}}
   <p><a href="/projects" target="_self">View all projects</a></p>
 </section>
