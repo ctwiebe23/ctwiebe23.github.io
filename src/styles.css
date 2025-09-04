@@ -5,11 +5,11 @@
 }
 
 :root {
-  --fg:light-dark(#324, #eef);
-  --bg:light-dark(#fff, #222);
-  --primary:light-dark(#a27, #69f);
-  --fg-faded:light-dark(#867, #889);
-  --bg-faded:light-dark(#ede, #445);
+  --fg:light-dark(#324, #e0e0e8);
+  --bg:light-dark(#fff, #1c1c1f);
+  --primary:light-dark(#c25, #69f);
+  --fg-faded:light-dark(#960, #8080b3);
+  --bg-faded:light-dark(#fde, #444460);
   --font:KohSantepheap, serif;
   --rule:2px;
 
@@ -205,7 +205,7 @@ h2 {
 button {
   border:var(--rule) solid var(--bg-faded);
   border-radius:4px;
-  padding:4px;
+  padding:4px 8px;
   color:var(--fg);
   background:var(--bg-faded);
   font-family:var(--font-family);
@@ -233,7 +233,7 @@ a:hover {
 
 a:hover::after {
   position:absolute;
-  top:1.2rem;
+  top:1.3rem;
   left:0;
   white-space:pre;
   content:attr(href);
@@ -241,6 +241,7 @@ a:hover::after {
   border-radius:4px;
   background:var(--bg-faded);
   font-weight:normal;
+  color:var(--fg);
 }
 
 img {

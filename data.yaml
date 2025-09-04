@@ -68,7 +68,7 @@ projects:
     tagline: Probe websockets
     lang: HTML, CSS, JavaScript
     links:
-      - href: https://ctwiebe23.github.io/perturb-and-resp
+      - href: /perturb-and-resp
         show: Site
       - href: https://github.com/ctwiebe23/perturb-and-resp
         show: Github
@@ -84,7 +84,7 @@ projects:
     tagline: Generate circuit phasor diagrams
     lang: HTML, CSS, JavaScript
     links:
-      - href: https://ctwiebe23.github.io/phasor-diagrams
+      - href: /phasor-diagrams
         show: Site
       - href: https://github.com/ctwiebe23/phasor-diagrams
         show: Github
@@ -100,7 +100,7 @@ projects:
     tagline: Microtalk for <a href="https://os2g.github.io">OS2G</a>
     lang: HTML, CSS, JavaScript
     links:
-      - href: https://ctwiebe23.github.io/html-slideshow
+      - href: /html-slideshow
         show: Site
       - href: https://github.com/ctwiebe23/html-slideshow
         show: Github
@@ -131,7 +131,7 @@ projects:
     tagline: Short story by Isaac Asimov
     lang: HTML, CSS
     links:
-      - href: https://ctwiebe23.github.io/the-last-question
+      - href: /the-last-question
         show: Site
       - href: https://github.com/ctwiebe23/the-last-question
         show: Github
@@ -148,7 +148,7 @@ projects:
     tagline: Reverse polish notation calculator
     lang: Rust, BASH
     links:
-      - href: https://ctwiebe23.github.io/rpcalc
+      - href: /rpcalc
         show: Site
       - href: https://github.com/ctwiebe23/rpcalc
         show: Github
@@ -163,7 +163,7 @@ projects:
     tagline: Create HTML in the shell
     lang: C
     links:
-      - href: https://ctwiebe23.github.io/htag
+      - href: /htag
         show: Site
       - href: https://github.com/ctwiebe23/htag
         show: Github
