@@ -5,7 +5,7 @@
 }
 
 :root {
-  --fg:light-dark(#324, #e0e0e8);
+  --fg:light-dark(#292222, #e0e0e8);
   --bg:light-dark(#fff, #1c1c1f);
   --primary:light-dark(#c25, #69f);
   --fg-faded:light-dark(#960, #8090b3);
