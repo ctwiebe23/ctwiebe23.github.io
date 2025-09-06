@@ -73,11 +73,11 @@ header h2 {
   margin-top:0;
 }
 
-/* C */ header h1 span:nth-child(1)  {animation-delay:calc(0  * var(--kf-offset) + var(--kf-delay));}
+/* C */ header h1 span:nth-child(1) {animation-delay:calc(0 * var(--kf-offset) + var(--kf-delay));}
 /* space */
-/* W */ header h1 span:nth-child(3)  {animation-delay:calc(1  * var(--kf-offset) + var(--kf-delay));}
-/* i */ header h1 span:nth-child(4) {animation-delay:calc(2  * var(--kf-offset) + var(--kf-delay));}
-/* e */ header h1 span:nth-child(5) {animation-delay:calc(3  * var(--kf-offset) + var(--kf-delay));}
+/* W */ header h1 span:nth-child(3) {animation-delay:calc(1 * var(--kf-offset) + var(--kf-delay));}
+/* i */ header h1 span:nth-child(4) {animation-delay:calc(2 * var(--kf-offset) + var(--kf-delay));}
+/* e */ header h1 span:nth-child(5) {animation-delay:calc(3 * var(--kf-offset) + var(--kf-delay));}
 /* b */ header h1 span:nth-child(6) {animation-delay:calc(4 * var(--kf-offset) + var(--kf-delay));}
 /* e */ header h1 span:nth-child(7) {animation-delay:calc(5 * var(--kf-offset) + var(--kf-delay));}
 

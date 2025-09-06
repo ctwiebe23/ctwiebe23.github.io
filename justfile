@@ -8,7 +8,7 @@ watch:
 
 # Removes the ./www directory
 clean:
-	[ -d ./www ] && rm -r ./www || true
+	[ ! -d ./www ] || rm -r ./www
 
 # starts a python server in ./www on 0.0.0.0:3040
 serve:

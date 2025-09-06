@@ -4,7 +4,7 @@
     <h2>Command line programs</h2>
     <ul>
       ##resources{{##[type.cli]{{
-        <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
+      <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
       }}}}
     </ul>
   </section>
@@ -12,7 +12,7 @@
     <h2>Desktop applications</h2>
     <ul>
       ##resources{{##[type.desktop]{{
-        <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
+      <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
       }}}}
     </ul>
   </section>
@@ -20,7 +20,7 @@
     <h2>Websites &amp; documents</h2>
     <ul>
       ##resources{{##[type.website]{{
-        <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
+      <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
       }}}}
     </ul>
   </section>

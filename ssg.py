@@ -16,6 +16,8 @@ RETCODE_OUTPUT_DIR_IS_FILE = 3
 RETCODE_NO_DATA = 4
 RETCODE_NAMING_CONFLICT = 5
 
+CHAR_ENCODING = "utf-8"
+
 if __name__ == "__main__":
     layout_path = Path("./layout.html")
     if not layout_path.is_file():
@@ -39,8 +41,8 @@ if __name__ == "__main__":
     if not output_dir_path.is_dir():
         output_dir_path.mkdir()
 
-    layout = layout_path.read_text(encoding="utf-8")
-    data = data_path.read_text(encoding="utf-8")
+    layout = layout_path.read_text(encoding=CHAR_ENCODING)
+    data = data_path.read_text(encoding=CHAR_ENCODING)
     data = yaml.safe_load(data)
 
     def copy_dir_and_process_html(dir_path: Path, dest_dir_path: Path):
@@ -62,16 +64,16 @@ if __name__ == "__main__":
                 copy_dir_and_process_html(path, dest_path)
             else: # handling a file
                 if path.match("*.html"):
-                    contents = path.read_text(encoding="utf-8")
+                    contents = path.read_text(encoding=CHAR_ENCODING)
                     page = layout.replace("##CONTENTS##", contents)
-                    dest_path.write_text(page)
+                    dest_path.write_text(page, encoding=CHAR_ENCODING)
                 elif path.match("*.plate"):
                     dest_path = dest_path.with_suffix("") # remove .plate suffix
-                    contents = path.read_text(encoding="utf-8")
+                    contents = path.read_text(encoding=CHAR_ENCODING)
                     generated = kera.process(contents, data)
                     if dest_path.match("*.html"):
                         generated = layout.replace("##CONTENTS##", generated)
-                    dest_path.write_text(generated)
+                    dest_path.write_text(generated, encoding=CHAR_ENCODING)
                 else:
                     shutil.copy(str(path), str(dest_path))
 
