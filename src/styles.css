@@ -105,7 +105,7 @@ footer {
 }
 
 @media (width > 900px) {
-  body{
+  body {
     grid-template:
       "head head" min-content
       "main nav" 1fr
