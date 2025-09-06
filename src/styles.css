@@ -94,7 +94,7 @@ nav h3 {
 
 main {
   grid-area:main;
-  animation:fadein 0.4s;
+  animation:fadein 0.5s;
 }
 
 footer {
