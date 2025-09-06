@@ -8,7 +8,7 @@
   --fg:light-dark(#292222, #e0e0e8);
   --bg:light-dark(#fff, #1c1c1f);
   --primary:light-dark(#c25, #69f);
-  --fg-faded:light-dark(#960, #8090b3);
+  --fg-faded:light-dark(#a71, #8090b3);
   --bg-faded:light-dark(#fde, #444460);
   --font:KohSantepheap, serif;
   --rule:2px;
@@ -35,7 +35,7 @@ body {
 }
 
 header {
-  --kf-offset:0.1s;
+  --kf-offset:0.12s;
   --kf-delay:2s;
   grid-area:head;
   text-align:center;
@@ -94,6 +94,7 @@ nav h3 {
 
 main {
   grid-area:main;
+  animation:fadein 0.4s;
 }
 
 footer {
@@ -212,7 +213,8 @@ button:hover {
 }
 
 button:active {
-  background:var(--fg);
+  border-color:var(--fg-faded);
+  background:var(--fg-faded);
   color:var(--bg);
 }
 
@@ -314,17 +316,22 @@ personal-profile {
   100% {opacity:1;}
 }
 
+@keyframes fadein {
+  from {opacity:0;}
+  to   {opacity:1;}
+}
+
 /* Fonts ------------------------------------------------------------------- */
 
 @font-face {
   font-family:KohSantepheap;
-  src:url('./fonts/KohSantepheap-Regular.ttf');
+  src:url('/fonts/KohSantepheap-Regular.ttf');
   font-display:swap;
 }
 
 @font-face {
   font-family:KohSantepheap;
   font-weight:bold;
-  src:url('./fonts/KohSantepheap-Bold.ttf');
+  src:url('/fonts/KohSantepheap-Bold.ttf');
   font-display:swap;
 }
