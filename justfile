@@ -9,6 +9,7 @@ watch:
 # Removes the ./www directory
 clean:
 	[ ! -d ./www ] || rm -r ./www
+	[ ! -d ./__pycache__ ] || rm -r ./__pycache__
 
 # starts a python server in ./www on 0.0.0.0:3040
 serve:
