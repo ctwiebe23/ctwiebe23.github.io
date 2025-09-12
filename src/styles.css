@@ -264,7 +264,13 @@ img + figcaption::before {
 
 project-profile {
   display:block;
-  margin:32px 16px;
+  margin-block:32px;
+}
+
+@media (width > 900px) {
+  project-profile {
+    margin-inline:16px;
+  }
 }
 
 project-name {
