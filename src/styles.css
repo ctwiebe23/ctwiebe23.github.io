@@ -226,6 +226,7 @@ a {
 
 a:hover {
   position:relative;
+  text-decoration:underline var(--rule) solid currentcolor;
 }
 
 a:hover::after {
