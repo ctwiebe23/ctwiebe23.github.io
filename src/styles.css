@@ -10,10 +10,10 @@
   --primary:light-dark(#c25, #69f);
   --fg-faded:light-dark(#a71, #8090b3);
   --bg-faded:light-dark(#fde, #444460);
-  --font:KohSantepheap, serif;
+  --font:Outfit, sans-serif;
   --rule:2px;
 
-  font:13pt / 1.5 var(--font);
+  font:15pt / 1.5 var(--font);
   hyphens:auto;
   color:var(--fg);
   background:var(--bg);
@@ -324,14 +324,14 @@ personal-profile {
 /* Fonts ------------------------------------------------------------------- */
 
 @font-face {
-  font-family:KohSantepheap;
-  src:url('/fonts/KohSantepheap-Regular.ttf');
-  font-display:swap;
+  font-family: Outfit;
+  src: url("/fonts/Outfit-Regular.ttf");
+  /* font-display:swap; */
 }
 
 @font-face {
-  font-family:KohSantepheap;
-  font-weight:bold;
-  src:url('/fonts/KohSantepheap-Bold.ttf');
-  font-display:swap;
+  font-family: Outfit;
+  src: url("/fonts/Outfit-Bold.ttf");
+  font-weight: bold;
+  /* font-display:swap; */
 }
