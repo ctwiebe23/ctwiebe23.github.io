@@ -169,7 +169,7 @@ projects:
         show: Github
     desc: |
       Little C script that generates HTML tags in a BASH-friendly way.  Allows
-      adding attributes to the flags as well.
+      adding attributes to the tags as well.
 
 resources:
   - name: just
