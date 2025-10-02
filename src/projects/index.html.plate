@@ -25,6 +25,18 @@
     }}}}
   </section>
   <section>
+    <h2>Libraries</h2>
+    ##projects{{##[type.lib]{{
+    <project-profile>
+      <project-name>##name##</project-name>
+      <project-tagline>##tagline##</project-tagline>
+      <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
+      <project-lang>##lang##</project-lang>
+      <project-desc><p>##desc##</p></project-desc>
+    </project-profile>
+    }}}}
+  </section>
+  <section>
     <h2>Sites</h2>
     ##projects{{##[type.website]{{
     <project-profile>
