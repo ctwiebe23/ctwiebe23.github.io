@@ -171,6 +171,21 @@ projects:
       Little C script that generates HTML tags in a BASH-friendly way.  Allows
       adding attributes to the tags as well.
 
+  - name: auttaja
+    featured: false
+    type:
+      lib: true
+    tagline: Personal JS helper library
+    lang: JavaScript
+    links:
+      - href: /auttaja
+        show: Site
+      - href: https://github.com/ctwiebe23/auttaja
+        show: Github
+    desc: |
+      Small collection of helper functions and classes that I use in personal
+      JavaScript projects.
+
 resources:
   - name: just
     href: https://github.com/casey/just
