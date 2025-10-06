@@ -14,6 +14,22 @@ projects:
       Command line program that combines template files and structured data to
       produce filled templates.  It built the page you're looking at right now!
 
+  - name: corre
+    featured: false
+    type:
+      cli: true
+    tagline: Execute shell scripts embedded in text
+    lang: Rust
+    links:
+      - href: /corre
+        show: Site
+      - href: https://github.com/ctwiebe23/corre
+        show: Github
+    desc: |
+      Command line program that executes shell scripts embedded in text files
+      and replaces them with there STDOUT results.  Shell scripts are marked by
+      delimiters.
+
   - name: M-DOT
     featured: true
     type:
