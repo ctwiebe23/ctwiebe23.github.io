@@ -20,6 +20,7 @@ projects:
       lib: true
     tagline: Simple HTML tag assembler
     lang: JavaScript
+    links:
       - href: /ellipsi
         show: Site
       - href: https://github.com/ctwiebe23/ellipsi
