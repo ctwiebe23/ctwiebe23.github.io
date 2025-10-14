@@ -63,7 +63,7 @@ projects:
       registers.
 
   - name: os2g.github.io
-    featured: true
+    featured: false
     type:
       website: true
     tagline: Club website for OS2G
@@ -139,6 +139,21 @@ projects:
       Made for a microtalk I gave at a meeting of the Operating Systems &amp;
       Open Source Group.  Demonstrates the creation of a slideshow using
       standard web languages.
+
+  - name: Sol Maps
+    featured: false
+    type:
+      website: true
+    tagline: Solar system map created during Cornhacks 2025
+    lang: HTML, CSS, JavaScript
+    links:
+      - href: https://cscheet2.github.io/cornhacks
+        show: Site
+      - href: https://github.com/cscheet2/cornhacks
+        show: Github
+    desc: |
+      Map of the solar system built using p5.js over the course of 24 hours for
+      Cornhacks 2025.  Created with Cale Sigerson and Raegan Scheet.
 
   - name: M'TAG
     featured: false
