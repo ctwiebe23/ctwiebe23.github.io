@@ -17,9 +17,9 @@
     </ul>
   </section>
   <section>
-    <h2>Websites &amp; documents</h2>
+    <h2>Writing advice</h2>
     <ul>
-      ##resources{{##[type.website]{{
+      ##resources{{##[type.writing]{{
       <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
       }}}}
     </ul>

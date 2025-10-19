@@ -13,7 +13,7 @@
   --font:Outfit, sans-serif;
   --rule:2px;
 
-  font:15pt / 1.5 var(--font);
+  font:14pt / 1.5 var(--font);
   hyphens:auto;
   color:var(--fg);
   background:var(--bg);
@@ -63,7 +63,7 @@ header h1 a {
   text-decoration:none;
 }
 
-header h1 a:hover::after {
+header h1 a:hover::before, header h1 a::after {
   content:none;
 }
 
@@ -220,15 +220,21 @@ button:active {
 }
 
 a {
-  color:var(--primary);
+  color:var(--fg);
   text-decoration:none;
+}
+
+a::after {
+  content:'°';
+  color:var(--primary);
 }
 
 a:hover {
   position:relative;
+  text-decoration:underline var(--rule) solid var(--primary);
 }
 
-a:hover::after {
+a:hover::before {
   position:absolute;
   top:1.3rem;
   left:0;

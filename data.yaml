@@ -280,14 +280,14 @@ resources:
   - name: Butterick's Practical Typography
     href: https://practicaltypography.com/
     type:
-      website: true
+      writing: true
     desc: |
       Web-book about typography and styling text.
 
   - name: How to Write Mathematics
     href: https://faculty.washington.edu/heagerty/Courses/b572/public/HalmosHowToWrite.pdf
     type:
-      website: true
+      writing: true
     desc: |
       Essay on how to write math, how to write technical, and how to write in
       general.
