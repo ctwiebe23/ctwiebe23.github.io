@@ -13,7 +13,7 @@
   --font:Outfit, sans-serif;
   --rule:2px;
 
-  font:14pt / 1.5 var(--font);
+  font:14pt / 1.4 var(--font);
   hyphens:auto;
   color:var(--fg);
   background:var(--bg);
@@ -23,7 +23,7 @@
 body {
   max-width:900px;
   min-height:100vh;
-  padding:24px;
+  padding:16px;
   margin-inline:auto;
   display:grid;
   grid-template:
@@ -137,7 +137,7 @@ footer {
 /* Element ----------------------------------------------------------------- */
 
 ul, ol {
-  margin-left:4ch;
+  margin-left:3ch;
 }
 
 p + p {

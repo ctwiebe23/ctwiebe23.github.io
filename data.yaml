@@ -45,7 +45,7 @@ projects:
         show: Github
     desc: |
       Command line program that executes shell scripts embedded in text files
-      and replaces them with there STDOUT results.  Shell scripts are marked by
+      and replaces them with their STDOUT results.  Shell scripts are marked by
       delimiters.
 
   - name: M-DOT
