@@ -7,7 +7,8 @@
       <project-name>##name##</project-name>
       <project-tagline>##tagline##</project-tagline>
       <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-      <project-lang>##lang##</project-lang>
+      <project-lang>##lang(, ){{##lang##}}</project-lang>
+      ##[team]{{<project-team>##team(, ){{##name##}}</project-team>}}
       <project-desc><p>##desc##</p></project-desc>
     </project-profile>
     }}}}
@@ -19,7 +20,8 @@
       <project-name>##name##</project-name>
       <project-tagline>##tagline##</project-tagline>
       <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-      <project-lang>##lang##</project-lang>
+      <project-lang>##lang(, ){{##lang##}}</project-lang>
+      ##[team]{{<project-team>##team(, ){{##name##}}</project-team>}}
       <project-desc><p>##desc##</p></project-desc>
     </project-profile>
     }}}}
@@ -31,19 +33,21 @@
       <project-name>##name##</project-name>
       <project-tagline>##tagline##</project-tagline>
       <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-      <project-lang>##lang##</project-lang>
+      <project-lang>##lang(, ){{##lang##}}</project-lang>
+      ##[team]{{<project-team>##team(, ){{##name##}}</project-team>}}
       <project-desc><p>##desc##</p></project-desc>
     </project-profile>
     }}}}
   </section>
   <section>
     <h2>Sites</h2>
-    ##projects{{##[type.website]{{
+    ##projects{{##[type.web]{{
     <project-profile>
       <project-name>##name##</project-name>
       <project-tagline>##tagline##</project-tagline>
       <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-      <project-lang>##lang##</project-lang>
+      <project-lang>##lang(, ){{##lang##}}</project-lang>
+      ##[team]{{<project-team>##team(, ){{##name##}}</project-team>}}
       <project-desc><p>##desc##</p></project-desc>
     </project-profile>
     }}}}

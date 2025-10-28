@@ -310,6 +310,15 @@ project-desc {
   display:block;
 }
 
+project-team {
+  display:block;
+}
+
+project-team::before {
+  content:'team: ';
+  color:var(--fg-faded);
+}
+
 personal-profile {
   display:grid;
   gap:16px;

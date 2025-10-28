@@ -4,7 +4,8 @@ projects:
     type:
       cli: true
     tagline: Fill template files
-    lang: Python
+    lang:
+      - lang: Python
     links:
       - href: /kera
         show: Site
@@ -19,7 +20,8 @@ projects:
     type:
       lib: true
     tagline: Simple HTML tag assembler
-    lang: JavaScript
+    lang:
+      - lang: JavaScript
     links:
       - href: /ellipsi
         show: Site
@@ -34,7 +36,8 @@ projects:
     type:
       cli: true
     tagline: Execute shell scripts embedded in text
-    lang: Rust
+    lang:
+      - lang: Rust
     links:
       - href: /corre
         show: Site
@@ -50,7 +53,8 @@ projects:
     type:
       hardware: true
     tagline: Maze-navigating robot car
-    lang: C++
+    lang:
+      - lang: C++
     links:
       - href: https://github.com/ctwiebe23/m-dot
         show: Github
@@ -62,27 +66,38 @@ projects:
       programmed using a custom library that directly uses the ATmega328P
       registers.
 
-  - name: os2g.github.io
-    featured: false
+  - name: SATVIZ
+    featured: true
     type:
-      website: true
-    tagline: Club website for OS2G
-    lang: HTML, CSS, Python
+      web: true
+    tagline: Visualizer for <a href="http://minisat.se/">MiniSAT</a>
+    lang:
+      - lang: PHP
+      - lang: CSS
+      - lang: JavaScript
+      - lang: Java
+      - lang: C++
+      - lang: SQL
     links:
-      - href: https://os2g.github.io
+      - href: https://satviz.unl.edu
         show: Site
-      - href: https://github.com/os2g/os2g.github.io
-        show: Github
+    team:
+      - name: Raegan Scheet
     desc: |
-      Club website built for the Operating Systems &amp; Open Source Group.
-      JavaScript-less and generated using a custom Python SSG.
+      Creates visualizations for CNF instances ran through MiniSAT.  Generates
+      trails, trees, implication graphs, and tracks learned clauses throughout
+      multiple restarts.  Research project for the Constraint Systems
+      Laboratory.
 
   - name: My homepage
     featured: false
     type:
-      website: true
+      web: true
     tagline: This site right here!
-    lang: HTML, CSS
+    lang:
+      - lang: HTML
+      - lang: CSS
+      - lang: Python
     links:
       - href: /
         show: Site
@@ -92,12 +107,33 @@ projects:
       Simple webpage hosting some information about me and collecting all my
       links in the same place.
 
+  - name: OS2G.github.io
+    featured: false
+    type:
+      web: true
+    tagline: Club website for OS2G
+    lang:
+      - lang: HTML
+      - lang: CSS
+      - lang: Python
+    links:
+      - href: https://os2g.github.io
+        show: Site
+      - href: https://github.com/os2g/os2g.github.io
+        show: Github
+    desc: |
+      Club website built for the Operating Systems &amp; Open Source Group.
+      JavaScript-less and generated using a custom Python SSG.
+
   - name: Websocket pertubation &amp; response
     featured: false
     type:
-      website: true
+      web: true
     tagline: Probe websockets
-    lang: HTML, CSS, JavaScript
+    lang:
+      - lang: HTML
+      - lang: CSS
+      - lang: JavaScript
     links:
       - href: /perturb-and-resp
         show: Site
@@ -111,9 +147,12 @@ projects:
   - name: Phasor diagrams
     featured: false
     type:
-      website: true
+      web: true
     tagline: Generate circuit phasor diagrams
-    lang: HTML, CSS, JavaScript
+    lang:
+      - lang: HTML
+      - lang: CSS
+      - lang: JavaScript
     links:
       - href: /phasor-diagrams
         show: Site
@@ -127,9 +166,12 @@ projects:
   - name: HTML slideshow
     featured: false
     type:
-      website: true
+      web: true
     tagline: Microtalk for <a href="https://os2g.github.io">OS2G</a>
-    lang: HTML, CSS, JavaScript
+    lang:
+      - lang: HTML
+      - lang: CSS
+      - lang: JavaScript
     links:
       - href: /html-slideshow
         show: Site
@@ -143,24 +185,31 @@ projects:
   - name: Sol Maps
     featured: false
     type:
-      website: true
-    tagline: Solar system map created during Cornhacks 2025
-    lang: HTML, CSS, JavaScript
+      web: true
+    tagline: Solar system map.
+    lang:
+      - lang: HTML
+      - lang: CSS
+      - lang: JavaScript
     links:
       - href: https://cscheet2.github.io/cornhacks
         show: Site
       - href: https://github.com/cscheet2/cornhacks
         show: Github
+    team:
+      - name: Cale Sigerson
+      - name: Raegan Scheet
     desc: |
-      Map of the solar system built using p5.js over the course of 24 hours for
-      Cornhacks 2025.  Created with Cale Sigerson and Raegan Scheet.
+      Map of the solar system built using <a href="https://p5js.org/">p5.js</a>
+      over the course of 24 hours for Cornhacks 2025, a university hack-a-thon.
 
   - name: M'TAG
     featured: false
     type:
       cli: true
     tagline: Tag audio files based on filenames
-    lang: Clojure
+    lang:
+      - lang: Clojure
     links:
       - href: https://github.com/ctwiebe23/m-tag
         show: Github
@@ -173,9 +222,11 @@ projects:
   - name: The Last Question
     featured: false
     type:
-      website: true
+      web: true
     tagline: Short story by Isaac Asimov
-    lang: HTML, CSS
+    lang:
+      - lang: HTML
+      - lang: CSS
     links:
       - href: /the-last-question
         show: Site
@@ -192,7 +243,9 @@ projects:
     type:
       cli: true
     tagline: Reverse polish notation calculator
-    lang: Rust, BASH
+    lang:
+      - lang: Rust
+      - lang: BASH
     links:
       - href: /rpcalc
         show: Site
@@ -207,7 +260,8 @@ projects:
     type:
       cli: true
     tagline: Create HTML in the shell
-    lang: C
+    lang:
+      - lang: C
     links:
       - href: /htag
         show: Site
@@ -222,7 +276,8 @@ projects:
     type:
       lib: true
     tagline: Personal JS helper library
-    lang: JavaScript
+    lang:
+      - lang: JavaScript
     links:
       - href: /auttaja
         show: Site
