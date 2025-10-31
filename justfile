@@ -2,11 +2,11 @@
 build:
 	./.venv/bin/python3.14 ./ssg.py
 
-# Runs the build script anytime a file in ./src changes
+# Runs the build script anytime a file changes (ignoring ./www)
 watch:
 	watchexec -i ./www -- just build
 
-# Removes the ./www directory
+# Removes the ./www and ./__pycache__ directories
 clean:
 	[ ! -d ./www ] || rm -r ./www
 	[ ! -d ./__pycache__ ] || rm -r ./__pycache__
