@@ -1,19 +1,4 @@
 projects:
-  - name: kera
-    featured: true
-    type:
-      cli: true
-    tagline: Fill template files
-    lang:
-      - lang: Python
-    links:
-      - href: /kera
-        show: Site
-      - href: https://github.com/ctwiebe23/kera
-        show: Github
-    desc: |
-      Command line program that combines template files and structured data to
-      produce filled templates.  It built the page you're looking at right now!
 
   - name: Ellipsi
     featured: true
@@ -31,22 +16,21 @@ projects:
       A simple JavaScript library used to create HTML tags programmatically,
       without having to resort to a framework.
 
-  - name: corre
-    featured: false
+  - name: kera
+    featured: true
     type:
       cli: true
-    tagline: Execute shell scripts embedded in text
+    tagline: Fill template files
     lang:
-      - lang: Rust
+      - lang: Python
     links:
-      - href: /corre
+      - href: /kera
         show: Site
-      - href: https://github.com/ctwiebe23/corre
+      - href: https://github.com/ctwiebe23/kera
         show: Github
     desc: |
-      Command line program that executes shell scripts embedded in text files
-      and replaces them with their STDOUT results.  Shell scripts are marked by
-      delimiters.
+      Command line program that combines template files and structured data to
+      produce filled templates.  It built the page you're looking at right now!
 
   - name: M-DOT
     featured: true
@@ -84,10 +68,27 @@ projects:
     team:
       - name: Raegan Scheet
     desc: |
-      Creates visualizations for CNF instances ran through MiniSAT.  Generates
-      trails, trees, implication graphs, and tracks learned clauses throughout
-      multiple restarts.  Research project for the Constraint Systems
-      Laboratory.
+      Website that visualizes the decision path taken by the solver <a
+      href="https://minisat.se">MiniSAT</a>. We instrumented MiniSAT to produce
+      a log that then generates trails, trees, implication graphs, and more.
+      This research project was done for the Constraint Systems Laboratory.
+
+  - name: corre
+    featured: false
+    type:
+      cli: true
+    tagline: Execute shell scripts embedded in text
+    lang:
+      - lang: Rust
+    links:
+      - href: /corre
+        show: Site
+      - href: https://github.com/ctwiebe23/corre
+        show: Github
+    desc: |
+      Command line program that executes shell scripts embedded in text files
+      and replaces them with their STDOUT results.  Shell scripts are marked by
+      delimiters.
 
   - name: My homepage
     featured: false
@@ -104,26 +105,9 @@ projects:
       - href: https://github.com/ctwiebe23/ctwiebe23.github.io
         show: Github
     desc: |
-      Simple webpage hosting some information about me and collecting all my
-      links in the same place.
-
-  - name: OS2G.github.io
-    featured: false
-    type:
-      web: true
-    tagline: Club website for OS2G
-    lang:
-      - lang: HTML
-      - lang: CSS
-      - lang: Python
-    links:
-      - href: https://os2g.github.io
-        show: Site
-      - href: https://github.com/os2g/os2g.github.io
-        show: Github
-    desc: |
-      Club website built for the Operating Systems &amp; Open Source Group.
-      JavaScript-less and generated using a custom Python SSG.
+      Static webpage hosting some information about me and collecting all my
+      links in the same place.  JavaScript-less and generated using
+      <a href="/kera">kera</a> and a custom Python SSG.
 
   - name: Websocket pertubation &amp; response
     featured: false
@@ -163,46 +147,6 @@ projects:
       computer-generated phasor diagrams.  Takes a bunch of phasors and graphs
       them together.
 
-  - name: HTML slideshow
-    featured: false
-    type:
-      web: true
-    tagline: Microtalk for <a href="https://os2g.github.io">OS2G</a>
-    lang:
-      - lang: HTML
-      - lang: CSS
-      - lang: JavaScript
-    links:
-      - href: /html-slideshow
-        show: Site
-      - href: https://github.com/ctwiebe23/html-slideshow
-        show: Github
-    desc: |
-      Made for a microtalk I gave at a meeting of the Operating Systems &amp;
-      Open Source Group.  Demonstrates the creation of a slideshow using
-      standard web languages.
-
-  - name: Sol Maps
-    featured: false
-    type:
-      web: true
-    tagline: Solar system map.
-    lang:
-      - lang: HTML
-      - lang: CSS
-      - lang: JavaScript
-    links:
-      - href: https://cscheet2.github.io/cornhacks
-        show: Site
-      - href: https://github.com/cscheet2/cornhacks
-        show: Github
-    team:
-      - name: Cale Sigerson
-      - name: Raegan Scheet
-    desc: |
-      Map of the solar system built using <a href="https://p5js.org/">p5.js</a>
-      over the course of 24 hours for Cornhacks 2025, a university hack-a-thon.
-
   - name: M'TAG
     featured: false
     type:
@@ -218,25 +162,6 @@ projects:
       href="https://github.com/RouHim/jaudiotagger">JAudioTagger</a> to bulk
       re-tag audio files by matching their filenames against patterns using
       regular expressions.
-
-  - name: The Last Question
-    featured: false
-    type:
-      web: true
-    tagline: Short story by Isaac Asimov
-    lang:
-      - lang: HTML
-      - lang: CSS
-    links:
-      - href: /the-last-question
-        show: Site
-      - href: https://github.com/ctwiebe23/the-last-question
-        show: Github
-    desc: |
-      Thrown together in an angry haze after someone shared a link to this
-      short story with the worst typesetting imaginable.  I was forced to
-      download the original page and rewrite it with better styling before I
-      could read the story.
 
   - name: rpcalc
     featured: false
@@ -288,6 +213,7 @@ projects:
       JavaScript projects.
 
 resources:
+
   - name: just
     href: https://github.com/casey/just
     type:
@@ -303,34 +229,13 @@ resources:
     desc: |
       Execute commands when files are changed.
 
-  - name: Music Player Daemon
-    href: https://www.musicpd.org/
-    type:
-      cli: true
-    desc: |
-      Stream music on a home network.
-
-  - name: rmpc
-    href: https://mierak.github.io/rmpc/
-    type:
-      cli: true
-    desc: |
-      Connect to an instance of the Music Player Daemon through the terminal.
-
   - name: OBS
     href: https://obsproject.com/
     type:
       desktop: true
     desc: |
       Screen recording and video streaming.  Great for recording slideshow
-      presentations and the like.
-
-  - name: PixiEditor
-    href: https://pixieditor.net/
-    type:
-      desktop: true
-    desc: |
-      Free 2d art program with impressive capabilities.
+      presentations.
 
   - name: Butterick's Practical Typography
     href: https://practicaltypography.com/

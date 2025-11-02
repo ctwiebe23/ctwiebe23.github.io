@@ -1,6 +1,14 @@
 <section>
   <h1>My favorite resources</h1>
   <section>
+    <h2>Writing advice</h2>
+    <ul>
+      ##resources{{##[type.writing]{{
+      <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
+      }}}}
+    </ul>
+  </section>
+  <section>
     <h2>Command line programs</h2>
     <ul>
       ##resources{{##[type.cli]{{
@@ -12,14 +20,6 @@
     <h2>Desktop applications</h2>
     <ul>
       ##resources{{##[type.desktop]{{
-      <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
-      }}}}
-    </ul>
-  </section>
-  <section>
-    <h2>Writing advice</h2>
-    <ul>
-      ##resources{{##[type.writing]{{
       <li><strong><a href="##href##">##name##</a></strong> — ##desc##</li>
       }}}}
     </ul>

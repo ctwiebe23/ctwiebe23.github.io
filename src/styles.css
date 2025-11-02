@@ -8,7 +8,7 @@
   --fg:light-dark(#292222, #dcd7ba);
   --bg:light-dark(#fff, #1f1f28);
   --primary:light-dark(#c25, #69f);
-  --fg-faded:light-dark(#a71, #779);
+  --fg-faded:light-dark(#a71, #7c777a);
   --bg-faded:light-dark(#fde, #335);
   --font:Outfit, sans-serif;
   --rule:2px;
@@ -71,6 +71,7 @@ header h2 {
   border:none;
   color:var(--fg-faded);
   margin-top:0;
+  padding-top:0;
 }
 
 /* C */ header h1 span:nth-child(1) {animation-delay:calc(0 * var(--kf-offset) + var(--kf-delay));}
