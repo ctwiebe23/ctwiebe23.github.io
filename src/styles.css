@@ -5,11 +5,11 @@
 }
 
 :root {
-  --fg:light-dark(#292222, #e0e0e8);
-  --bg:light-dark(#fff, #1c1c1f);
+  --fg:light-dark(#292222, #dcd7ba);
+  --bg:light-dark(#fff, #1f1f28);
   --primary:light-dark(#c25, #69f);
-  --fg-faded:light-dark(#a71, #8090b3);
-  --bg-faded:light-dark(#fde, #444460);
+  --fg-faded:light-dark(#a71, #779);
+  --bg-faded:light-dark(#fde, #335);
   --font:Outfit, sans-serif;
   --rule:2px;
 
