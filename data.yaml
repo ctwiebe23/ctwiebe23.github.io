@@ -128,25 +128,6 @@ projects:
       <a href="https://www.npmjs.com/package/ellipsi">Ellipsi</a> that
       lets you connect to a websocket and exchange messages.
 
-  - name: Phasor diagrams
-    featured: false
-    type:
-      web: true
-    tagline: Generate circuit phasor diagrams
-    lang:
-      - lang: HTML
-      - lang: CSS
-      - lang: JavaScript
-    links:
-      - href: /phasor-diagrams
-        show: Site
-      - href: https://github.com/ctwiebe23/phasor-diagrams
-        show: Github
-    desc: |
-      Created for my circuits class after I spent much too time making
-      computer-generated phasor diagrams.  Takes a bunch of phasors and graphs
-      them together.
-
   - name: M'TAG
     featured: false
     type:
@@ -162,55 +143,6 @@ projects:
       href="https://github.com/RouHim/jaudiotagger">JAudioTagger</a> to bulk
       re-tag audio files by matching their filenames against patterns using
       regular expressions.
-
-  - name: htag
-    featured: false
-    type:
-      cli: true
-    tagline: Create HTML in the shell
-    lang:
-      - lang: C
-    links:
-      - href: /htag
-        show: Site
-      - href: https://github.com/ctwiebe23/htag
-        show: Github
-    desc: |
-      Little C script that generates HTML tags in a BASH-friendly way.  Allows
-      adding attributes to the tags as well.
-
-  - name: rpcalc
-    featured: false
-    type:
-      cli: true
-    tagline: Reverse polish notation calculator
-    lang:
-      - lang: Rust
-      - lang: BASH
-    links:
-      - href: /rpcalc
-        show: Site
-      - href: https://github.com/ctwiebe23/rpcalc
-        show: Github
-    desc: |
-      Simple shell-based calculator made in BASH and Rust to let me quickly
-      run calculations on my computer.
-
-  - name: auttaja
-    featured: false
-    type:
-      lib: true
-    tagline: Personal JS helper library
-    lang:
-      - lang: JavaScript
-    links:
-      - href: /auttaja
-        show: Site
-      - href: https://github.com/ctwiebe23/auttaja
-        show: Github
-    desc: |
-      Small collection of helper functions and classes that I use in personal
-      JavaScript projects.
 
 resources:
 
