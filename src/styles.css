@@ -10,6 +10,7 @@
   --primary:light-dark(#c25, #69f);
   --fg-faded:light-dark(#a71, #7c777a);
   --bg-faded:light-dark(#fde, #335);
+  --error:light-dark(#c44, #c44);
   --font:Outfit, sans-serif;
   --rule:2px;
 
@@ -329,6 +330,12 @@ personal-profile {
   personal-profile {
     grid-template:"desc img";
   }
+}
+
+/* Classes ----------------------------------------------------------------- */
+
+*.text-error {
+  color:var(--error);
 }
 
 /* Animations -------------------------------------------------------------- */
