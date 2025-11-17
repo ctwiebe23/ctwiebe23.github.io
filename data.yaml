@@ -69,7 +69,7 @@ projects:
       - name: Raegan Scheet
     desc: |
       Website that visualizes the decision path taken by the solver <a
-      href="https://minisat.se">MiniSAT</a>. We instrumented MiniSAT to produce
+      href="http://minisat.se">MiniSAT</a>. We instrumented MiniSAT to produce
       a log that then generates trails, trees, implication graphs, and more.
       This research project was done for the Constraint Systems Laboratory.
 
