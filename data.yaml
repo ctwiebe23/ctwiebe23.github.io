@@ -16,6 +16,24 @@ projects:
       A simple JavaScript library used to create HTML tags programmatically,
       without having to resort to a framework.
 
+  - name: formul8
+    featured: false
+    type:
+      lib: true
+    tagline: Automatic form handling
+    lang:
+      - lang: JavaScript
+    links:
+      - href: /formul8
+        show: Site
+      - href: https://github.com/ctwiebe23/formul8
+        show: Github
+    desc: |
+      JavaScript library that takes an HTML form and returns a JSON object that
+      contains the live state of the form, as well as an event that fires each
+      time the form changes.  Can also be bidirectional; changing the object
+      changes the form.
+
   - name: kera
     featured: true
     type:
