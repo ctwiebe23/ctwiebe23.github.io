@@ -195,7 +195,9 @@ h1 {
 h2 {
   font-size:1.2rem;
   border-top:var(--rule) solid var(--bg-faded);
-  padding-top:8px;
+  margin-right:-16px;
+  padding-right:16px;
+  padding-top:16px;
   margin-top:16px;
   margin-bottom:12px;
 }
