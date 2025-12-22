@@ -188,7 +188,7 @@ h1, h2, h3 {
 h1 {
   font-size:1.5rem;
   margin-top:32px;
-  margin-bottom:8px;
+  margin-bottom:16px;
   color:var(--primary);
 }
 
@@ -249,6 +249,12 @@ a:hover::before {
   background:var(--bg-faded);
   font-weight:normal;
   color:var(--fg);
+}
+
+code {
+  font-size:0.8em;
+  background:var(--bg-faded);
+  padding-inline:4px;
 }
 
 img {

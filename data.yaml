@@ -164,20 +164,31 @@ projects:
 
 resources:
 
+  - name: pandoc
+    href: https://pandoc.org/
+    type:
+      cli: true
+    desc: |
+      Extremely powerful program for converting between document types.
+      I primarily use it to generate beautiful PDFs and half-decent websites
+      from markdown files.
+
   - name: just
     href: https://github.com/casey/just
     type:
       cli: true
     desc: |
-      Project-level aliases; language-agnostic makefile.  Allows you to easily
-      shortcut commands.
+      Allows you to easily shortcut commands, essentially Makefiles for any
+      language.
 
   - name: watchexec
     href: https://github.com/watchexec/watchexec
     type:
       cli: true
     desc: |
-      Execute commands when files are changed.
+      Execute commands when files are changed.  If you've used a
+      <code>--watch</code> flag or <code>watch</code> subcommand, this is that
+      for <em>every</em> command line interface.
 
   - name: OBS
     href: https://obsproject.com/
@@ -201,3 +212,17 @@ resources:
     desc: |
       Essay on how to write math, how to write technical, and how to write in
       general.
+
+  - name: Learn You a Haskell for Great Good!
+    href: https://learnyouahaskell.github.io/chapters.html
+    type:
+      programming: true
+    desc: |
+      Very thorough guide to the Haskell language.
+
+  - name: Clojure for the Brave and True
+    href: https://www.braveclojure.com/introduction/
+    type:
+      programming: true
+    desc: |
+      The only guide to Clojure I could find that made sense to me.
