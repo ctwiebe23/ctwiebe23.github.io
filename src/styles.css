@@ -62,6 +62,10 @@ header h1 span {
 header h1 a {
   color:var(--primary);
   text-decoration:none;
+
+  &:hover {
+    text-decoration:none;
+  }
 }
 
 header h1 a:hover::before, header h1 a::after {
@@ -195,11 +199,14 @@ h1 {
 h2 {
   font-size:1.2rem;
   border-top:var(--rule) solid var(--bg-faded);
-  margin-right:-16px;
-  padding-right:16px;
   padding-top:16px;
   margin-top:16px;
   margin-bottom:12px;
+
+  @media (width > 900px) {
+    margin-right:-16px;
+    padding-right:16px;
+  }
 }
 
 button {
@@ -226,6 +233,7 @@ button:active {
 a {
   color:var(--fg);
   text-decoration:none;
+  white-space:nowrap;
 }
 
 a::after {
