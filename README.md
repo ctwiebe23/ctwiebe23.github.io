@@ -1,4 +1,89 @@
-# C's Homepage
+C WIEBE'S HOMEPAGE                                                v1.0.0 260319
+===============================================================================
 
-Personal homepage for C Wiebe.  Static site built using kera and composed of
-plain HTML and CSS — no JavaScript.
+A static site built by a custom SSG and served by github pages.  Website
+written in raw HTML and CSS, SSG written in Python.
+
+NAME
+===============================================================================
+
+cwiebe.com — C's personal homepage
+
+SYNOPSIS
+===============================================================================
+
+    https://cwiebe.com
+    https://cwiebe.com/about
+    https://cwiebe.com/projects
+    https://cwiebe.com/resources
+
+DESCRIPTION
+===============================================================================
+
+IMPLEMENTATION
+-------------------------------------------------------------------------------
+
+The site itself is written in HTML and CSS.
+
+The SSG is written in Python.  It makes use of the
+[PyYAML](https://pypi.org/project/PyYAML/) library to parse YAML, and uses my
+own [Kera](https://pypi.org/project/kera/) library to fill HTML templates.
+
+DESIGN BRAINSTORMING
+-------------------------------------------------------------------------------
+
+* Light mode should be simple black-and-white, very close to the default CSS
+  styles.  I really like <https://ksadov.com>, but don't think I can go that
+  minimalist for this.
+* Dark mode should be based on the
+  [Kanagawa](https://github.com/rebelot/kanagawa.nvim) Neovim theme.
+* Single-column site (primarily) centered on the page, not full-screen.
+* Explore using a single non-scrolling background image — very experimental.
+* Try using colored backgrounds like <https://keepachangelog.com> does.
+* Experiment with a [REAPER](https://reaper.fm)-like header.
+* Try to incorporate a sidebar similar to <https://yetiodo.com/>.
+
+COLOR SCHEMES
+-------------------------------------------------------------------------------
+
+Light mode:
+
+          Text: #333
+    Background: #fff
+       Primary: #4cc
+     Secondary: #c4c
+      Tertiary: #44c
+         Error: #c44
+       Warning: #cc4
+            Ok: #4c4
+
+Dark mode:
+
+          Text: #dcd7ba
+    Background: #1f1f28
+       Primary: #69f
+     Secondary: #
+      Tertiary: #
+         Error: #c44
+       Warning: #cc4
+            Ok: #4c4
+
+FONTS
+-------------------------------------------------------------------------------
+
+    Header: Clother
+      Body: Koh Santepheap
+      Else: Parabolica
+
+SEE ALSO
+===============================================================================
+
+Site inspirations:
+
+* <https://ksadov.com/>
+* <https://nicbarker.com/clay>
+* <https://practicaltypography.com/>
+* <https://reaper.fm/>
+* <https://keepachangelog.com>
+* <https://g2games.dev/>
+* <https://yetiodo.com/>

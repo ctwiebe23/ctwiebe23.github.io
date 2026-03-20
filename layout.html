@@ -3,49 +3,74 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Force dark mode in CSS. -->
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light dark" />
+
     <base target="_blank" rel="noopener noreferrer" />
 
-    <title>C Wiebe</title>
+    <title>CWI | ##TITLE##</title>
     <meta name="author" content="C Wiebe" />
-    <meta name="description" content="C Wiebe's personal website documenting projects and resources.  Built using HTML, CSS, and a Python SSG." />
-    <meta name="generator" content="python+kera" />
+    <meta name="description" content="C Wiebe's personal homepage." />
 
-    <link rel="stylesheet" type="text/css" href="/styles.css" />
-    <link rel="icon" type="image/favicon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header>
-      <!-- Spans are for CSS animations. -->
-      <h1><a href="/" target="_self"><span>C</span><span> </span><span>W</span><span>i</span><span>e</span><span>b</span><span>e</span></a></h1>
-      <h2>[see we bee]</h2>
+      <h1><a class="nolink" target="_self" href="/">C WIEBE</a></h1>
+      <ul>
+        <li class="font-header">engineer</li>
+        <li class="font-header">artist</li>
+        <li class="text-faded font-other">[see we bee]</li>
+      </ul>
+      <ul>
+        <li><a target="_self" href="/about">about me</a></li>
+        <li><a target="_self" href="/projects">my projects</a></li>
+        <li><a target="_self" href="/resources">resources</a></li>
+      </ul>
     </header>
 
-    <nav>
-      <form target="_self">
-        <button formaction="/">
-          Home
-        </button>
-        <button formaction="/projects">
-          Projects
-        </button>
-        <button formaction="/resources">
-          Resources
-        </button>
-      </form>
+    <nav class="primary dark font-other">
+      <ul>
+        <li><a target="_self" href="/">Home</a></li>
+        <li><a target="_self" href="/projects">Projects</a></li>
+        <li><a target="_self" href="/about">About</a></li>
+        <li><a target="_self" href="/resources">Resources</a></li>
+        <picture>
+          <source srcset="/images/confox.png" />
+          <source srcset="/images/confox.png" media="(prefers-color-scheme:dark)" />
+          <img src="/images/confox.png" alt="An image of a wireframe fox." width="120px" />
+        </picture>
+      </ul>
     </nav>
 
-    <main>
+    <main class="kfc-bodyfade">
       ##CONTENTS##
     </main>
 
-    <footer>
-      <inline-list>
-        <li>by C Wiebe</li>
-        <li>on Github Pages</li>
-        <li>with HTML &amp; CSS</li>
-      </inline-list>
+    <footer class="full dark">
+      <section>
+        <p>Contact</p>
+        <ul>
+          <li>Email: <a href="mailto:cwiebe@cwiebe.com">cwiebe@cwiebe.com</a></li>
+          <li>Github: <a href="https://github.com/ctwiebe23">@ctwiebe23</a></li>
+        </ul>
+      </section>
+      <section>
+        <p>Site Details</p>
+        <ul>
+          <li>by C Wiebe</li>
+          <li>on Github Pages</li>
+          <li>w/ HTML, CSS, &amp; Python</li>
+        </ul>
+      </section>
+      <section>
+        <p>Images &amp; Fonts</p>
+        <ul>
+          <li>Clother font from Adobe Fonts</li>
+          <li>Parabolica font from Adobe Fonts</li>
+          <li>Koh Santepheap font from Google Fonts</li>
+          <li>Sidebar fox from Adobe Stock</li>
+        </ul>
+      </section>
     </footer>
   </body>
 </html>

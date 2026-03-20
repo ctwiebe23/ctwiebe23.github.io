@@ -1,55 +1,57 @@
+<section class="text">
+  <h1>My Projects</h1>
+  <p>A collection of libraries, apps, websites, and hardware that I
+    have designed and developed.</p>
+</section>
 <section>
-  <h1>My projects</h1>
-  <section>
-    <h2>Programs</h2>
-    ##projects{{##[type.cli]{{
-    <project-profile>
-      <project-name>##name##</project-name>
-      <project-tagline>##tagline##</project-tagline>
-      <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-      <project-lang>##lang(, ){{##lang##}}</project-lang>
-      ##[team]{{<project-team>##team(, ){{##name##}}</project-team>}}
-      <project-desc><p>##desc##</p></project-desc>
-    </project-profile>
-    }}}}
+  <h1>Libraries</h1>
+  ##projects{{ ##[type.lib]{{
+  <section class="project">
+    <h2 class="title">##name##</h2>
+    <p class="tagline">##tagline##</p>
+    ##[thumbnail]{{ <img class="thumb" src="##thumbnail##" alt="Thumbnail for ##name##." width="150" height="150" /> }}
+    <p class="links">##links(, ){{ <a href="##href##">##show##</a> }}</p>
+    <p class="langs">##lang(, ){{ ##lang## }}</p>
+    <p class="desc">##desc##</p>
   </section>
-  <section>
-    <h2>Hardware</h2>
-    ##projects{{##[type.hardware]{{
-    <project-profile>
-      <project-name>##name##</project-name>
-      <project-tagline>##tagline##</project-tagline>
-      <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-      <project-lang>##lang(, ){{##lang##}}</project-lang>
-      ##[team]{{<project-team>##team(, ){{##name##}}</project-team>}}
-      <project-desc><p>##desc##</p></project-desc>
-    </project-profile>
-    }}}}
+  }}}}
+</section>
+<section>
+  <h1>Programs</h1>
+  ##projects{{ ##[type.cli]{{
+  <section class="project">
+    <h2 class="title">##name##</h2>
+    <p class="tagline">##tagline##</p>
+    ##[thumbnail]{{ <img class="thumb" src="##thumbnail##" alt="Thumbnail for ##name##." width="150" height="150" /> }}
+    <p class="links">##links(, ){{ <a href="##href##">##show##</a> }}</p>
+    <p class="langs">##lang(, ){{ ##lang## }}</p>
+    <p class="desc">##desc##</p>
   </section>
-  <section>
-    <h2>Libraries</h2>
-    ##projects{{##[type.lib]{{
-    <project-profile>
-      <project-name>##name##</project-name>
-      <project-tagline>##tagline##</project-tagline>
-      <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-      <project-lang>##lang(, ){{##lang##}}</project-lang>
-      ##[team]{{<project-team>##team(, ){{##name##}}</project-team>}}
-      <project-desc><p>##desc##</p></project-desc>
-    </project-profile>
-    }}}}
+  }}}}
+</section>
+<section>
+  <h1>Hardware</h1>
+  ##projects{{ ##[type.hardware]{{
+  <section class="project">
+    <h2 class="title">##name##</h2>
+    <p class="tagline">##tagline##</p>
+    ##[thumbnail]{{ <img class="thumb" src="##thumbnail##" alt="Thumbnail for ##name##." width="150" height="150" /> }}
+    <p class="links">##links(, ){{ <a href="##href##">##show##</a> }}</p>
+    <p class="langs">##lang(, ){{ ##lang## }}</p>
+    <p class="desc">##desc##</p>
   </section>
-  <section>
-    <h2>Sites</h2>
-    ##projects{{##[type.web]{{
-    <project-profile>
-      <project-name>##name##</project-name>
-      <project-tagline>##tagline##</project-tagline>
-      <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-      <project-lang>##lang(, ){{##lang##}}</project-lang>
-      ##[team]{{<project-team>##team(, ){{##name##}}</project-team>}}
-      <project-desc><p>##desc##</p></project-desc>
-    </project-profile>
-    }}}}
+  }}}}
+</section>
+<section>
+  <h1>Websites</h1>
+  ##projects{{ ##[type.web]{{
+  <section class="project">
+    <h2 class="title">##name##</h2>
+    <p class="tagline">##tagline##</p>
+    ##[thumbnail]{{ <img class="thumb" src="##thumbnail##" alt="Thumbnail for ##name##." width="150" height="150" /> }}
+    <p class="links">##links(, ){{ <a href="##href##">##show##</a> }}</p>
+    <p class="langs">##lang(, ){{ ##lang## }}</p>
+    <p class="desc">##desc##</p>
   </section>
+  }}}}
 </section>

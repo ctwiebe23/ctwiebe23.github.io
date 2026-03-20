@@ -5,14 +5,13 @@ projects:
     type:
       lib: true
     tagline: Simple HTML tag assembler
-    thumbnail: /images/ellipsi.jpg
     lang:
       - lang: JavaScript
     links:
       - href: /ellipsi
-        show: README
+        show: Site
       - href: https://github.com/ctwiebe23/ellipsi
-        show: Repo
+        show: Github
     desc: |
       A simple JavaScript library used to create HTML tags programmatically,
       without having to resort to a framework.
@@ -26,9 +25,9 @@ projects:
       - lang: JavaScript
     links:
       - href: /formul8
-        show: README
+        show: Site
       - href: https://github.com/ctwiebe23/formul8
-        show: Repo
+        show: Github
     desc: |
       JavaScript library that takes an HTML form and returns a JSON object that
       contains the live state of the form, as well as an event that fires each
@@ -44,9 +43,9 @@ projects:
       - lang: Python
     links:
       - href: /kera
-        show: README
+        show: Site
       - href: https://github.com/ctwiebe23/kera
-        show: Repo
+        show: Github
     desc: |
       Command line program that combines template files and structured data to
       produce filled templates.  It built the page you're looking at right now!
@@ -60,13 +59,13 @@ projects:
       - lang: C++
     links:
       - href: https://github.com/ctwiebe23/m-dot
-        show: Repo
+        show: Github
       - href: /m-dot/out.pdf
         show: Report
     desc: |
       Robot car built using an Arduino UNO, hobby motors, an ultrasonic sensor,
       and an IR receiver.  Does not use any Arduino libraries — rather, it is
-      programmed using a custom library that directly manipulates the ATmega328P
+      programmed using a custom library that directly uses the ATmega328P
       registers.
 
   - name: SATVIZ
@@ -83,13 +82,14 @@ projects:
       - lang: SQL
     links:
       - href: https://satviz.unl.edu
-        show: satviz.unl.edu
+        show: Site
+    team:
+      - name: Raegan Scheet
     desc: |
       Website that visualizes the decision path taken by the solver <a
       href="http://minisat.se">MiniSAT</a>. We instrumented MiniSAT to produce
       a log that then generates trails, trees, implication graphs, and more.
-      This research project was done for the Constraint Systems Laboratory
-      alongside R Scheet.
+      This research project was done for the Constraint Systems Laboratory.
 
   - name: corre
     featured: false
@@ -100,9 +100,9 @@ projects:
       - lang: Rust
     links:
       - href: /corre
-        show: README
+        show: Site
       - href: https://github.com/ctwiebe23/corre
-        show: Repo
+        show: Github
     desc: |
       Command line program that executes shell scripts embedded in text files
       and replaces them with their STDOUT results.  Shell scripts are marked by
@@ -119,9 +119,9 @@ projects:
       - lang: Python
     links:
       - href: /
-        show: cwiebe.com
+        show: Site
       - href: https://github.com/ctwiebe23/ctwiebe23.github.io
-        show: Repo
+        show: Github
     desc: |
       Static webpage hosting some information about me and collecting all my
       links in the same place.  JavaScript-less and generated using
@@ -138,9 +138,9 @@ projects:
       - lang: JavaScript
     links:
       - href: /perturb-and-resp
-        show: Link
+        show: Site
       - href: https://github.com/ctwiebe23/perturb-and-resp
-        show: Repo
+        show: Github
     desc: |
       Webform created using
       <a href="https://www.npmjs.com/package/ellipsi">Ellipsi</a> that
@@ -155,7 +155,7 @@ projects:
       - lang: Clojure
     links:
       - href: https://github.com/ctwiebe23/m-tag
-        show: Repo
+        show: Github
     desc: |
       Command line program that uses <a
       href="https://github.com/RouHim/jaudiotagger">JAudioTagger</a> to bulk
