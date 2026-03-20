@@ -1,7 +1,7 @@
-C WIEBE'S HOMEPAGE                                                v1.0.0 260319
+C WIEBE'S HOMEPAGE                                                v2.0.0 260320
 ===============================================================================
 
-A static site built by a custom SSG and served by github pages.  Website
+A static site built by a custom SSG and served by Github Pages.  Website
 written in raw HTML and CSS, SSG written in Python.
 
 NAME
@@ -42,31 +42,6 @@ DESIGN BRAINSTORMING
 * Try using colored backgrounds like <https://keepachangelog.com> does.
 * Experiment with a [REAPER](https://reaper.fm)-like header.
 * Try to incorporate a sidebar similar to <https://yetiodo.com/>.
-
-COLOR SCHEMES
--------------------------------------------------------------------------------
-
-Light mode:
-
-          Text: #333
-    Background: #fff
-       Primary: #4cc
-     Secondary: #c4c
-      Tertiary: #44c
-         Error: #c44
-       Warning: #cc4
-            Ok: #4c4
-
-Dark mode:
-
-          Text: #dcd7ba
-    Background: #1f1f28
-       Primary: #69f
-     Secondary: #
-      Tertiary: #
-         Error: #c44
-       Warning: #cc4
-            Ok: #4c4
 
 FONTS
 -------------------------------------------------------------------------------
