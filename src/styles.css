@@ -61,6 +61,7 @@
 @layer base {
   html {
     overflow-x: hidden;
+    counter-reset:figure;
   }
 
   html, button, input {
@@ -129,12 +130,21 @@
 
   figure {
     padding:1rem;
+    text-align:center;
   }
 
   figcaption {
     font-size:0.8em;
     color:var(--text-faded);
-    text-align: center;
+  }
+
+  img {
+    border-radius:0.7rem;
+  }
+
+  img + figcaption::before {
+    counter-increment:figure;
+    content:'fig 'counter(figure)': ';
   }
 
   summary {
@@ -179,10 +189,6 @@
     p.langs   { grid-area:langs; }
     p.desc    { grid-area:desc;  }
     img.thumb { grid-area:img;   }
-
-    img.thumb {
-      border-radius:0.7rem;
-    }
 
     p.desc {
       margin-top:0.5rem;

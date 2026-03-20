@@ -151,7 +151,7 @@ def main():
     layout_path, src_dir_path, data_path, output_dir_path = confirm_file_locations(args)
 
     layout, data = get_file_values(layout_path, data_path)
-    
+
     def fill_page(content, title):
         titled = layout.replace(args.title_string, title)
         filled = titled.replace(args.content_string, content)
@@ -210,27 +210,26 @@ def main():
                 if dest_path.is_file():
                     print(f"ERROR : naming conflict: {dest_path}")
                     sys.exit(RETCODE_NAMING_CONFLICT)
-                    
+
                 if not dest_path.is_dir():
                     dest_path.mkdir()
-                    
+
                 if args.auto_index:
                     # create index page if none is present
                     create_index_page_for(path, dest_path)
-                    
+
                 # recursively operate on the inner directory
                 copy_dir_and_process_html(path, dest_path)
             else:  # handling a file
                 page_title = path.name.split(".")[0]
-                print(page_title)
                 if page_title == "index":
                   if dir_path == src_dir_path:  # root page
                     page_title = "Home"
                   else:  # take name of parent directory
                     page_title = dir_path.stem
-                    
+
                 page_title = html.escape(page_title).capitalize()
-                
+
                 if path.match("*.html"):
                     contents = path.read_text(encoding=ENCODING)
                     page = fill_page(contents, page_title)
