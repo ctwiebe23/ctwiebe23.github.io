@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run:  pip install kera pyyaml
       - name: Run SSG
-        run:  python ssg.py
+        run:  python ssg.py -d data.yaml
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
