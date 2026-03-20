@@ -1,42 +1,30 @@
-<section>
+<section class="text">
   <h1>Heya!</h1>
-  <personal-profile>
-    <personal-desc>
-      <p>
-        You can call me C — I'm a guy on the internet who enjoys messing with
-        computers, learning about languages (for computers or for humans), and
-        occasionally making art.  By trade I'm a software engineer, and I'm
-        studying Computer and Electrical Engineering at university.
-      </p>
-      <p>
-        You can <a href="mailto:cwiebe@cwiebe.com">email</a> me if you want to
-        reach out, though I don't maintain online presences elsewhere.
-      </p>
-    </personal-desc>
-    <figure>
-      <img src="/images/400x400_profile-photo.JPG"
-           alt="A photograph of me."
-           title="A photograph of me."
-           width="200"
-           />
-      <figcaption>
-        A photograph of me.
-      </figcaption>
-    </figure>
-  </personal-profile>
+  <p>You can call me C — I'm an engineer and artist who loves
+    overcomplicating simple tasks.</p>
+  <figure class="float-right">
+    <img src="/images/me.jpg" alt="C's profile photo." width="200" height="200" />
+    <figcaption>
+      Me.
+    </figcaption>
+  </figure>
+  <p>Other hobbies include tinkering with computers, learning about languages
+    (computer ones or human ones), and theoretically making art.  By trade I'm
+    a software engineer, and I'm currently studying computer and electrical
+    engineering in university.</p>
+  <p>You can <a href="mailto:cwiebe@cwiebe.com">email</a> me if you want to
+    reach out, though I don't maintain online presences elsewhere.</p>
 </section>
-
 <section>
-  <h1>Featured projects</h1>
-  ##projects{{##[featured]{{
-  <project-profile>
-    <project-name>##name##</project-name>
-    <project-tagline>##tagline##</project-tagline>
-    <project-link>##links(, ){{<a href="##href##">##show##</a>}}</project-link>
-    <project-lang>##lang(, ){{##lang##}}</project-lang>
-    ##[team]{{<project-team>##team(, ){{##name##}}</project-team>}}
-    <project-desc><p>##desc##</p></project-desc>
-  </project-profile>
+  <h1>Featured Projects</h1>
+  ##projects{{ ##[featured]{{
+  <section class="project">
+    <h2 class="title">##name##</h2>
+    <p class="tagline">##tagline##</p>
+    ##[thumbnail]{{ <img class="thumb" src="##thumbnail##" alt="Thumbnail for ##name##." width="150" height="150" /> }}
+    <p class="links">##links(, ){{ <a href="##href##">##show##</a> }}</p>
+    <p class="langs">##lang(, ){{ ##lang## }}</p>
+    <p class="desc">##desc##</p>
+  </section>
   }}}}
-  <p><a href="/projects" target="_self">View all projects</a></p>
 </section>
