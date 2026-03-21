@@ -69,6 +69,13 @@
     background:var(--bg);
     font:var(--font-size) / var(--line-height) var(--body-family);
   }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      background: url("/images/4000x3000_scene.jpg") no-repeat center center fixed;
+      background-size:cover;
+    }
+  }
 }
 
 @layer elements {
@@ -206,17 +213,19 @@
   }
 
   *.float-right {
-    @media (width > 42rem) {
+    @media (width > 46rem) {
       float:right;
       padding-block:0;
       margin-block:0;
+      margin-right:0;
+      padding-right:0;
     }
   }
 
   *.full {
-    @media (width > 42rem) {
+    @media (width > 46rem) {
       margin-inline:-50vw;
-      padding-inline:50vw;
+      padding-inline:calc(50vw + 2rem);
     }
   }
 
@@ -227,9 +236,8 @@
   *.text-faded { color:var(--text-faded); }
   *.text-error { color:var(--error);      }
 
-  *.primary {
-    background:var(--primary);
-  }
+  *.primary { background:var(--primary); }
+  *.bg      { background:var(--bg);      }
 
   *.kfc-bodyfade > * { animation:bodyfade 0.5s; }
 }
@@ -246,9 +254,8 @@
       "main nav" 1fr
       "foot foot" min-content
     / 1fr min-content;
-    column-gap: 1rem;
 
-    @media (width < 42rem) {
+    @media (width < 46rem) {
       grid-template:
         "head" min-content
         "main" 1fr
@@ -275,7 +282,7 @@
         "del center xxx" 1rem
       / 1fr 3.5fr 1fr;
 
-      @media (width < 42rem) {
+      @media (width < 46rem) {
         grid-template:
           "center center center" min-content
           "left nop right" min-content
@@ -292,7 +299,7 @@
         text-align: center;
         margin:0 0 0.12em 0;
 
-        @media (width < 42rem) {
+        @media (width < 46rem) {
           font-size:4rem;
         }
       }
@@ -307,10 +314,16 @@
         & + ul {
           text-align:left;
         }
+
+        a, a:visited {
+          color:var(--primary);
+        }
       }
     }
 
     & > nav {
+      border-radius:0 0.5rem 0 0;
+
       a, a:visited {
         color:var(--text);
         display:block;
@@ -320,7 +333,6 @@
       ul {
         list-style: none;
         margin:1rem;
-        height:calc(100vh - 2rem);
         width:120px;
 
         position: sticky;
@@ -329,18 +341,23 @@
         li + li {
           margin-top:0.5rem;
         }
+      }
 
-        picture {
-          position: absolute;
-          bottom:0;
-          right:0;
-        }
+      picture {
+        position: sticky;
+        top:calc(100vh - 1.5rem);
+        padding-inline:0.5rem;
       }
     }
 
     & > main {
-      @media (width < 42rem) {
+      padding-top:2rem;
+      padding-inline:2rem;
+      border-radius:0.5rem 0 0 0;
+
+      @media (width < 46rem) {
         padding-inline:1rem;
+        border-radius:0;
       }
 
       & > section {
@@ -360,7 +377,7 @@
       display:grid;
       grid-auto-flow: column;
 
-      @media (width < 42rem) {
+      @media (width < 46rem) {
         display:block;
         padding-inline:1rem;
 

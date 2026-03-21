@@ -1,0 +1,11 @@
+260320	2.1.0 -- Background image and Lightroom edits
+	* ./src/styles.css: Background photo chosen, edited in Adobe
+	Lightroom, and set as darkmode-only full-site background.
+	* ./src/images/*: Image size added to filename.
+	* ./src/images/2048x2048_me.jpg: Recolored in Lightroom.
+260319	2.0.0 -- March makeover
+	* ./*: Scorched-earth redo of site.  Some original text and colors
+	carried over, all else was rewritten.
+	* ./README.md: Contains documentation about the goal of the redo.
+	* ./ssg.py: Updated with changes including a CLI interface, auto-index
+	listings, and page titles.

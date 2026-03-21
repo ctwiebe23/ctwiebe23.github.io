@@ -1,4 +1,4 @@
-C WIEBE'S HOMEPAGE                                                v2.0.0 260320
+C WIEBE'S HOMEPAGE                                                v2.1.0 260320
 ===============================================================================
 
 A static site built by a custom SSG and served by Github Pages.  Website

@@ -5,7 +5,7 @@ projects:
     type:
       lib: true
     tagline: Simple HTML tag assembler
-    thumbnail: /images/ellipsi.jpg
+    thumbnail: /images/400x400_ellipsi.jpg
     lang:
       - lang: JavaScript
     links:
