@@ -29,9 +29,13 @@
 @layer variables {
   html {
     --text:light-dark(#222,#dcd7ba);
-    --text-faded:light-dark(#777,#7c777a);
+    --text-faded:light-dark(#555,#9c979a);
     --bg:light-dark(#fff,#1f1f28);
     --bg-faded:light-dark(#eee,#335);
+    --bg-trans:light-dark(
+      color(from var(--bg) srgb r g b / 0.90),
+      color(from var(--bg) srgb r g b / 0.85)
+    );
     --primary:light-dark(#4023af,#69d);
     --link:light-dark(#45f,#aad);
     --visited:light-dark(#95f,#daf);
@@ -49,7 +53,7 @@
   *.dark {
     --text:light-dark(#fff,#1f1f28);
     --text-faded:light-dark(#ccc,#ccc);
-    --bg:light-dark(#000,#dcd7ba);
+    --bg:light-dark(#222,#dcd7ba);
     --link:light-dark(#aad,#45f);
     --visited:light-dark(#daf,#95f);
 
@@ -68,6 +72,13 @@
     color:var(--text);
     background:var(--bg);
     font:var(--font-size) / var(--line-height) var(--body-family);
+  }
+
+  @media (prefers-color-scheme: light) {
+    html {
+      background: url("/images/2048x1537_pier.jpg") no-repeat center center fixed;
+      background-size:cover;
+    }
   }
 
   @media (prefers-color-scheme: dark) {
@@ -236,8 +247,8 @@
   *.text-faded { color:var(--text-faded); }
   *.text-error { color:var(--error);      }
 
-  *.primary { background:var(--primary); }
-  *.bg      { background:var(--bg);      }
+  *.primary  { background:var(--primary);  }
+  *.bg-trans { background:var(--bg-trans); }
 
   *.kfc-bodyfade > * { animation:bodyfade 0.5s; }
 }
@@ -273,7 +284,7 @@
     & > footer { grid-area:foot; }
 
     & > header {
-      padding-block:4rem;
+      margin-block:4rem;
 
       display:grid;
       grid-template:
@@ -287,6 +298,8 @@
           "center center center" min-content
           "left nop right" min-content
         / 1fr 2rem 1fr;
+
+        margin-bottom:6rem;
       }
 
       h1      { grid-area:center; }

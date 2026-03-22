@@ -1,3 +1,7 @@
+260321	2.2.0 -- Light mode image, transparent backgrounds
+	* ./src/images/2048x1537_pier.jpg: Background photo for light mode.
+	* ./src/styles.css: Made the <main/> element use a transparent
+	background in place of a solid one.
 260320	2.1.0 -- Background image and Lightroom edits
 	* ./src/styles.css: Background photo chosen, edited in Adobe
 	Lightroom, and set as darkmode-only full-site background.
