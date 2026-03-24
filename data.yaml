@@ -108,7 +108,7 @@ projects:
       and replaces them with their STDOUT results.  Shell scripts are marked by
       delimiters.
 
-  - name: My homepage
+  - name: My Homepage
     featured: false
     type:
       web: true
@@ -127,11 +127,11 @@ projects:
       links in the same place.  JavaScript-less and generated using
       <a href="/kera">kera</a> and a custom Python SSG.
 
-  - name: Websocket pertubation &amp; response
+  - name: WebSocket Perturbation &amp; Response
     featured: false
     type:
       web: true
-    tagline: Probe websockets
+    tagline: Probe WebSockets
     lang:
       - lang: HTML
       - lang: CSS
@@ -144,7 +144,7 @@ projects:
     desc: |
       Webform created using
       <a href="https://www.npmjs.com/package/ellipsi">Ellipsi</a> that
-      lets you connect to a websocket and exchange messages.
+      lets you connect to a WebSocket and exchange messages.
 
   - name: M'TAG
     featured: false
