@@ -1,9 +1,10 @@
 260328	2.3.2 -- Link previews
 	* ./src/styles.css: Added link previews to <a/> tags within the page
-	body.  Tweaked colors, especially in light mode.
+	body.  Tweaked colors, especially in light mode.  Added additional
+	links to footer.
 260327	2.3.1 -- Tweaked color scheme and navbar
-	* ./src/styles.css: Altered the values of various background colors, added
-	a hover effect to the navbar.
+	* ./src/styles.css: Altered the values of various background colors,
+	added a hover effect to the navbar.
 260327	2.3.0 -- Page class identifier
 	* ./ssg.py: Added a layout key for the page class identifier --- a
 	sanitized version of the page title that can be used as a CSS class to

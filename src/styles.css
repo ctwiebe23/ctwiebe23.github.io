@@ -39,7 +39,7 @@
     --bg-disabled:light-dark(#eee, #2f2f38);
     --primary:light-dark(#30538f,#69d);
     --link:light-dark(#45f,#abf);
-    --visited:light-dark(#95f,#daf);
+    --visited:light-dark(#95f,#eaf);
     --error:light-dark(#c44,#c44);
 
     --rule:2px;
@@ -54,10 +54,10 @@
   *.dark {
     --text:light-dark(#e4efff,#2f2f38);
     --text-faded:light-dark(#bce,#357);
-    --bg:light-dark(#222f38,#aca79a);
-    --bg-faded:light-dark(#32496c,#9c978a);
-    --link:light-dark(#aad,#237);
-    --visited:light-dark(#daf,#63d);
+    --bg:light-dark(#222f38,#ccc7aa);
+    --bg-faded:light-dark(#32496c,#aca79a);
+    --link:light-dark(#aad,#25d);
+    --visited:light-dark(#daf,#6f05fd);
 
     color:var(--text);
     background: var(--bg);
@@ -435,6 +435,10 @@
         section + section {
           margin-top:1rem;
         }
+      }
+
+      p + ul {
+        margin-top:0;
       }
 
       font-size:0.8rem;
