@@ -29,16 +29,16 @@
 @layer variables {
   html {
     --text:light-dark(#222,#dcd7ba);
-    --text-faded:light-dark(#555,#9c979a);
+    --text-faded:light-dark(#55556f,#9c979a);
     --bg:light-dark(#fff,#1f1f28);
-    --bg-faded:light-dark(#eee,#235);
+    --bg-faded:light-dark(#e8e8f8,#283050);
     --bg-trans:light-dark(
       color(from var(--bg) srgb r g b / 0.90),
       color(from var(--bg) srgb r g b / 0.90)
     );
     --bg-disabled:light-dark(#eee, #2f2f38);
-    --primary:light-dark(#4023af,#69d);
-    --link:light-dark(#45f,#aad);
+    --primary:light-dark(#30538f,#69d);
+    --link:light-dark(#45f,#abf);
     --visited:light-dark(#95f,#daf);
     --error:light-dark(#c44,#c44);
 
@@ -52,12 +52,12 @@
   }
 
   *.dark {
-    --text:light-dark(#fff,#1f1f28);
+    --text:light-dark(#e4efff,#2f2f38);
     --text-faded:light-dark(#bce,#357);
-    --bg:light-dark(#222,#dcd7ba);
-    --bg-faded:light-dark(#3f4f94,#58c);
-    --link:light-dark(#aad,#45f);
-    --visited:light-dark(#daf,#95f);
+    --bg:light-dark(#222f38,#aca79a);
+    --bg-faded:light-dark(#32496c,#9c978a);
+    --link:light-dark(#aad,#237);
+    --visited:light-dark(#daf,#63d);
 
     color:var(--text);
     background: var(--bg);
@@ -136,6 +136,22 @@
 
     &:hover {
       text-decoration: underline solid 1px currentColor;
+      position:relative;
+
+      &::after {
+        content:attr(href);
+        color:var(--text);
+        white-space:nowrap;
+        position:absolute;
+        top:1.2rem;
+        left:0;
+        background:var(--bg-faded);
+        border-radius:0.25rem;
+        padding:1px 6px;
+        font-family:var(--other-family);
+        pointer-events:none;
+        text-indent:0;
+      }
     }
 
     &.nolink {
@@ -144,6 +160,10 @@
       &:hover {
         color: currentColor;
         text-decoration: none;
+
+        &::after {
+          content:none;
+        }
       }
     }
   }
@@ -319,6 +339,10 @@
         }
       }
 
+      a::after {
+        content:none;
+      }
+
       ul {
         display:grid;
 
@@ -348,6 +372,10 @@
         &:hover {
           background:var(--bg-faded);
           text-decoration:none;
+
+          &::after {
+            content:none;
+          }
         }
 
         &:active {
