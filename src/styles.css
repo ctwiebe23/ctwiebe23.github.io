@@ -31,11 +31,12 @@
     --text:light-dark(#222,#dcd7ba);
     --text-faded:light-dark(#555,#9c979a);
     --bg:light-dark(#fff,#1f1f28);
-    --bg-faded:light-dark(#eee,#335);
+    --bg-faded:light-dark(#eee,#235);
     --bg-trans:light-dark(
       color(from var(--bg) srgb r g b / 0.90),
-      color(from var(--bg) srgb r g b / 0.85)
+      color(from var(--bg) srgb r g b / 0.90)
     );
+    --bg-disabled:light-dark(#eee, #2f2f38);
     --primary:light-dark(#4023af,#69d);
     --link:light-dark(#45f,#aad);
     --visited:light-dark(#95f,#daf);
@@ -52,8 +53,9 @@
 
   *.dark {
     --text:light-dark(#fff,#1f1f28);
-    --text-faded:light-dark(#ccc,#ccc);
+    --text-faded:light-dark(#bce,#357);
     --bg:light-dark(#222,#dcd7ba);
+    --bg-faded:light-dark(#3f4f94,#58c);
     --link:light-dark(#aad,#45f);
     --visited:light-dark(#daf,#95f);
 
@@ -170,7 +172,7 @@
     font-family: var(--other-family);
     cursor: pointer;
     margin-left:-2ch;
-    padding:0.1rem 0.25rem 0.25rem 0.25rem;
+    padding:0.1rem 0.75rem 0.25rem 0.75rem;
 
     &:hover {
       background: var(--bg-faded);
@@ -330,6 +332,7 @@
 
         a, a:visited {
           color:var(--primary);
+          display:block;
         }
       }
     }
@@ -340,20 +343,27 @@
       a, a:visited {
         color:var(--text);
         display:block;
-        width:100%;
+        padding:0.25rem 1rem;
+
+        &:hover {
+          background:var(--bg-faded);
+          text-decoration:none;
+        }
+
+        &:active {
+          background:var(--text-faded);
+          color:var(--bg-faded);
+        }
       }
 
       ul {
         list-style: none;
-        margin:1rem;
-        width:120px;
+        margin:0rem;
+        margin-top:1rem;
+        width:150px;
 
         position: sticky;
         top:1rem;
-
-        li + li {
-          margin-top:0.5rem;
-        }
       }
 
       picture {

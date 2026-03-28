@@ -1,3 +1,10 @@
+260327	2.3.1 -- Tweaked color scheme and navbar
+	* ./styles.css: Altered the values of various background colors, added
+	a hover effect to the navbar.
+260327	2.3.0 -- Page class identifier
+	* ./ssg.py: Added a layout key for the page class identifier --- a
+	sanitized version of the page title that can be used as a CSS class to
+	highlight the active page in a navbar.
 260321	2.2.0 -- Light mode image, transparent backgrounds
 	* ./src/images/2048x1537_pier.jpg: Background photo for light mode.
 	* ./src/styles.css: Made the <main/> element use a transparent

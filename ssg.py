@@ -34,6 +34,7 @@ DEFAULT_WWW_PATH = "./www"
 ENCODING = "utf-8"
 CONTENT_STRING = "##CONTENTS##"
 TITLE_STRING = "##TITLE##"
+PAGE_STRING = "##PAGE##"
 
 
 def get_args():
@@ -66,6 +67,14 @@ def get_args():
         type=str,
         default=TITLE_STRING,
         help="The string in the layout file that should be replaced with the page title",
+    )
+
+    parser.add_argument(
+        "-p",
+        "--page-string",
+        type=str,
+        default=PAGE_STRING,
+        help="The string in the layout file that should be replaced with the page class identifier",
     )
 
     parser.add_argument(
@@ -153,8 +162,15 @@ def main():
     layout, data = get_file_values(layout_path, data_path)
 
     def fill_page(content, title):
-        titled = layout.replace(args.title_string, title)
-        filled = titled.replace(args.content_string, content)
+        title = html.escape(title)
+        html_title = title.replace("_", " ").capitalize()
+        class_identifier = title.replace(" ", "_").lower()
+        filled = (
+            layout
+                .replace(args.title_string, html_title)
+                .replace(args.content_string, content)
+                .replace(args.page_string, class_identifier)
+        )
         return filled
 
     def create_index_page_for(dir: Path, dest_dir: Path):
@@ -221,25 +237,23 @@ def main():
                 # recursively operate on the inner directory
                 copy_dir_and_process_html(path, dest_path)
             else:  # handling a file
-                page_title = path.name.split(".")[0]
-                if page_title == "index":
-                  if dir_path == src_dir_path:  # root page
-                    page_title = "Home"
-                  else:  # take name of parent directory
-                    page_title = dir_path.stem
-
-                page_title = html.escape(page_title).capitalize()
+                title = path.name.split(".")[0]
+                if title == "index":
+                    if dir_path == src_dir_path:  # root page
+                        title = "Home"
+                    else:  # take name of parent directory
+                        title = dir_path.stem
 
                 if path.match("*.html"):
                     contents = path.read_text(encoding=ENCODING)
-                    page = fill_page(contents, page_title)
+                    page = fill_page(contents, title)
                     dest_path.write_text(page, encoding=ENCODING)
                 elif path.match("*.plate"):
                     dest_path = dest_path.with_suffix("")  # remove .plate suffix
                     contents = path.read_text(encoding=ENCODING)
                     generated = kera.process(contents, data)
                     if dest_path.match("*.html"):
-                        generated = fill_page(generated, page_title)
+                        generated = fill_page(generated, title)
                     dest_path.write_text(generated, encoding=ENCODING)
                 else:
                     shutil.copy(str(path), str(dest_path))
