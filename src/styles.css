@@ -38,8 +38,7 @@
     );
     --bg-disabled:light-dark(#eee, #2f2f38);
     --primary:light-dark(#30538f,#69d);
-    --link:light-dark(#45f,#abf);
-    --visited:light-dark(#95f,#eaf);
+    --link:var(--primary);
     --error:light-dark(#c44,#c44);
 
     --rule:2px;
@@ -53,9 +52,8 @@
 
   *.dark {
     --text:light-dark(#e4efff,#2f2f38);
-    --text-faded:light-dark(#bce,#357);
+    --text-faded:light-dark(#222,#dcd7ba);
     --bg:light-dark(#222f38,#ccc7aa);
-    --bg-faded:light-dark(#32496c,#aca79a);
     --link:light-dark(#aad,#25d);
     --visited:light-dark(#daf,#6f05fd);
 
@@ -127,30 +125,34 @@
   }
 
   a {
-    color:var(--link);
+    color:var(--text);
     text-decoration: none;
 
-    &:visited {
-      color:var(--visited);
+    &::after {
+      content:"*";
+      white-space: nowrap;
+      color:var(--link);
     }
 
     &:hover {
-      text-decoration: underline solid 1px currentColor;
+      text-decoration: underline solid 2px var(--link);
       position:relative;
 
-      &::after {
-        content:attr(href);
-        color:var(--text);
-        white-space:nowrap;
-        position:absolute;
-        top:1.2rem;
-        left:0;
-        background:var(--bg-faded);
-        border-radius:0.25rem;
-        padding:1px 6px;
-        font-family:var(--other-family);
-        pointer-events:none;
-        text-indent:0;
+      @media (width > 58rem) {
+        &::before {
+          content:attr(href);
+          color:var(--link);
+          white-space:nowrap;
+          position:absolute;
+          top:1.2rem;
+          left:0;
+          background:var(--bg);
+          border-radius:0.25rem;
+          padding:1px 6px;
+          font-family:var(--other-family);
+          pointer-events:none;
+          text-indent:0;
+        }
       }
     }
 
@@ -161,7 +163,7 @@
         color: currentColor;
         text-decoration: none;
 
-        &::after {
+        &::after, &::before {
           content:none;
         }
       }
@@ -202,7 +204,6 @@
 
   details {
     margin-block:0.5rem;
-    margin-left:2ch;
 
     &:is(:open, [open]) {
       padding-bottom:0.5rem;
@@ -246,7 +247,7 @@
   }
 
   *.float-right {
-    @media (width > 46rem) {
+    @media (width > 58rem) {
       float:right;
       padding-block:0;
       margin-block:0;
@@ -256,7 +257,7 @@
   }
 
   *.full {
-    @media (width > 46rem) {
+    @media (width > 58rem) {
       margin-inline:-50vw;
       padding-inline:calc(50vw + 2rem);
     }
@@ -271,13 +272,14 @@
 
   *.primary  { background:var(--primary);  }
   *.bg-trans { background:var(--bg-trans); }
+  *.bg       { background:var(--bg);       }
 
   *.kfc-bodyfade > * { animation:bodyfade 0.5s; }
 }
 
 @layer layout {
   body {
-    max-width:42rem;
+    max-width:50rem;
     min-height:100vh;
     margin-inline:auto;
 
@@ -288,7 +290,7 @@
       "foot foot" min-content
     / 1fr min-content;
 
-    @media (width < 46rem) {
+    @media (width < 58rem) {
       grid-template:
         "head" min-content
         "main" 1fr
@@ -315,7 +317,7 @@
         "del center xxx" 1rem
       / 1fr 3.5fr 1fr;
 
-      @media (width < 46rem) {
+      @media (width < 58rem) {
         grid-template:
           "center center center" min-content
           "left nop right" min-content
@@ -330,16 +332,16 @@
 
       h1 {
         line-height: 1;
-        font-size:120px;
+        font-size:140px;
         text-align: center;
-        margin:0 0 0.12em 0;
+        margin:0 0 0.22em 0;
 
-        @media (width < 46rem) {
+        @media (width < 58rem) {
           font-size:4rem;
         }
       }
 
-      a::after {
+      a::after, a::before {
         content:none;
       }
 
@@ -354,7 +356,7 @@
           text-align:left;
         }
 
-        a, a:visited {
+        a {
           color:var(--primary);
           display:block;
         }
@@ -364,16 +366,21 @@
     & > nav {
       border-radius:0 0.5rem 0 0;
 
-      a, a:visited {
+      a {
         color:var(--text);
         display:block;
         padding:0.25rem 1rem;
 
+        &::after {
+          content:none;
+        }
+
         &:hover {
           background:var(--bg-faded);
+          color:var(--text-faded);
           text-decoration:none;
 
-          &::after {
+          &::before {
             content:none;
           }
         }
@@ -406,7 +413,7 @@
       padding-inline:2rem;
       border-radius:0.5rem 0 0 0;
 
-      @media (width < 46rem) {
+      @media (width < 58rem) {
         padding-inline:1rem;
         border-radius:0;
       }
@@ -428,7 +435,7 @@
       display:grid;
       grid-auto-flow: column;
 
-      @media (width < 46rem) {
+      @media (width < 58rem) {
         display:block;
         padding-inline:1rem;
 
