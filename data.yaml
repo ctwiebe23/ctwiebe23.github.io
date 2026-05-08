@@ -169,17 +169,31 @@ resources:
     type:
       cli: true
     desc: |
-      Extremely powerful program for converting between document types.
-      I primarily use it to generate beautiful PDFs and half-decent websites
-      from markdown files.
+      Converts between document types. I primarily use it to generate beautiful
+      PDFs and half-decent websites from markdown files.
 
   - name: just
     href: https://github.com/casey/just
     type:
       cli: true
     desc: |
-      Allows you to easily shortcut commands, essentially Makefiles for any
-      language.
+      Shortcut commands easily with what are essentially modern Makefiles.
+
+  - name: eza
+    href: https://github.com/eza-community/eza
+    type:
+      cli: true
+    desc: |
+      Combines common utilities and patterns into a modern <code>ls</code>
+      replacement.
+
+  - name: zoxide
+    href: https://github.com/ajeetdsouza/zoxide
+    type:
+      cli: true
+    desc: |
+      Intelligently navigates filetrees.  It's completely replaced
+      <code>cd</code> on all my systems, and I can no longer live without it.
 
   - name: watchexec
     href: https://github.com/watchexec/watchexec
@@ -195,8 +209,17 @@ resources:
     type:
       desktop: true
     desc: |
-      Screen recording and video streaming.  Great for recording slideshow
-      presentations.
+      Screen record with all the professional toys you need.  I use it for
+      everything from slideshow presentations to live demos.
+
+  - name: Easy Effects
+    href: https://github.com/wwmm/easyeffects
+    type:
+      desktop: true
+    desc: |
+      Proxy microphone audio and filter audio streams.  Has an extremely
+      capable live noise limiter that cuts background noise from your input
+      mic before it ever reaches another application.
 
   - name: Butterick's Practical Typography
     href: https://practicaltypography.com/
