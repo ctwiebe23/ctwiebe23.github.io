@@ -1,0 +1,16 @@
+0664 125k 00_title.pdf
+0775  218 10_standard_form.py
+0775  210 20_recursive_form.py
+0775  628 30_newtons_method.py
+0775 1.6k 40_newtons_divided_differences.py
+0775  629 50_newtons_method.py
+0664 3.1k 60_2d_graph.py
+0664 1.9k 70_3d_graph.py
+0775  194 80_lucas.py
+0664  25k 99_announce.pdf
+0664    0 index.txt
+0664  337 pyproject.toml
+0664  496 script.txt
+0775    - src
+0775  17k teleprompter
+0664  91k uv.lock
